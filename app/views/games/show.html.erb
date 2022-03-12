@@ -1,0 +1,25 @@
+<% content_for(:title) { @game.name } %>
+<%= link_to("<< Back to List", games_path, :class => 'back-link') %>
+
+<div class="games show">
+  <h2>Show Game</h2>
+
+  <table summary="Game detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @game.name %></td>
+    </tr>
+    <tr>
+      <th>Genres</th>
+      <td><%= @game.genres.map{ |genre| link_to(genre.name, genre_path(genre), :class => 'action show') }.join(", ").html_safe %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @game.created_at.to_formatted_s(:db) %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @game.updated_at.to_formatted_s(:db) %></td>
+    </tr>
+  </table>
+</div>

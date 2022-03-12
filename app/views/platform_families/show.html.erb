@@ -1,0 +1,33 @@
+<% content_for(:title) { @platform_family.name } %>
+<%= link_to("<< Back to List", platform_families_path, :class => 'back-link') %>
+
+<div class="platform_families show">
+  <h2>Show Platform</h2>
+
+  <table summary="Platform Family detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @platform_family.name %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @platform_family.created_at.to_formatted_s(:db) %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @platform_family.updated_at.to_formatted_s(:db) %></td>
+    </tr>
+    <table class="listing" summary="Platform list">
+      <tr class="header">
+        <th></th>
+        <th>Platform</th>
+      </tr>
+      <% @platform_family.platforms.each do |platform| %>
+        <tr>
+          <td><%= platform.id %></td>
+          <td><%= link_to(platform.name, platform_path(platform), :class => 'action show') %></td>
+        </tr>
+      <% end %>
+    </table>
+  </table>
+</div>

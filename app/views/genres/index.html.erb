@@ -1,0 +1,18 @@
+<% content_for(:title) { "Genres" } %>
+
+<div class="genres index">
+  <h2>Genres</h2>
+
+  <table class="listing" summary="Genre list">
+    <tr class="header">
+      <th></th>
+      <th>Genre</th>
+    </tr>
+    <% @genres.each do |genre| %>
+    <tr>
+      <td><%= genre.id %></td>
+      <td><%= link_to(genre.name, genre_path(genre), :class => 'action show') %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
