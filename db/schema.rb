@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_09_154249) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_02_09_154249) do
   create_table "games", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "name", null: false
+    t.integer "igdb_id", null: false
+    t.date "release_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "games_genres", id: false, force: :cascade do |t|
@@ -32,22 +33,25 @@ ActiveRecord::Schema.define(version: 2022_02_09_154249) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "igdb_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "platform_families", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "name", null: false
+    t.integer "igdb_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "platforms", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "igdb_id", null: false
     t.date "release_date"
     t.integer "platform_family_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["platform_family_id"], name: "index_platforms_on_platform_family_id"
   end
 
