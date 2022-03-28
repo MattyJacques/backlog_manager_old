@@ -65,6 +65,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Improve code quality by checking for code smells
+  gem "reek"
 end
 
 group :test do
