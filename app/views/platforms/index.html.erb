@@ -13,7 +13,10 @@
     <tr>
       <td><%= platform.id %></td>
       <td><%= link_to(platform.name, platform_path(platform), :class => 'action show') %></td>
-      <td><%= link_to(platform.platform_family.name, platform_family_path(platform.platform_family), :class => 'action show') %></td>
+      
+      <% if platform.platform_family.present? %>
+        <td><%= link_to(platform.platform_family.name, platform_family_path(platform.platform_family), :class => 'action show') %></td>
+      <% end %>
     </tr>
     <% end %>
   </table>

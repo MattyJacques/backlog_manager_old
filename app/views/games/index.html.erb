@@ -2,6 +2,9 @@
 
 <div class="games index">
   <h2>Games</h2>
+  
+  <%= button_to("Import game", new_game_path, method: :get) %>
+  <br/>
 
   <table class="listing" summary="Game list">
     <tr class="header">
@@ -11,7 +14,7 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= game.id %></td>
-        <td><%= link_to(game.name, game_path(game), :class => 'action show') %></td>
+        <td><%= link_to(game.name, game_path(game), action: 'show') %></td>
       </tr>
     <% end %>
   </table>

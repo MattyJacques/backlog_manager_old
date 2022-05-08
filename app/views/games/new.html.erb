@@ -1,0 +1,27 @@
+<% content_for(:title) { "New Game" } %>
+<%= link_to("<< Back to List", games_path, :class => 'back-link') %>
+
+<div class="games new">
+  <h2>Import Game</h2>
+  <%= form_tag(new_game_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+  <table class="paddingBetweenCols" summary="Game list">
+    <tr class="header">
+      <th></th>
+      <th>Name</th>
+      <th>Platforms</th>
+      <th>Genres</th>
+    </tr>
+    <% @games&.each do |game| %>
+      <tr>
+        <td><%= button_to "Import", action: "create", params: { igdb_id: game.id } %></td>
+        <td><%= game.name %></td>
+        <td><%= game.platforms&.map{ |platform| platform.name }&.join(", ")&.html_safe %></td>
+        <td><%= game.genres&.map{ |genre| genre.name }&.join(", ")&.html_safe %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

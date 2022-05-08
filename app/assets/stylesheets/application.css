@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.paddingBetweenCols td {
+  padding: 0 15px 0 0;
+}
+
+th {
+  text-align: left
+}

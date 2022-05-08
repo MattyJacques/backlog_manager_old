@@ -1,3 +1,4 @@
+# Controller responsible for handling PlatformFamiliy actions
 class PlatformFamiliesController < ApplicationController
   def index
     @platform_families = PlatformFamily.all

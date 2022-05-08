@@ -3,7 +3,6 @@ class CreateGames < ActiveRecord::Migration[7.0]
     create_table :games do |t|
       t.string :name, null: false
       t.integer :igdb_id, null: false
-      t.date :release_date
 
       t.timestamps
     end

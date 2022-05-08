@@ -1,3 +1,4 @@
+# Controller responsible for handling Platform actions
 class PlatformsController < ApplicationController
   def index
     @platforms = Platform.all

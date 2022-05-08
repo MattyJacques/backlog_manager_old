@@ -1,5 +1,7 @@
 # README
 
+You need to run `rails dev:cache` as caching is used for access tokens.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
