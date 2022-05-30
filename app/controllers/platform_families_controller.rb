@@ -5,6 +5,8 @@ class PlatformFamiliesController < ApplicationController
   end
 
   def show
-    @platform_family = PlatformFamily.find(params[:id])
+    @platform_family = PlatformFamily.where(id: params[:id]).first
+
+    redirect_to(platform_families_path) if @platform_family.nil?
   end
 end

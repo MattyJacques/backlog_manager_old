@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.igdb.com/v4/games
+    body:
+      encoding: UTF-8
+      string: |-
+        fields name, genres.name, platforms.platform_family.name,
+                                    platforms.name, release_dates.date, release_dates.game,
+                                    release_dates.platform, release_dates.region;where id = 1009;
+    headers:
+      Accept:
+      - application/json
+      Client-Id:
+      - "<IGDB_CLIENT_ID>"
+      Authorization:
+      - Bearer accesstoken
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.igdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:49 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - ea80f703-92df-4ccb-999a-4146c86f4717
+      X-Amzn-Remapped-Content-Length:
+      - '676'
+      X-Amz-Apigw-Id:
+      - Sb_c2Hx5PTcFkrg=
+      X-Amzn-Remapped-Server:
+      - Javalin
+      X-Count:
+      - '1'
+      X-Amzn-Remapped-Date:
+      - Fri, 20 May 2022 18:35:49 GMT
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 58336461deb255b6pa24bb4f21db9b6a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR50-C1
+      X-Amz-Cf-Id:
+      - SnSrOVBNvALJFhu8p492KxMsT039v1GwUbU6br0YS4MVuGR4la4brw==
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 70e72c9ebbcf8895-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 1009,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3",
+                "platform_family": {
+                  "id": 1,
+                  "name": "PlayStation"
+                }
+              }
+            ],
+            "release_dates": [
+              {
+                "id": 106244,
+                "date": 1371168000,
+                "game": 1009,
+                "platform": 9,
+                "region": 2
+              },
+              {
+                "id": 106245,
+                "date": 1371168000,
+                "game": 1009,
+                "platform": 9,
+                "region": 1
+              }
+            ]
+          }
+        ]
+  recorded_at: Fri, 20 May 2022 18:35:48 GMT
+recorded_with: VCR 6.1.0

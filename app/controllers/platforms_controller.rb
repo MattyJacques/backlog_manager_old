@@ -5,6 +5,8 @@ class PlatformsController < ApplicationController
   end
 
   def show
-    @platform = Platform.find(params[:id])
+    @platform = Platform.where(id: params[:id]).first
+
+    redirect_to(platforms_path) if @platform.nil?
   end
 end

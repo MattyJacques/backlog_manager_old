@@ -7,6 +7,8 @@ class ReleaseDate < ApplicationRecord
   belongs_to :game
   belongs_to :platform
 
+  validates :date, presence: true
+
   # Create a ReleaseDate record, converting the unix timestamp to a Date
   def self.convert_create(game, platform, unix_timestamp)
     ReleaseDate.create!(game: game, platform: platform, date: unix_to_date(unix_timestamp))

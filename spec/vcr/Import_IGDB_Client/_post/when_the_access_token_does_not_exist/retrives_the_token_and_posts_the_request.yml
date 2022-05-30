@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://id.twitch.tv/oauth2/token
+    body:
+      encoding: UTF-8
+      string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:44 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.18.0
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctxlog-Logid:
+      - 1-6287df80-37d0gh203171e70604a8e880
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"accesstoken","expires_in":5126358,"token_type":"bearer"}
+
+        '
+  recorded_at: Fri, 20 May 2022 18:35:43 GMT
+- request:
+    method: post
+    uri: https://api.igdb.com/v4/games
+    body:
+      encoding: UTF-8
+      string: fields name;where id = 1009;
+    headers:
+      Accept:
+      - application/json
+      Client-Id:
+      - "<IGDB_CLIENT_ID>"
+      Authorization:
+      - Bearer accesstoken
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.igdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:45 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 465610ff-dc7a-4c0f-9930-0e93e79eeaf9
+      X-Amzn-Remapped-Content-Length:
+      - '56'
+      X-Amz-Apigw-Id:
+      - Sb_cRGnnPHcF7Tw=
+      X-Amzn-Remapped-Server:
+      - Javalin
+      X-Count:
+      - '1'
+      X-Amzn-Remapped-Date:
+      - Fri, 20 May 2022 18:35:45 GMT
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 f960e36cae6548ff1a3142e3d61bcba8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR50-C1
+      X-Amz-Cf-Id:
+      - rTCSiUOyAI2_nqp81aleCUhy6NaKqTY1Y1EskuYrBe0r6GSJ-0aKKw==
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 70e72c874hj67711-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 1009,
+            "name": "The Last of Us"
+          }
+        ]
+  recorded_at: Fri, 20 May 2022 18:35:44 GMT
+recorded_with: VCR 6.1.0

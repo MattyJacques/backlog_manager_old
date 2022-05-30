@@ -13,10 +13,10 @@ module Import
         Import::IGDB::Client.post(ENDPOINT, params)
       end
 
-      def self.import(id)
-        return if id.blank?
+      def self.import(igdb_id)
+        return if igdb_id.blank?
 
-        data = get_igdb_data(id)
+        data = get_igdb_data(igdb_id)
         import_from_data(data)
       end
 

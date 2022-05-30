@@ -5,6 +5,8 @@ class GenresController < ApplicationController
   end
 
   def show
-    @genre = Genre.find(params[:id])
+    @genre = Genre.where(id: params[:id]).first
+
+    redirect_to(genres_path) if @genre.nil?
   end
 end

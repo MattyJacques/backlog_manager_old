@@ -5,6 +5,9 @@
 class PlatformFamily < ApplicationRecord
   has_many :platforms
 
+  validates :name, presence: true
+  validates :igdb_id, presence: true, numericality: { only_integer: true }, uniqueness: true
+
   def self.find_or_create(igdb_id, name)
     return unless igdb_id.present? && name.present?
 

@@ -16,12 +16,12 @@
       <th>Genres</th>
     </tr>
     <% @games&.each do |game| %>
-      <tr>
-        <td><%= button_to "Import", action: "create", params: { igdb_id: game.id } %></td>
+      <%= tag.tr(name: game.name) do %>
+        <td><%= button_to "Import", { action: "create" }, params: { igdb_id: game.id }, id: game.name %></td>
         <td><%= game.name %></td>
         <td><%= game.platforms&.map{ |platform| platform.name }&.join(", ")&.html_safe %></td>
         <td><%= game.genres&.map{ |genre| genre.name }&.join(", ")&.html_safe %></td>
-      </tr>
+      <% end %>
     <% end %>
   </table>
 </div>

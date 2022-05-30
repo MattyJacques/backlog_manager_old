@@ -1,0 +1,294 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.igdb.com/v4/games
+    body:
+      encoding: UTF-8
+      string: fields name, platforms.name, genres.name;search "The Last of Us";limit
+        20;
+    headers:
+      Accept:
+      - application/json
+      Client-Id:
+      - "<IGDB_CLIENT_ID>"
+      Authorization:
+      - Bearer accesstoken
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.igdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:48 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '365'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - d7d7a265-15f8-46h7-ba42-40834cf62d24
+      X-Amzn-Remapped-Content-Length:
+      - '365'
+      X-Amz-Apigw-Id:
+      - Sb_cuGdjPHcF9Fg=
+      X-Amzn-Remapped-Server:
+      - Javalin
+      X-Count:
+      - '13'
+      X-Amzn-Remapped-Date:
+      - Fri, 20 May 2022 18:35:48 GMT
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 30731c20ed98a811a0285abe5bef62f2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR52-C1
+      X-Amz-Cf-Id:
+      - mGs7B3KhQdqPgWMiDeHJH9EBYen9w1zke7wdjUTcSNAav9mfIqcOmA==
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 70e72c9b1c3375c6-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 26192,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Part II",
+            "platforms": [
+              {
+                "id": 48,
+                "name": "PlayStation 4"
+              }
+            ]
+          },
+          {
+            "id": 1009,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 6036,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Remastered",
+            "platforms": [
+              {
+                "id": 48,
+                "name": "PlayStation 4"
+              }
+            ]
+          },
+          {
+            "id": 11790,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us: Left Behind",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              },
+              {
+                "id": 48,
+                "name": "PlayStation 4"
+              }
+            ]
+          },
+          {
+            "id": 101462,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Ellie Edition",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 102081,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Joel Edition",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 102082,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Survival Edition",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 102083,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Post-Pandemic Edition",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 135986,
+            "genres": [
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Part II: Ellie Edition"
+          },
+          {
+            "id": 135956,
+            "genres": [
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Part II: Special Edition"
+          },
+          {
+            "id": 89931,
+            "genres": [
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Remastered: Day 1 Edition",
+            "platforms": [
+              {
+                "id": 48,
+                "name": "PlayStation 4"
+              }
+            ]
+          },
+          {
+            "id": 135955,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Part II: Collector\u0027s Edition",
+            "platforms": [
+              {
+                "id": 48,
+                "name": "PlayStation 4"
+              }
+            ]
+          }
+        ]
+  recorded_at: Fri, 20 May 2022 18:35:47 GMT
+recorded_with: VCR 6.1.0

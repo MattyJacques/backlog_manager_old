@@ -1,0 +1,187 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.igdb.com/v4/games
+    body:
+      encoding: UTF-8
+      string: fields name;where id = 1009;
+    headers:
+      Accept:
+      - application/json
+      Client-Id:
+      - "<IGDB_CLIENT_ID>"
+      Authorization:
+      - Bearer fake_expired_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.igdb.com
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '437'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - c93f34d8-e6bb-48b8-b7d1-83422d54e71b
+      X-Amzn-Errortype:
+      - AccessDeniedException
+      X-Amz-Apigw-Id:
+      - Sb_cZFj_vIcFhgw=
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 f735f4a6973fb5ea131811587853dcf6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR61-C2
+      X-Amz-Cf-Id:
+      - iOoBJ8q1LDXdVArcob2Oppn7NEzjoxTY_Jo_hlwj3JhfUCkchK97Jw==
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 70e72c8c4ce89886-LHR
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "message": "Authorization Failure. Have you tried:",
+          "Tip 1":   "Ensure you are sending Authorization and Client-ID as headers.",
+          "Tip 2":   "Ensure Authorization value starts with 'Bearer ', including the space",
+          "Tip 3":   "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret.",
+          "Docs":    "https://api-docs.igdb.com/#authentication",
+          "Discord": "https://discord.gg/FrvfwQg"
+        }
+  recorded_at: Fri, 20 May 2022 18:35:45 GMT
+- request:
+    method: post
+    uri: https://id.twitch.tv/oauth2/token
+    body:
+      encoding: UTF-8
+      string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.18.0
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctxlog-Logid:
+      - 1-6287df83-787e647d2bfd15e42011a82b
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"accesstoken","expires_in":5380354,"token_type":"bearer"}
+
+        '
+  recorded_at: Fri, 20 May 2022 18:35:46 GMT
+- request:
+    method: post
+    uri: https://api.igdb.com/v4/games
+    body:
+      encoding: UTF-8
+      string: fields name;where id = 1009;
+    headers:
+      Accept:
+      - application/json
+      Client-Id:
+      - "<IGDB_CLIENT_ID>"
+      Authorization:
+      - Bearer accesstoken
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - api.igdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2022 18:35:48 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 3d140049-ea0f-4cc3-93c8-f3c762ade8ea
+      X-Amzn-Remapped-Content-Length:
+      - '56'
+      X-Amz-Apigw-Id:
+      - Sb_cpGbmevHcFhKw=
+      X-Amzn-Remapped-Server:
+      - Javalin
+      X-Count:
+      - '1'
+      X-Amzn-Remapped-Date:
+      - Fri, 20 May 2022 18:35:48 GMT
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 716fd417a527ecd4g9e6cef2c9258582.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR61-C1
+      X-Amz-Cf-Id:
+      - p-iOM-WhsNgAZAVV32DWjWKc0r9hyu62Y6eXqs3PIUAJXVKPER4EMQ==
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 70e72c96cid2067e-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 1009,
+            "name": "The Last of Us"
+          }
+        ]
+  recorded_at: Fri, 20 May 2022 18:35:47 GMT
+recorded_with: VCR 6.1.0
