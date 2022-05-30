@@ -2,6 +2,46 @@
 http_interactions:
 - request:
     method: post
+    uri: https://id.twitch.tv/oauth2/token
+    body:
+      encoding: UTF-8
+      string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 30 May 2022 17:51:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.18.0
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctxlog-Logid:
+      - 1-62950436-308a43a493d7216212148061
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"accesstoken","expires_in":5314769,"token_type":"bearer"}
+
+        '
+  recorded_at: Mon, 30 May 2022 17:51:49 GMT
+- request:
+    method: post
     uri: https://api.igdb.com/v4/games
     body:
       encoding: UTF-8
