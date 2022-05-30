@@ -2,6 +2,46 @@
 http_interactions:
 - request:
     method: post
+    uri: https://id.twitch.tv/oauth2/token
+    body:
+      encoding: UTF-8
+      string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 30 May 2022 17:51:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.18.0
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctxlog-Logid:
+      - 1-62950436-308a43a493d7216212148061
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"accesstoken","expires_in":5314769,"token_type":"bearer"}
+
+        '
+  recorded_at: Mon, 30 May 2022 17:51:49 GMT
+- request:
+    method: post
     uri: https://api.igdb.com/v4/games
     body:
       encoding: UTF-8
@@ -15,7 +55,7 @@ http_interactions:
       Client-Id:
       - "<IGDB_CLIENT_ID>"
       Authorization:
-      - Bearer y6ar58fuasrdv8vr844kagyxjvwbhm
+      - Bearer accesstoken
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -28,7 +68,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 May 2022 16:03:45 GMT
+      - Mon, 30 May 2022 18:07:38 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -36,25 +76,25 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 31a7bbc4-1ab4-4c7e-84e3-6e7eb2c6e519
+      - dc82448d-41aa-4141-8955-00e4ddab9d5c
       X-Amzn-Remapped-Content-Length:
       - '676'
       X-Amz-Apigw-Id:
-      - S8mjOEwdPHcFrOg=
+      - S84smHYtvHcFwhg=
       X-Amzn-Remapped-Server:
       - Javalin
       X-Count:
       - '1'
       X-Amzn-Remapped-Date:
-      - Mon, 30 May 2022 16:03:45 GMT
+      - Mon, 30 May 2022 18:07:38 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 2fe8f7f5aca4ab098dc7bad8e97a06dc.cloudfront.net (CloudFront)
+      - 1.1 76cca2ef798b9dc955bb151bf3bff218.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LHR50-P1
       X-Amz-Cf-Id:
-      - JK-rNoRuvUWpBpGWK8ZNGKMgm7BAn-ZMDzzKxWZh2s6YU69NhixFCA==
+      - H8NGTB798I4T5vhvYZE0ruSNkDYBJb-mrTjKl10DdsLxK5biI3RUHQ==
       Cf-Cache-Status:
       - DYNAMIC
       Expect-Ct:
@@ -66,7 +106,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7138b39dce2671bd-LHR
+      - 713969166a26750d-LHR
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -112,5 +152,5 @@ http_interactions:
             ]
           }
         ]
-  recorded_at: Mon, 30 May 2022 16:03:44 GMT
+  recorded_at: Mon, 30 May 2022 18:07:36 GMT
 recorded_with: VCR 6.1.0
