@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.playstation.PlayStationApp://redirect&response_type=code&scope=psn:mobile.v1%20psn:clientapp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - npsso=<PSN_NPSSO>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx
+      Content-Length:
+      - '0'
+      X-Psn-Request-Id:
+      - fa9a8e7f97e4a9637a54e24e6c094120
+      X-Psn-Correlation-Id:
+      - 66e921f6-ed99-466e-8df5-63923d709ff8
+      X-Requestid:
+      - fa9a8e7f97e4a9637a54e24e6c094120
+      X-Correlationid:
+      - 66e921f6-ed99-466e-8df5-63923d709ff8
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Expires:
+      - '0'
+      Location:
+      - com.playstation.PlayStationApp://redirect/?code=v1.Ab23CD&cid=66e921f6-ed99-466e-8df5-63923d709ff8
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      Date:
+      - Fri, 19 Aug 2022 14:18:26 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _abck=4C70A17B501E744CEEF64B81A726C303~-1~YAAQkOEWAmyNF7GCAQAAnTJ4tghfrDlhOmYr39Kcx29UnqXYIYYE/RCQc18O6YxP4U0eoWfj8xtGCCjR6+BQesAFtQuKlWoJjWNFI/M9mkq/53jPRKeRYowrFXHOPyek1RE6U3M078SO/awCDh73yrlPeqLBXXVr7Gv4YtEaT2/Ru06jMk2O5jNTgPV8bDhwEPGTXxOblJMdT4BOtmS/zeN4yx+yMQU+6WaDYKZLuceAxoRKWbKA3o8kiHb+YplkbWlR4OVGbw43ZgrB70v3GDz+Z3TbCLvYG1jh40R2z7doTpXPiptYwJsaJVoZiA1yeuM06Mfe6vamp/NrviTD5uBfduN+4Dg+rdAgcQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 26 Aug 2022 14:18:26 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=0DD41F80A1A81E5CC0694CF9A8196AB8~YAAQkOEWAm2NF7GCAQAAnTJ4thACkgVzRlqhKvm7fC9sSWaMC4F4AhEiAFdk2cLuMKbzsqApD2oklqGOILk02mSld9PR8EkVX/TsutsVSOEtuK///yoYKev+3Lpr+7vX1+nT8h8qXMhkV9WDjjMmlxXVp3JGz0UEUeKmekXfbgA9arFRNoU2CGj7B8L6KGFWMbDL8PN4LY/HXoE41svNj7V4HE56eOKpgc3++vK7zkXMmRpabHyzIulxL9Nr8e1Unlh9XLHucw5giGRKNQvNR8tAovD+YU+qdhOVU6G8aZjmISMyO7DYJme7v+94uL8UQkiHIZ/4rncgy2wX6nlrQ1OvRxrLjEpU+L57MY8276jNDpX778bbpuROtx0=~3556407~3290674;
+        Domain=.sony.com; Path=/; Expires=Fri, 19 Aug 2022 18:18:26 GMT; Max-Age=14400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 19 Aug 2022 14:18:26 GMT
+- request:
+    method: post
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=<PSN_CLIENT_ID>&client_secret=&code=v3.xaKvfS&grant_type=authorization_code&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&scope=psn%3Amobile.v1+psn%3Aclientapp&token_format=jwt
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic <PSN_BASIC>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Psn-Request-Id:
+      - 7abf8043cab4b392c1ba583245a62d0c
+      X-Psn-Correlation-Id:
+      - 48cd2250-0ce5-4946-bebe-fe3f1f348ed0
+      X-Requestid:
+      - 7abf8043cab4b392c1ba583245a62d0c
+      X-Correlationid:
+      - 48cd2250-0ce5-4946-bebe-fe3f1f348ed0
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Content-Length:
+      - '3619'
+      Date:
+      - Fri, 19 Aug 2022 14:18:27 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _abck=4BF4DAD1DCDE9DA349EAD3712EA92B68~-1~YAAQkOEWAoqNF7GCAQAAOzR4tgg5t2B5p+WV9IEdlBEv5EaHdRFVGWHaM+Xj5WAPxz3Xl7tP8V+qM8SPBdYDusY4J/nMcrT0w9XLomErEEa4C2EuLu5pADt+hLml9Ln2R+mDtRMoBDAZCXc2HTcvzqHLllbhAEb3ajoUzFJYF+5pb3Kgpff98xakirUxuwJTem5NsVysQxA76VY0jW+CPY6aRtXRP3LC2kLxqLpXAwXzL/b3LUa2mC3iiKs+djqxb3n8yyu0G5hHTXZ+Cl84Cg7yPXbxYG6jzzSYntmnuKY7FwVN7zGwY5QRVxRyDveBirXA6qnPXrjhaB9A8B+dKaemXM63CV9LxKCKfw==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 26 Aug 2022 14:18:27 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=EFA481404AB3B916DD0A95D9480CF938~YAAQkOEWAouNF7GCAQAAOzR4thAXH1/95oxjTh4cbli02yRJwwIwyKJmedO48LBqb4shsT+zIWWa/OLpaOdsUQZl0iHXgRCtW9lyY5taYMzLmrdefcm9UCeDTsDkfzgmOb/yzT5SSM50KDqSQtU82fYFE3BndDJjMTlWaouC0iLoqBE90eT/UuSZ8ycsVtLanIhTwjoxJD4/hYQc+O8d7gfGupv6yeeZsgWVY6a4DzpUKlmVGwATN+fIeTd6bDq99d1/+KJlKFJ4hH3INy/uooH2HxzUXYh1FUIQVJBCs202lY8pusvfmrt7zuMN14xazvJbb69PWqYmWVDavsNCNqSF2xqI40se9SttP+yPNNeEkqzEKdA3PE2Byqc=~3749433~4600119;
+        Domain=.sony.com; Path=/; Expires=Fri, 19 Aug 2022 18:18:27 GMT; Max-Age=14400
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"accesstoken","token_type":"bearer","expires_in":3599,"scope":"psn:mobile.v1
+        psn:clientapp","id_token":"idtoken","refresh_token":"refreshtoken","refresh_token_expires_in":5183999}'
+  recorded_at: Fri, 19 Aug 2022 14:18:26 GMT
+recorded_with: VCR 6.1.0

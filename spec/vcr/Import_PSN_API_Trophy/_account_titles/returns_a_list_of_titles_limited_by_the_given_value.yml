@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.playstation.PlayStationApp://redirect&response_type=code&scope=psn:mobile.v1%20psn:clientapp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - npsso=<PSN_NPSSO>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx
+      Content-Length:
+      - '0'
+      X-Psn-Request-Id:
+      - 7020e20a46c265399f31b17630385897
+      X-Psn-Correlation-Id:
+      - 55831db3-3f8e-4756-9ed8-a0dc16ade9b5
+      X-Requestid:
+      - 7020e20a46c265399f31b17630385897
+      X-Correlationid:
+      - 55831db3-3f8e-4756-9ed8-a0dc16ade9b5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Expires:
+      - '0'
+      Location:
+      - com.playstation.PlayStationApp://redirect/?code=v1.Ab23CD&cid=55831db3-3f8e-4756-9ed8-a0dc16ade9b5
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      Date:
+      - Fri, 19 Aug 2022 14:48:40 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _abck=36ECBAEF85117D875E412E3B8DF5474F~-1~YAAQkOEWAm/HGbGCAQAA7t+TtghYVGIq7WPTprgaUQAnTddK45gJ8uQ9c1Bq2Zusy/jJnb9PJCFje4IEsqDBVJhcs2DrGfu6+oAiaZktfncWHDIgtoF8CWBuyrGHcsWC9vdp8xpYZebqtpiXPR4Afna0HIV5TfUtwr+Bts1DAw2vuBKBtFtJdHsNKzK+tvFqtRpjy6capvDcNbJlvk8OufsbSQ7YmVSKLNVA1x9D515+PNqAn5v4sxckdk73E6gHcW1tGKFQkazJeZWEYBBHTXUAX9GngS8HccfPNAhLbT198Yo0JIuk3KMZdrtNgp6xInOKB491M14AYKo/HQhNDZCbj1GkPIn+9BzJDA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 26 Aug 2022 14:48:40 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=84863ED5184BD03DD4D18C5F6D28EEA3~YAAQkOEWAnDHGbGCAQAA7t+TthCZrwSIvWGsvxEpnVMMdCK0rgzgHOrWsvY4XeiqKs/PGG2k4jazKYNJPWUALlh/KsFB9UtBxhB+jAdrGnaCq+5p0KyUlLwf+owJvtCZjOBjLVYE7n9IPBVtLtQwdJnPQ1WKz1PUXwB8WWCz3ExRQt3wRqbi0WwEMtOrNWPMCCfy7jlEHRcAwh1Wv6lcFiqaG7UrdBEL/1qzCUTuqFaZFdKtKKqXzMJjpw87afXqSeOXh0k7b2v5QIh1oXlZwXXgMgq3/YLM1TEZRN3DjDTsI8Cs5y1Nk2l1EDG553Mhv9x9YiCJizp/LN+hqkln+UNiXJJz/u7MLtMD3/k8JoRSf/uZzaeVShhyCNw=~3159365~4604225;
+        Domain=.sony.com; Path=/; Expires=Fri, 19 Aug 2022 18:48:40 GMT; Max-Age=14400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 19 Aug 2022 14:48:40 GMT
+- request:
+    method: post
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=<PSN_CLIENT_ID>&client_secret=&code=v3.febjSx&grant_type=authorization_code&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&scope=psn%3Amobile.v1+psn%3Aclientapp&token_format=jwt
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic <PSN_BASIC>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Psn-Request-Id:
+      - d73d8d8fecd1e090c4c7f90af51c5ec3
+      X-Psn-Correlation-Id:
+      - 27b22012-39b9-4f0d-8b06-df52d30fd260
+      X-Requestid:
+      - d73d8d8fecd1e090c4c7f90af51c5ec3
+      X-Correlationid:
+      - 27b22012-39b9-4f0d-8b06-df52d30fd260
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store
+      Content-Length:
+      - '3619'
+      Date:
+      - Fri, 19 Aug 2022 14:48:41 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _abck=D88F466A1C82B9EC1A9E9584312332F4~-1~YAAQkOEWArHHGbGCAQAAquGTtgiq+NBEj5mhnr5t1pzgTpSrUxPkoqn8iZgVZwFIVylt5jSuDjgnZ6PQ968Jvm48P9Ruop/LXdCrSR8n/H2mOrGqpsEFpSz0XVE1aOTiMwGzpl4paE2C6z/z5JlmyUvmq3GWjXygcpdJ64ybco2LrnjcpisuP6yzXuqjSAc4jOYFvW5VgqKzC90x2Ay1OfNUvNYCYUT8fJlNZQDnc1EmHWir8WfsqEhuc81My1EKWU7pyBxrtb4fFUAt1/Pqn114UInZEjG21XV/zRJ2BBquIV3w/FFSXVB96qhUMmzABN58xCQYDF6CSyHmLHTxi7211h/fOmBoNu8gjQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 26 Aug 2022 14:48:41 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=B86FB46F167644BC9AD7DC8239633B0F~YAAQkOEWArLHGbGCAQAAquGTthAbnLWFe9Dz1iGunsVfPDjNTlK/NmM9x6O6k2Qq9mf6SzCK3+i7eZiS/RH4IbVhXKIT8Sjek8X+BJ4x065iPTlWqnkMgcDxUk8lv2sBK6JSILTLHAErsg2ja4f75tkF0rCpHzqvJ7kn3hPG5Ag2moK/ek+d4WWKHXL7sRo39idYH5s7ImPB9hPstuy5VR+7tNI1w/1dqAuNtFo911YJYUgncZGOH0LHlotlB9V2z6JBJH7h7lGM1BSK7hboyFsfopXqfECnOyx6DdKvkAUOfq3fDDvuD1jB3UGNO1EmTXZL5fofbCcNyz3vIoOOaadQBUt47KdZtPRSkxGlSE428mnCrkpb7mGGFaI=~3159365~4604225;
+        Domain=.sony.com; Path=/; Expires=Fri, 19 Aug 2022 18:48:40 GMT; Max-Age=14399
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"accesstoken","token_type":"bearer","expires_in":3599,"scope":"psn:mobile.v1
+        psn:clientapp","id_token":"idtoken","refresh_token":"refreshtoken","refresh_token_expires_in":5183999}'
+  recorded_at: Fri, 19 Aug 2022 14:48:40 GMT
+- request:
+    method: get
+    uri: https://ps5.np.playstation.net/api/trophy/v1/users/me/trophyTitles?limit=10&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <PSN_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '5840'
+      Server:
+      - Apache
+      Cache-Control:
+      - private
+      Date:
+      - Fri, 19 Aug 2022 14:19:19 GMT
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0cm9waHlUaXRsZXMiOlt7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IwNTUwNl8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wNyIsInRyb3BoeVRpdGxlTmFtZSI6IktpbGx6b25lIFNoYWRvdyBGYWxsIiwidHJvcGh5VGl0bGVEZXRhaWwiOiJLaWxsem9uZSBTaGFkb3cgRmFsbCB0cm9waHkgc2V0IiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMDU1MDZfMDBfMDA0ODRDMjYzNzNFQkQ3Mzg5NUM2NkU0RTVGRDFGOTE0MzJGMTc2ODk1L0NCNzI4QzJGQzRBRUY2MUY0OEM1Qzc4NjZCRjAwRDE5MzFGRjZDOUQuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6dHJ1ZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MjgsInNpbHZlciI6MTAsImdvbGQiOjgsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjY4LCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjE2LCJzaWx2ZXIiOjcsImdvbGQiOjYsInBsYXRpbnVtIjowfSwiaGlkZGVuRmxhZyI6ZmFsc2UsImxhc3RVcGRhdGVkRGF0ZVRpbWUiOiIyMDIyLTA4LTE4VDIwOjU0OjI3WiJ9LHsibnBTZXJ2aWNlTmFtZSI6InRyb3BoeSIsIm5wQ29tbXVuaWNhdGlvbklkIjoiTlBXUjA1OTYxXzAwIiwidHJvcGh5U2V0VmVyc2lvbiI6IjAxLjAyIiwidHJvcGh5VGl0bGVOYW1lIjoiRXZlcnlib2R5J3MgR29sZuKEoiIsInRyb3BoeVRpdGxlRGV0YWlsIjoiVGhpcyBpcyB0aGUgdHJvcGh5IHNldCBmb3IgRXZlcnlib2R5J3MgR29sZuKEoiIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vaW1hZ2UuYXBpLnBsYXlzdGF0aW9uLmNvbS90cm9waHkvbnAvTlBXUjA1OTYxXzAwXzAwODdCMUUyMjM2MDM5NDlCNUExRjE0NDQ5Mjc2REQ0REUxNEJCM0M4OS8xRTFDRjVDQzdDNDg4QzlCRDhDQjg4OEY3NzZGMUY2NEY2OTIwMjdBLlBORyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzQiLCJoYXNUcm9waHlHcm91cHMiOmZhbHNlLCJkZWZpbmVkVHJvcGhpZXMiOnsiYnJvbnplIjoxNSwic2lsdmVyIjoxMCwiZ29sZCI6NSwicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6NDcsImVhcm5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MTMsInNpbHZlciI6NiwiZ29sZCI6MSwicGxhdGludW0iOjB9LCJoaWRkZW5GbGFnIjpmYWxzZSwibGFzdFVwZGF0ZWREYXRlVGltZSI6IjIwMjItMDgtMTZUMjA6NDU6MzdaIn0seyJucFNlcnZpY2VOYW1lIjoidHJvcGh5MiIsIm5wQ29tbXVuaWNhdGlvbklkIjoiTlBXUjI1OTQ5XzAwIiwidHJvcGh5U2V0VmVyc2lvbiI6IjAxLjAxIiwidHJvcGh5VGl0bGVOYW1lIjoiS25vY2tvdXQgQ2l0eSIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vcHNub2JqLnByb2QuZGwucGxheXN0YXRpb24ubmV0L3Bzbm9iai9OUFdSMjU5NDlfMDAvMDMxZTRlZjYtZmQwMS00NTI5LWI2MWQtMzQ2ODFiZWFhZjIzLnBuZyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzUiLCJoYXNUcm9waHlHcm91cHMiOmZhbHNlLCJkZWZpbmVkVHJvcGhpZXMiOnsiYnJvbnplIjozNywic2lsdmVyIjoxMiwiZ29sZCI6MSwicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6MTAwLCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjM3LCJzaWx2ZXIiOjEyLCJnb2xkIjoxLCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMi0wOC0wNFQyMToyNzoxNloifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IyMDg0Nl8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMSIsInRyb3BoeVRpdGxlTmFtZSI6Iktub2Nrb3V0IENpdHkiLCJ0cm9waHlUaXRsZURldGFpbCI6Iktub2Nrb3V0IENpdHkiLCJ0cm9waHlUaXRsZUljb25VcmwiOiJodHRwczovL2ltYWdlLmFwaS5wbGF5c3RhdGlvbi5jb20vdHJvcGh5L25wL05QV1IyMDg0Nl8wMF8wMDZCOTJCOTQ1QUE3MjVGREM0RUY3ODNBMUM0OTA0QjAyODE3NThFQTEvOUE5NTQ0MTIwNTgzNTE5Q0ZFNDgyNzEwMDY0QkE5ODgyMDIyODc3Qi5QTkciLCJ0cm9waHlUaXRsZVBsYXRmb3JtIjoiUFM0IiwiaGFzVHJvcGh5R3JvdXBzIjpmYWxzZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MzcsInNpbHZlciI6MTIsImdvbGQiOjEsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjk3LCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjM1LCJzaWx2ZXIiOjEyLCJnb2xkIjoxLCJwbGF0aW51bSI6MH0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMi0wNy0zMFQxNTo1MDoxM1oifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkyIiwibnBDb21tdW5pY2F0aW9uSWQiOiJOUFdSMjIzMDVfMDAiLCJ0cm9waHlTZXRWZXJzaW9uIjoiMDEuMDAiLCJ0cm9waHlUaXRsZU5hbWUiOiJXcmVja2Zlc3QiLCJ0cm9waHlUaXRsZUljb25VcmwiOiJodHRwczovL3Bzbm9iai5wcm9kLmRsLnBsYXlzdGF0aW9uLm5ldC9wc25vYmovTlBXUjIyMzA1XzAwL2QyZmNmOTdlLTE2NzYtNGNlOS1hMDlhLWY3NWJjZGExZDExOS5QTkciLCJ0cm9waHlUaXRsZVBsYXRmb3JtIjoiUFM1IiwiaGFzVHJvcGh5R3JvdXBzIjpmYWxzZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6Miwic2lsdmVyIjoxMSwiZ29sZCI6NywicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6MTAwLCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjIsInNpbHZlciI6MTEsImdvbGQiOjcsInBsYXRpbnVtIjoxfSwiaGlkZGVuRmxhZyI6ZmFsc2UsImxhc3RVcGRhdGVkRGF0ZVRpbWUiOiIyMDIyLTA3LTI4VDIwOjU2OjU2WiJ9LHsibnBTZXJ2aWNlTmFtZSI6InRyb3BoeSIsIm5wQ29tbXVuaWNhdGlvbklkIjoiTlBXUjEzMzM1XzAwIiwidHJvcGh5U2V0VmVyc2lvbiI6IjAxLjAwIiwidHJvcGh5VGl0bGVOYW1lIjoiV3JlY2tmZXN0IiwidHJvcGh5VGl0bGVEZXRhaWwiOiJUaGUgVHJvcGh5IFNldCBvZiBXcmVja2Zlc3QuIiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMTMzMzVfMDBfMDBBQkQ4MTU1NUMwMEJENTFBQTBDQjU0MEMzQkNDRDhBMzI2REE1NUNDL0U3MkZCNUFFREI3OENCRDRDMTAyMjIzQzU1NTgxQkNDQ0JENTFFRUQuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6ZmFsc2UsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjIsInNpbHZlciI6MTEsImdvbGQiOjcsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjksImVhcm5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MCwic2lsdmVyIjowLCJnb2xkIjoxLCJwbGF0aW51bSI6MH0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMi0wNy0yOFQxMToxNToxM1oifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IwMTU2OV8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wNSIsInRyb3BoeVRpdGxlTmFtZSI6IktpbGx6b25lIDMiLCJ0cm9waHlUaXRsZURldGFpbCI6IktpbGx6b25lIDMgdHJvcGh5IHNldCIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vaW1hZ2UuYXBpLnBsYXlzdGF0aW9uLmNvbS90cm9waHkvbnAvTlBXUjAxNTY5XzAwXzAwNjcwMTVBM0VFNDIwMkFCNThDNTgwNkIwQUM1Rjc1NzgyQkY3QTM3OC9ENDkxRjc5QUY5REY2RUQ1RENBMkY5NUFFN0I0OEIyRDlDQzlBMkI4LlBORyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzMiLCJoYXNUcm9waHlHcm91cHMiOnRydWUsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjU5LCJzaWx2ZXIiOjE2LCJnb2xkIjozLCJwbGF0aW51bSI6MX0sInByb2dyZXNzIjozNSwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjoyOSwic2lsdmVyIjoyLCJnb2xkIjoxLCJwbGF0aW51bSI6MH0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMi0wNy0yN1QyMTo1MjoxOFoifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IwMjQ4NV8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMCIsInRyb3BoeVRpdGxlTmFtZSI6IlNpbGVudCBIaWxsIERvd25wb3VyIiwidHJvcGh5VGl0bGVEZXRhaWwiOiJTaWxlbnQgSGlsbCBEb3ducG91ciIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vaW1hZ2UuYXBpLnBsYXlzdGF0aW9uLmNvbS90cm9waHkvbnAvTlBXUjAyNDg1XzAwXzAwMjM4NkYwN0E0QTAwNzYyQUM3QzgzMDI0MjI2NTcwREU4N0YwQjZBNi8xM0VENzAzRTI4REFGRUEzMEUxMUM4RDc2N0Q5OTZEQTgzM0ZEOTQ5LlBORyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzMiLCJoYXNUcm9waHlHcm91cHMiOmZhbHNlLCJkZWZpbmVkVHJvcGhpZXMiOnsiYnJvbnplIjoyNCwic2lsdmVyIjoxNCwiZ29sZCI6MywicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6MTAwLCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjI0LCJzaWx2ZXIiOjE0LCJnb2xkIjozLCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMi0wNy0yNVQwODo0MTozNloifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkyIiwibnBDb21tdW5pY2F0aW9uSWQiOiJOUFdSMjEwOTBfMDAiLCJ0cm9waHlTZXRWZXJzaW9uIjoiMDEuMDAiLCJ0cm9waHlUaXRsZU5hbWUiOiJUb20gQ2xhbmN54oCZcyBSYWluYm93IFNpeMKuIEV4dHJhY3Rpb24iLCJ0cm9waHlUaXRsZUljb25VcmwiOiJodHRwczovL3Bzbm9iai5wcm9kLmRsLnBsYXlzdGF0aW9uLm5ldC9wc25vYmovTlBXUjIxMDkwXzAwLzhjNzVlOWViLTMxMTMtNDAwZC1iZjA0LWVlYmNjYTRmMzMxNC5wbmciLCJ0cm9waHlUaXRsZVBsYXRmb3JtIjoiUFM1IiwiaGFzVHJvcGh5R3JvdXBzIjpmYWxzZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MjYsInNpbHZlciI6MTMsImdvbGQiOjMsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjY1LCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjI0LCJzaWx2ZXIiOjgsImdvbGQiOjEsInBsYXRpbnVtIjowfSwiaGlkZGVuRmxhZyI6ZmFsc2UsImxhc3RVcGRhdGVkRGF0ZVRpbWUiOiIyMDIyLTA3LTI0VDExOjUxOjA1WiJ9LHsibnBTZXJ2aWNlTmFtZSI6InRyb3BoeSIsIm5wQ29tbXVuaWNhdGlvbklkIjoiTlBXUjA1MzI3XzAwIiwidHJvcGh5U2V0VmVyc2lvbiI6IjAxLjAxIiwidHJvcGh5VGl0bGVOYW1lIjoiSW5qdXN0aWNlOiBHb2RzIEFtb25nIFVzIFVsdGltYXRlIEVkaXRpb24iLCJ0cm9waHlUaXRsZURldGFpbCI6IlRyb3BoeSBzZXQgZm9yIEluanVzdGljZSIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vaW1hZ2UuYXBpLnBsYXlzdGF0aW9uLmNvbS90cm9waHkvbnAvTlBXUjA1MzI3XzAwXzAwMTE1M0IxQjlCQTI2Njc3NTg0NzRDQjc2NkNCNzVFNjQ4RkRCM0FCQS8wQkFGNTdCQ0VGNkI2RDQ2RjU5MkYzQzc2QTE3QjZDOTJFRjU2Q0E0LlBORyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzQiLCJoYXNUcm9waHlHcm91cHMiOmZhbHNlLCJkZWZpbmVkVHJvcGhpZXMiOnsiYnJvbnplIjozOCwic2lsdmVyIjoxMCwiZ29sZCI6MiwicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6NDEsImVhcm5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MjEsInNpbHZlciI6NCwiZ29sZCI6MCwicGxhdGludW0iOjB9LCJoaWRkZW5GbGFnIjpmYWxzZSwibGFzdFVwZGF0ZWREYXRlVGltZSI6IjIwMjItMDctMDdUMTA6Mjg6MTJaIn1dLCJuZXh0T2Zmc2V0IjoxMCwidG90YWxJdGVtQ291bnQiOjIzM30=
+  recorded_at: Fri, 19 Aug 2022 14:19:18 GMT
+recorded_with: VCR 6.1.0
