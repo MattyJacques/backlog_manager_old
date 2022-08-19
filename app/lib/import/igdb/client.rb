@@ -55,7 +55,8 @@ module Import
         client = OAuth2::Client.new(ENV['IGDB_CLIENT_ID'],
                                     ENV['IGDB_CLIENT_SECRET'],
                                     site: 'https://id.twitch.tv',
-                                    token_url: 'oauth2/token')
+                                    token_url: 'oauth2/token',
+                                    auth_scheme: :request_body)
         set_token(client.client_credentials.get_token)
 
         Rails.cache.read('igdb_token')
