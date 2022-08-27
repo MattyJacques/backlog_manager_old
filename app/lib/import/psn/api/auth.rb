@@ -29,6 +29,8 @@ module Import
         def self.fetch_auth_code
           response = HTTParty.get(auth_url, headers: HEADER, follow_redirects: false)
 
+          Rails.logger.info(response)
+
           parse_code(response.headers['location'])
         end
 
@@ -60,13 +62,17 @@ module Import
           else
             error = location.match(/&error=([A-Za-z0-9:\?_\-\.\/=]+)/)
 
-            if error[1] == 'login_required'
-              Rails.logger.error('PSN authorisation failed, NPSSO code has expired')
-            else
-              Rails.logger.error("Unhandled PSN auth error (#{error})")
-            end
+            message = get_error_message(error[1])
+            Rails.logger.error(message)
+            raise message
+          end
+        end
 
-            raise "Failed to get psn authorisation code"
+        def self.get_error_message(error)
+          if error == 'login_required'
+            'PSN authorisation failed, NPSSO code has expired' 
+          else
+            "Unhandled PSN auth error (#{error})"
           end
         end
       end

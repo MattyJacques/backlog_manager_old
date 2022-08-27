@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.playstation.PlayStationApp://redirect&response_type=code&scope=psn:mobile.v1%20psn:clientapp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - npsso=<PSN_NPSSO>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx
+      Content-Length:
+      - '0'
+      X-Psn-Request-Id:
+      - 7f46095eecb8bc3acd66fec86e9c4813
+      X-Psn-Correlation-Id:
+      - 07e6d1ad-e9e2-4a3a-aa89-0a97e9c9f063
+      X-Requestid:
+      - 7f46095eecb8bc3acd66fec86e9c4813
+      X-Correlationid:
+      - 07e6d1ad-e9e2-4a3a-aa89-0a97e9c9f063
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Expires:
+      - '0'
+      Location:
+      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v1+psn%3Aclientapp&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=07e6d1ad-e9e2-4a3a-aa89-0a97e9c9f063
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      Date:
+      - Sat, 27 Aug 2022 21:33:49 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _abck=5D670F2A4F9667BF29BFB0B963EBBFD0~-1~YAAQkOEWAgW+19yCAQAAwqw54QgsV/eTbrZF7TZT75o4mASAaldPHoRionsAu7vPkw3g3dR8FR+cBh8KtH8QNFOI4WMDdgYed2hlVkgir7yaA/mp2SXpPvTglMhAxQ6NwCOVMjM5g3BunFMPxO/XrM+6B44I3iTlpUEY+KRvGBuxxk20eXG7vScony40zRDCYrs8Otn5KpDcYrdSFhRdUexwPPvmQ1nbaf6SEEnzM3KdwwWfkidybvr4VGabXtFIUO/P8r9DHRXT05B/QakP2pnUS58j45A0oHlC7x5RSUDjgqZwxAqSkXtNkNTRMU1bccLlLCJ0IoBRVK8xevbVDQcKCjElQ0IwYvIEYA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Sat, 03 Sep 2022 21:33:49 GMT; Max-Age=604800;
+        Secure
+      - bm_sz=70A13BC149EE20550186976F6485D1C4~YAAQkOEWAga+19yCAQAAwqw54RB52YMqrbVcvkb08ki8OnZdDvCBuppO7LFPs4eoCMe9m7fILxyYkMHx/sHCFBDZzDuO62Fl0E4UYGKDh6y290y6VNoBsaEd5rQYJa1fZhBSx51EEeBtREgkChhJNILdHkx0j/Sq/c8xGDRDOovKvV+Ze4PQqcjgcwrcc3vgQgjgB6hosYJud5Pujwn22O+X+P3Qhoi2GM6Z7pvj9oB7wiCcMzXop83VGRcKnwx8uXy4ScBFXoTqnErvRgQRTq3p05MZSMVwYOQaXItUdCqZ6Ze70eMp9MQmb5pGngP00930yGp2AgC5n5n7t4nZWOvezyhnXs1jvQVTHPEQ0UvMzJ5IoAo3FoQ/1WU=~4273222~3420226;
+        Domain=.sony.com; Path=/; Expires=Sun, 28 Aug 2022 01:33:49 GMT; Max-Age=14400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 27 Aug 2022 21:33:48 GMT
+recorded_with: VCR 6.1.0
