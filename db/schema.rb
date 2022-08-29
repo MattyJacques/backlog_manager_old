@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_29_091435) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_26_185106) do
   create_table "games", force: :cascade do |t|
     t.string "name", null: false
     t.integer "igdb_id", null: false
+    t.integer "how_long_to_beat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,16 +55,39 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_29_091435) do
   end
 
   create_table "release_dates", force: :cascade do |t|
-    t.date "date"
     t.integer "game_id", null: false
     t.integer "platform_id", null: false
+    t.integer "region_id"
+    t.string "psn_communication_id"
+    t.string "psn_title_id"
+    t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index "\"game\", \"platform\", \"region_id\", \"psn_communication_id\"", name: "unique release index", unique: true
     t.index ["game_id"], name: "index_release_dates_on_game_id"
     t.index ["platform_id"], name: "index_release_dates_on_platform_id"
+  end
+
+  create_table "trophies", force: :cascade do |t|
+    t.integer "game_id", null: false
+    t.integer "psn_id", null: false
+    t.string "name", null: false
+    t.string "detail", null: false
+    t.string "icon_url", null: false
+    t.integer "rank", null: false
+    t.boolean "hidden", default: false, null: false
+    t.integer "progress_target", default: 1
+    t.string "trophy_group"
+    t.string "reward_name"
+    t.string "reward_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id", "psn_id"], name: "index_trophies_on_game_id_and_psn_id", unique: true
+    t.index ["game_id"], name: "index_trophies_on_game_id"
   end
 
   add_foreign_key "platforms", "platform_families"
   add_foreign_key "release_dates", "games"
   add_foreign_key "release_dates", "platforms"
+  add_foreign_key "trophies", "games"
 end
