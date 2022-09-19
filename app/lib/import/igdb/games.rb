@@ -34,7 +34,7 @@ module Import
         game = import_game(data)
         game.genres = import_genres(data.genres)
         game.platforms = import_platforms(data.platforms)
-        game.release_dates = import_release_dates(game, data.release_dates)
+        game.releases = import_releases(game, data.release_dates)
 
         game
       end
@@ -55,10 +55,10 @@ module Import
         end
       end
 
-      def self.import_release_dates(game, dates)
+      def self.import_releases(game, dates)
         dates.map do |date|
           platform = Platform.find_by!(igdb_id: date.platform)
-          ReleaseDate.convert_create(game, platform, date.date)
+          Release.convert_timestamp_and_create(game, platform, date.region, date.date)
         end
       end
     end

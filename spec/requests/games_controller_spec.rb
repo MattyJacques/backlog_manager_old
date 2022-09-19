@@ -69,7 +69,7 @@ RSpec.describe 'Games', type: :request do
         .and change(Genre, :count).by(2)
         .and change(Platform, :count).by(1)
         .and change(PlatformFamily, :count).by(1)
-        .and change(ReleaseDate, :count).by(2)
+        .and change(Release, :count).by(2)
 
       game = Game.last
       expect(game.name).to eq(valid_game[:name])
@@ -78,8 +78,8 @@ RSpec.describe 'Games', type: :request do
       expect(game.genres[1].name).to eq('Adventure')
       expect(game.platforms[0].name).to eq('PlayStation 3')
       expect(game.platforms[0].platform_family.name).to eq('PlayStation')
-      expect(game.release_dates[0].date).to eq(Date.new(2013, 6, 14))
-      expect(game.release_dates[1].date).to eq(Date.new(2013, 6, 14))
+      expect(game.releases[0].date).to eq(Date.new(2013, 6, 14))
+      expect(game.releases[1].date).to eq(Date.new(2013, 6, 14))
 
       expect(response).to redirect_to(game_url(game))
     end

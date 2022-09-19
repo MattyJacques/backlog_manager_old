@@ -44,7 +44,7 @@ RSpec.describe Import::IGDB::Games do
           .and change(Genre, :count).by(2)
           .and change(Platform, :count).by(1)
           .and change(PlatformFamily, :count).by(1)
-          .and change(ReleaseDate, :count).by(2)
+          .and change(Release, :count).by(2)
 
         expect(result.name).to eq('The Last of Us')
         expect(result.igdb_id).to eq(1009)
@@ -52,8 +52,8 @@ RSpec.describe Import::IGDB::Games do
         expect(result.genres[1].name).to eq('Adventure')
         expect(result.platforms[0].name).to eq('PlayStation 3')
         expect(result.platforms[0].platform_family.name).to eq('PlayStation')
-        expect(result.release_dates[0].date).to eq(Date.new(2013, 6, 14))
-        expect(result.release_dates[1].date).to eq(Date.new(2013, 6, 14))
+        expect(result.releases[0].date).to eq(Date.new(2013, 6, 14))
+        expect(result.releases[1].date).to eq(Date.new(2013, 6, 14))
       end
     end
 

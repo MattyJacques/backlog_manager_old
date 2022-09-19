@@ -54,18 +54,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_26_185106) do
     t.index ["platform_family_id"], name: "index_platforms_on_platform_family_id"
   end
 
-  create_table "release_dates", force: :cascade do |t|
+  create_table "releases", force: :cascade do |t|
     t.integer "game_id", null: false
     t.integer "platform_id", null: false
-    t.integer "region_id"
+    t.integer "region", default: 8, null: false
     t.string "psn_communication_id"
     t.string "psn_title_id"
     t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "\"game\", \"platform\", \"region_id\", \"psn_communication_id\"", name: "unique release index", unique: true
-    t.index ["game_id"], name: "index_release_dates_on_game_id"
-    t.index ["platform_id"], name: "index_release_dates_on_platform_id"
+    t.index "\"game\", \"platform\", \"region\", \"psn_communication_id\"", name: "unique release index", unique: true
+    t.index ["game_id"], name: "index_releases_on_game_id"
+    t.index ["platform_id"], name: "index_releases_on_platform_id"
   end
 
   create_table "trophies", force: :cascade do |t|
@@ -87,7 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_26_185106) do
   end
 
   add_foreign_key "platforms", "platform_families"
-  add_foreign_key "release_dates", "games"
-  add_foreign_key "release_dates", "platforms"
+  add_foreign_key "releases", "games"
+  add_foreign_key "releases", "platforms"
   add_foreign_key "trophies", "games"
 end

@@ -8,7 +8,7 @@ RSpec.describe Game, type: :model do
 
   it { should have_and_belong_to_many(:genres) }
   it { should have_and_belong_to_many(:platforms) }
-  it { should have_many(:release_dates).dependent(:destroy) }
+  it { should have_many(:releases).dependent(:destroy) }
 
   context 'when validating everything' do
     it 'is valid with valid attributes' do
