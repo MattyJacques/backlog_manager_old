@@ -242,7 +242,7 @@ GEM
       hashie
       version_gem (~> 1.1)
     sqlite3 (1.5.4-x86_64-linux)
-    stimulus-rails (1.1.0)
+    stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.1)
