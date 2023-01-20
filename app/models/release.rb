@@ -6,11 +6,12 @@
 # psn_communication_id: string
 # psn_title_id: string
 class Release < ApplicationRecord
-  belongs_to :game
-  belongs_to :platform
-
   enum region: { europe: 1, north_america: 2, australia: 3, new_zealand: 4,
     japan: 5, china: 6, asia: 7, worldwide: 8, korea: 9, brazil: 10 }, _prefix: true
+
+  belongs_to :game
+  belongs_to :platform
+  has_many :trophy_lists, dependent: :destroy
 
   validates :date, presence: true
   validates :psn_communication_id, format: { with: /\ANPWR[0-9]{5}_00\z/, allow_nil: true },

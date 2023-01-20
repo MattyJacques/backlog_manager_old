@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_26_185106) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_19_210634) do
   create_table "games", force: :cascade do |t|
     t.string "name", null: false
     t.integer "igdb_id", null: false
@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_26_185106) do
   end
 
   create_table "trophies", force: :cascade do |t|
-    t.integer "game_id", null: false
+    t.integer "trophy_list_id", null: false
     t.integer "psn_id", null: false
     t.string "name", null: false
     t.string "detail", null: false
@@ -82,12 +82,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_26_185106) do
     t.string "reward_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["game_id", "psn_id"], name: "index_trophies_on_game_id_and_psn_id", unique: true
-    t.index ["game_id"], name: "index_trophies_on_game_id"
+    t.index ["trophy_list_id", "psn_id"], name: "index_trophies_on_trophy_list_id_and_psn_id", unique: true
+    t.index ["trophy_list_id"], name: "index_trophies_on_trophy_list_id"
+  end
+
+  create_table "trophy_lists", force: :cascade do |t|
+    t.integer "release_id", null: false
+    t.integer "region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["release_id"], name: "index_trophy_lists_on_release_id"
   end
 
   add_foreign_key "platforms", "platform_families"
   add_foreign_key "releases", "games"
   add_foreign_key "releases", "platforms"
-  add_foreign_key "trophies", "games"
+  add_foreign_key "trophies", "trophy_lists"
+  add_foreign_key "trophy_lists", "releases"
 end

@@ -1,7 +1,7 @@
 class CreateTrophies < ActiveRecord::Migration[7.0]
   def change
     create_table :trophies do |t|
-      t.belongs_to :game, null: false, foreign_key: true
+      t.belongs_to :trophy_list, null: false, foreign_key: true
       t.integer :psn_id, null: false
       t.string :name, null: false
       t.string :detail, null: false
@@ -15,7 +15,7 @@ class CreateTrophies < ActiveRecord::Migration[7.0]
 
       t.timestamps
 
-      t.index [:game_id, :psn_id], unique: true
+      t.index [:trophy_list_id, :psn_id], unique: true
     end
   end
 end
