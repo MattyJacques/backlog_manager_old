@@ -1,5 +1,3 @@
-require 'httparty'
-
 module Import
   module PSN
     module API
@@ -28,7 +26,6 @@ module Import
 
         def self.fetch_auth_code
           response = HTTParty.get(auth_url, headers: HEADER, follow_redirects: false)
-
           Rails.logger.info(response)
 
           parse_code(response.headers['location'])
@@ -36,8 +33,7 @@ module Import
 
         def self.fetch_token(code)
           client.auth_code.get_token( code,
-                                      redirect_uri: 'com.playstation.PlayStationApp://redirect',
-                                      scope: 'psn:mobile.v1 psn:clientapp',
+                                      redirect_uri: 'com.scee.psxandroid.scecompcall://redirect',
                                       token_format: 'jwt',
                                       headers: { Authorization: "Basic #{BASIC_TOKEN}" })
         end
@@ -48,8 +44,8 @@ module Import
 
         def self.auth_url
           client.auth_code.authorize_url( access_type: 'offline',
-                                          redirect_uri: 'com.playstation.PlayStationApp://redirect',
-                                          scope: 'psn:mobile.v1 psn:clientapp')
+                                          redirect_uri: 'com.scee.psxandroid.scecompcall://redirect',
+                                          scope: 'psn:mobile.v2.core psn:clientapp')
         end
 
         private
@@ -70,7 +66,7 @@ module Import
 
         def self.get_error_message(error)
           if error == 'login_required'
-            'PSN authorisation failed, NPSSO code has expired' 
+            'PSN authorisation failed, NPSSO code has expired'
           else
             "Unhandled PSN auth error (#{error})"
           end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.playstation.PlayStationApp://redirect&response_type=code&scope=psn:mobile.v1%20psn:clientapp
+    uri: https://ca.account.sony.com/api/authz/v3/oauth/authorize?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.scee.psxandroid.scecompcall://redirect&response_type=code&scope=psn:mobile.v2.core%20psn:clientapp
     body:
       encoding: US-ASCII
       string: ''
@@ -25,13 +25,13 @@ http_interactions:
       Content-Length:
       - '0'
       X-Psn-Request-Id:
-      - fa9a8e7f97e4a9637a54e24e6c094120
+      - 62ff50fc6fbfe59325002a02c0d05a0f
       X-Psn-Correlation-Id:
-      - 66e921f6-ed99-466e-8df5-63923d709ff8
+      - 76cf70a9-4de6-4cba-9448-2012fb069eb2
       X-Requestid:
-      - fa9a8e7f97e4a9637a54e24e6c094120
+      - 62ff50fc6fbfe59325002a02c0d05a0f
       X-Correlationid:
-      - 66e921f6-ed99-466e-8df5-63923d709ff8
+      - 76cf70a9-4de6-4cba-9448-2012fb069eb2
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
@@ -39,7 +39,7 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - com.playstation.PlayStationApp://redirect/?code=v1.Ab23CD&cid=66e921f6-ed99-466e-8df5-63923d709ff8
+      - com.scee.psxandroid.scecompcall://redirect/?code=v1.Ab23CD&cid=76cf70a9-4de6-4cba-9448-2012fb069eb2
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Xss-Protection:
@@ -47,28 +47,28 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Date:
-      - Fri, 19 Aug 2022 14:18:26 GMT
+      - Fri, 20 Jan 2023 22:41:19 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=4C70A17B501E744CEEF64B81A726C303~-1~YAAQkOEWAmyNF7GCAQAAnTJ4tghfrDlhOmYr39Kcx29UnqXYIYYE/RCQc18O6YxP4U0eoWfj8xtGCCjR6+BQesAFtQuKlWoJjWNFI/M9mkq/53jPRKeRYowrFXHOPyek1RE6U3M078SO/awCDh73yrlPeqLBXXVr7Gv4YtEaT2/Ru06jMk2O5jNTgPV8bDhwEPGTXxOblJMdT4BOtmS/zeN4yx+yMQU+6WaDYKZLuceAxoRKWbKA3o8kiHb+YplkbWlR4OVGbw43ZgrB70v3GDz+Z3TbCLvYG1jh40R2z7doTpXPiptYwJsaJVoZiA1yeuM06Mfe6vamp/NrviTD5uBfduN+4Dg+rdAgcQ==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 26 Aug 2022 14:18:26 GMT; Max-Age=604800;
+      - _abck=2CFAE2859DEBDA537F7C4EB173B4DAA4~-1~YAAQl7D3SCDfXs+FAQAA8fFX0QmdM2xX8VSSyYMVa4kBbIybianKadyHExlaD/8nQGSbJA6zVvwEEhSvPmUqXcCPWCmjR1JNkn8xijsSJYQN0+nxcINRFjwY8RtLPq0jX8yWDLeRSAbU2Q9ja0EhtWbHBUxt7Dw48+nQXLBrp7Q7ad4uV5VnrxxQpQroq+u+n+ylIkmuBcUE/r4v0/rTGMaoAmSmwMvwHv3UOoBTv9e1sMV2gzyXDH84+k9rf6c5mQNWW8yvpMIoj3bMxyUXgN9yRGg+4WCa6r88mFY2apPazBBZCj/iE28zHfa98pGJ1YV7u815HVjxJd1mmjyweMt0v4LXdNR14LT4eZwVigDIsvAD8qT2GVn9fW/Kly8J/az7Vl5A7p1y2NuJNg==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 22:41:19 GMT; Max-Age=604800;
         Secure
-      - bm_sz=0DD41F80A1A81E5CC0694CF9A8196AB8~YAAQkOEWAm2NF7GCAQAAnTJ4thACkgVzRlqhKvm7fC9sSWaMC4F4AhEiAFdk2cLuMKbzsqApD2oklqGOILk02mSld9PR8EkVX/TsutsVSOEtuK///yoYKev+3Lpr+7vX1+nT8h8qXMhkV9WDjjMmlxXVp3JGz0UEUeKmekXfbgA9arFRNoU2CGj7B8L6KGFWMbDL8PN4LY/HXoE41svNj7V4HE56eOKpgc3++vK7zkXMmRpabHyzIulxL9Nr8e1Unlh9XLHucw5giGRKNQvNR8tAovD+YU+qdhOVU6G8aZjmISMyO7DYJme7v+94uL8UQkiHIZ/4rncgy2wX6nlrQ1OvRxrLjEpU+L57MY8276jNDpX778bbpuROtx0=~3556407~3290674;
-        Domain=.sony.com; Path=/; Expires=Fri, 19 Aug 2022 18:18:26 GMT; Max-Age=14400
+      - bm_sz=3F345E007C70AC95A7332E27E309611B~YAAQl7D3SCHfXs+FAQAA8fFX0RIH9vr8NsR8XWU2MAoRwZU/+0y5S58b3pI1o9L46guwZBgXZ3p7QOSREf4EqsTodThOwN2W7ozyBgaDZQZOi9JGZ2w4urcEreGMyl/2YH9MUJ7yK4C2CPwnl1mwvYB8lKUMO6zdNRR9AjW81DGhIfOJ8lW5jqT08iq3zLvJ9IqePjq9oZA/47UpKskFgMw3XiB5is7iGtyknYQzXEd3sthuBE1kOX+o+xYxRVuv7EWEVWhFP3GtKsR9QkZf7RGeucNfFXt36woaprwCwmcuFopgqjOj95p8X82JP39CZmzrtCW4772fdJndphYXj4upe+m2o0trn2AeqU+eH3w8LZSSq+fUfrTqaTo=~3486009~3491124;
+        Domain=.sony.com; Path=/; Expires=Sat, 21 Jan 2023 02:41:19 GMT; Max-Age=14400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 19 Aug 2022 14:18:26 GMT
+  recorded_at: Fri, 20 Jan 2023 22:41:17 GMT
 - request:
     method: post
     uri: https://ca.account.sony.com/api/authz/v3/oauth/token
     body:
       encoding: UTF-8
-      string: client_id=<PSN_CLIENT_ID>&client_secret=&code=v3.xaKvfS&grant_type=authorization_code&redirect_uri=com.playstation.PlayStationApp%3A%2F%2Fredirect&scope=psn%3Amobile.v1+psn%3Aclientapp&token_format=jwt
+      string: code=v3.EMcBA0&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&token_format=jwt
     headers:
       User-Agent:
-      - Faraday v2.2.0
+      - Faraday v2.5.2
       Content-Type:
       - application/x-www-form-urlencoded
       Authorization:
@@ -87,32 +87,32 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       X-Psn-Request-Id:
-      - 7abf8043cab4b392c1ba583245a62d0c
+      - 605d6c95a68ff551c2fb065aa79e796f
       X-Psn-Correlation-Id:
-      - 48cd2250-0ce5-4946-bebe-fe3f1f348ed0
+      - 67fbcdb2-a8e0-4d05-a5ed-0180795d6232
       X-Requestid:
-      - 7abf8043cab4b392c1ba583245a62d0c
+      - 605d6c95a68ff551c2fb065aa79e796f
       X-Correlationid:
-      - 48cd2250-0ce5-4946-bebe-fe3f1f348ed0
+      - 67fbcdb2-a8e0-4d05-a5ed-0180795d6232
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
       - no-store
       Content-Length:
-      - '3619'
+      - '3696'
       Date:
-      - Fri, 19 Aug 2022 14:18:27 GMT
+      - Fri, 20 Jan 2023 22:41:23 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=4BF4DAD1DCDE9DA349EAD3712EA92B68~-1~YAAQkOEWAoqNF7GCAQAAOzR4tgg5t2B5p+WV9IEdlBEv5EaHdRFVGWHaM+Xj5WAPxz3Xl7tP8V+qM8SPBdYDusY4J/nMcrT0w9XLomErEEa4C2EuLu5pADt+hLml9Ln2R+mDtRMoBDAZCXc2HTcvzqHLllbhAEb3ajoUzFJYF+5pb3Kgpff98xakirUxuwJTem5NsVysQxA76VY0jW+CPY6aRtXRP3LC2kLxqLpXAwXzL/b3LUa2mC3iiKs+djqxb3n8yyu0G5hHTXZ+Cl84Cg7yPXbxYG6jzzSYntmnuKY7FwVN7zGwY5QRVxRyDveBirXA6qnPXrjhaB9A8B+dKaemXM63CV9LxKCKfw==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 26 Aug 2022 14:18:27 GMT; Max-Age=604800;
+      - _abck=1438DADD18F55F05B9B816C2BCA6B649~-1~YAAQl7D3SA3gXs+FAQAAwABY0QnibB7kEpLp01ZRFoHtR0mKdwFD4q92gBgILf4x8em2JZcYN1ooPaINVmzNemKCIrbdsCvkgbs2bwYHO7VSxIb1NrV6t/lbwFOV0uU79ZwW8z3q+E5Zjh3uuT21K3qgd0EPcl6bgIBK6RlsBQhnTiCotfjIeLw7eI5bJL+64D407iatIoLAlUop/Sm++dVT6Xkhb0pzN8ygh1ZUGB4kJlMpUlR+BPRI9siseGQEXUCVVnMg/Wl+KASJcdZEmRiZ6aJC0fIH1VohE+Jm5lpCJJVLihTaaQS0YUCpRRmCNlvmgM4uY1aS6Dm/d7xQaLsp0wj6iXNK/+YVddNzRzFYk5/218JQotGdk1EgS4/RcSsdrMwXpPiDHwdPDw==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 22:41:23 GMT; Max-Age=604800;
         Secure
-      - bm_sz=EFA481404AB3B916DD0A95D9480CF938~YAAQkOEWAouNF7GCAQAAOzR4thAXH1/95oxjTh4cbli02yRJwwIwyKJmedO48LBqb4shsT+zIWWa/OLpaOdsUQZl0iHXgRCtW9lyY5taYMzLmrdefcm9UCeDTsDkfzgmOb/yzT5SSM50KDqSQtU82fYFE3BndDJjMTlWaouC0iLoqBE90eT/UuSZ8ycsVtLanIhTwjoxJD4/hYQc+O8d7gfGupv6yeeZsgWVY6a4DzpUKlmVGwATN+fIeTd6bDq99d1/+KJlKFJ4hH3INy/uooH2HxzUXYh1FUIQVJBCs202lY8pusvfmrt7zuMN14xazvJbb69PWqYmWVDavsNCNqSF2xqI40se9SttP+yPNNeEkqzEKdA3PE2Byqc=~3749433~4600119;
-        Domain=.sony.com; Path=/; Expires=Fri, 19 Aug 2022 18:18:27 GMT; Max-Age=14400
+      - bm_sz=E2F69C23AFD48D9A0D5F213B6D2F5933~YAAQl7D3SA7gXs+FAQAAwABY0RKLShSb40PwW1jvYuQf5rZgSt7QVgFPbSdF4l5PRGLwlJUzTUg69cOX8sWVvall7vJ+qJ57hERlNTzgcqMteStpvXkDB5gbSVw7nKhGmrS7M2Qm95dYvF0h3ISV6xOv7rDxUjFQuAGetrvrl4JCB8J1BgHUyH+FtWR80ZD3UVqhkmTyPe+2lhQDg5wH4lOYa7V4J7EHiD+RhSHBj/hHS4U4v8P6cljddFw4+izXyV3rdKU1zvPD1Of9douvg0vlI1hiTyDaNJXgn+j6tdFgCxnipufprEW5elVOhUTcZwiGmu2pS0CFIDEfaZtMlGtJCKGin3JVNaBWtN67nyhL3J26j3ymbVkx2dk=~3159857~4469827;
+        Domain=.sony.com; Path=/; Expires=Sat, 21 Jan 2023 02:41:23 GMT; Max-Age=14400
     body:
       encoding: UTF-8
-      string: '{"access_token":"accesstoken","token_type":"bearer","expires_in":3599,"scope":"psn:mobile.v1
+      string: '{"access_token":"accesstoken","token_type":"bearer","expires_in":3599,"scope":"psn:mobile.v2.core
         psn:clientapp","id_token":"idtoken","refresh_token":"refreshtoken","refresh_token_expires_in":5183999}'
-  recorded_at: Fri, 19 Aug 2022 14:18:26 GMT
+  recorded_at: Fri, 20 Jan 2023 22:41:21 GMT
 recorded_with: VCR 6.1.0

@@ -21,9 +21,9 @@ RSpec.describe Import::PSN::API::Auth, tag: :psn do
 
     context 'when PSN returns an unknown error' do
       it 'returns a unhandled error error' do
-        expect(Rails.logger).to receive(:error).with('Unhandled PSN auth error (no_data_for_you)')
+        expect(Rails.logger).to receive(:error).with('Unhandled PSN auth error (something_went_wrong)')
         expect{described_class.authenticate}.to raise_error(RuntimeError,
-                                                            /Unhandled PSN auth error \(no_data_for_you\)/)
+                                                            /Unhandled PSN auth error \(something_went_wrong\)/)
       end
     end
   end
