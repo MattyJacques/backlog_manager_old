@@ -2,46 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: https://id.twitch.tv/oauth2/token
-    body:
-      encoding: UTF-8
-      string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
-    headers:
-      User-Agent:
-      - Faraday v2.2.0
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 30 May 2022 17:51:51 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '93'
-      Connection:
-      - keep-alive
-      Server:
-      - nginx/1.18.0
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Ctxlog-Logid:
-      - 1-62950436-308a43a493d7216212148061
-    body:
-      encoding: UTF-8
-      string: '{"access_token":"accesstoken","expires_in":5314769,"token_type":"bearer"}
-
-        '
-  recorded_at: Mon, 30 May 2022 17:51:49 GMT
-- request:
-    method: post
     uri: https://api.igdb.com/v4/games
     body:
       encoding: UTF-8
@@ -55,7 +15,7 @@ http_interactions:
       Client-Id:
       - "<IGDB_CLIENT_ID>"
       Authorization:
-      - Bearer accesstoken
+      - Bearer <IGDB_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -68,45 +28,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 May 2022 18:07:38 GMT
+      - Wed, 01 Feb 2023 22:38:19 GMT
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - dc82448d-41aa-4141-8955-00e4ddab9d5c
+      - 311a03ef-1c48-409d-b55c-fad686bc2b9b
       X-Amzn-Remapped-Content-Length:
       - '676'
       X-Amz-Apigw-Id:
-      - S84smHYtvHcFwhg=
-      X-Amzn-Remapped-Server:
-      - Javalin
+      - frl6TGFjvHcFjjw=
       X-Count:
       - '1'
       X-Amzn-Remapped-Date:
-      - Mon, 30 May 2022 18:07:38 GMT
+      - Wed, 01 Feb 2023 22:38:19 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 76cca2ef798b9dc955bb151bf3bff218.cloudfront.net (CloudFront)
+      - 1.1 e63c071ca838fc63dd9d080ea4fe0c8a.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - LHR50-P1
+      - MAN50-C1
       X-Amz-Cf-Id:
-      - H8NGTB798I4T5vhvYZE0ruSNkDYBJb-mrTjKl10DdsLxK5biI3RUHQ==
+      - pXw3YA-dA-UtGt17okNnwCt1KYocV89ShtiBtkdjM6NcaxM8C6_9kQ==
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Set-Cookie:
+      - __cf_bm=RipYzv36J6GVC0unXRMWG_4H8w6g5RsUTu12woOCcsA-1675291099-0-AQbLtRZ/ouSZoVKpsrYxtaMvLmS19zZ4ZPqJp0lJmUKuCt0iwd0szHa2alKxWBJDmDwu/VZSZ2bF1OLG21cJPno=;
+        path=/; expires=Wed, 01-Feb-23 23:08:19 GMT; domain=.igdb.com; HttpOnly; Secure;
+        SameSite=None
+      Server-Timing:
+      - cf-q-config;dur=9.9999997473788e-06
       Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 713969166a26750d-LHR
+      - 792e2d38685d074a-MAN
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -152,5 +114,5 @@ http_interactions:
             ]
           }
         ]
-  recorded_at: Mon, 30 May 2022 18:07:36 GMT
+  recorded_at: Wed, 01 Feb 2023 22:38:19 GMT
 recorded_with: VCR 6.1.0

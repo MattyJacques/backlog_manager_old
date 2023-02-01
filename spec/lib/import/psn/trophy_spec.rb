@@ -31,7 +31,7 @@ RSpec.describe Import::PSN::Trophy do
       end
     end
   end
-  
+
   describe '.earned_trophies_for_title', :vcr do
     context 'when the title is a PS3, PS4 or PS Vita title' do
       it 'returns a list of earned trophies for a single title' do
@@ -52,11 +52,11 @@ RSpec.describe Import::PSN::Trophy do
         expect(result[1]['trophyEarnedRate']).to_not be_nil
       end
     end
-    
+
     context 'when the title is a PS5 title' do
       it 'returns a list of earned trophies for a single PS5 title' do
         # TODO - Get a result which has an in progress trophy
-        result = described_class.earned_trophies_for_title('NPWR22792_00', 'trophy2', 'me')
+        result = described_class.earned_trophies_for_title('NPWR22792_00', 'trophy2', '6588603711421927529')
 
         expect(result[0]['trophyId']).to_not be_nil
         expect(result[0]['trophyHidden']).to_not be_nil

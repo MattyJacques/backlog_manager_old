@@ -3,7 +3,6 @@ module Import
     module API
       class Auth
         AUTH_URL = 'https://ca.account.sony.com/api/authz/v3/'
-        HEADER = { 'Cookie' => "npsso=#{ENV['PSN_NPSSO']}" }
         BASIC_TOKEN = ENV['PSN_BASIC_TOKEN']
 
         def self.authenticate
@@ -25,7 +24,9 @@ module Import
         private
 
         def self.fetch_auth_code
-          response = HTTParty.get(auth_url, headers: HEADER, follow_redirects: false)
+          response = HTTParty.get(auth_url,
+                                  headers: { 'Cookie' => npsso_cookie },
+                                  follow_redirects: false)
           Rails.logger.info(response)
 
           parse_code(response.headers['location'])
@@ -70,6 +71,10 @@ module Import
           else
             "Unhandled PSN auth error (#{error})"
           end
+        end
+
+        def self.npsso_cookie
+          "npsso=#{ENV['PSN_NPSSO']}"
         end
       end
     end

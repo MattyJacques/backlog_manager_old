@@ -78,11 +78,11 @@ RSpec.describe Import::PSN::API::Trophy do
           expect(result['totalItemCount']).to_not be_nil
         end
       end
-      
+
       context 'when the title is a PS5 title' do
         it 'returns a list of trophies for a single title' do
           result = described_class.title_trophy_list('NPWR22598_00', 'trophy2')
-    
+
           expect(result['trophySetVersion']).to_not be_nil
           expect(result['hasTrophyGroups']).to_not be_nil
           expect(result['trophies']).to_not be_nil
@@ -132,11 +132,11 @@ RSpec.describe Import::PSN::API::Trophy do
           expect(result['totalItemCount']).to_not be_nil
         end
       end
-      
+
       context 'when the title is a PS5 title' do
         it 'returns a list of earned trophies for a single title' do
           # TODO - Get a result which has an in progress trophy
-          result = described_class.title_trophy_list('NPWR22792_00', 'trophy2', 'me')
+          result = described_class.title_trophy_list('NPWR22792_00', 'trophy2', '6588603711421927529')
 
           expect(result['trophySetVersion']).to_not be_nil
           expect(result['hasTrophyGroups']).to_not be_nil
@@ -171,7 +171,7 @@ RSpec.describe Import::PSN::API::Trophy do
 
   describe '.account_summary_for_title', :vcr do
     it 'returns a summary of the earned status for a title' do
-      result = described_class.account_summary_for_title(['PPSA04874_00'])
+      result = described_class.account_summary_for_title('6588603711421927529', ['PPSA04874_00'])
 
       expect(result['titles']).to_not be_nil
       expect(result['titles'][0]).to_not be_nil
@@ -225,7 +225,7 @@ RSpec.describe Import::PSN::API::Trophy do
     end
 
     it 'returns the earned data for the specified account for a specific trophy' do
-      result = described_class.trophy('NPWR22792_00', 1, 'trophy2', 'me')
+      result = described_class.trophy('NPWR22792_00', 1, 'trophy2', '6588603711421927529')
 
       expect(result['trophyId']).to_not be_nil
       expect(result['earned']).to_not be_nil
@@ -261,7 +261,7 @@ RSpec.describe Import::PSN::API::Trophy do
     end
 
     it 'returns the earned data for the trophy groups for a title' do
-      result = described_class.trophy_groups('NPWR22598_00', 'trophy2', 'me')
+      result = described_class.trophy_groups('NPWR22598_00', 'trophy2', '6588603711421927529')
 
       expect(result['trophySetVersion']).to_not be_nil
       expect(result['hiddenFlag']).to_not be_nil

@@ -27,22 +27,22 @@ RSpec.describe 'Games', type: :request do
     context 'when the Game record exists' do
       it 'renders a successful response' do
         game = Game.create!(valid_game)
-  
+
         get game_url(game)
-  
+
         expect(response).to be_successful
       end
     end
 
     context 'when the Game record does not exist' do
-      it 'renders a successful response' do  
+      it 'renders a successful response' do
         get game_url(100)
-  
+
         expect(response).to redirect_to(games_url)
       end
     end
   end
-  
+
   describe 'GET /new' do
     context 'when there is no search param' do
       it 'renders a successful response' do

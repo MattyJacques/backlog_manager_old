@@ -55,10 +55,11 @@ module Import
         # https://andshrew.github.io/PlayStation-Trophies/#/APIv2?id=trophy-title-summary-for-specific-title-id
         #
         # title_ids [Array[String]] ['CUSA09171', 'PPSA01284_00', 'PPSA04874_00']
-        def self.account_summary_for_title(title_ids = [])
+        def self.account_summary_for_title(account_id, title_ids)
+          raise 'account_id must be present' unless account_id.present?
           raise 'title_ids size must be less than or equal to 5' unless title_ids.length.between?(1, 5)
 
-          Import::PSN::API::Client.get('/trophy/v1/users/me/titles/trophyTitles',
+          Import::PSN::API::Client.get("/trophy/v1/users/#{account_id}/titles/trophyTitles",
             query: {
               npTitleIds: title_ids.join(','),
             })

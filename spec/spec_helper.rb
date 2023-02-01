@@ -49,11 +49,17 @@ VCR.configure do |c|
   # Allow automatic cassette recording if cassette does not already exist
   c.configure_rspec_metadata!
 
+  c.default_cassette_options = { match_requests_on: [:uri, :headers] }
+
+  # Use single cassette for api authentication, this paired with data filtering causes issues.
+  # When rerecording non-auth calls it has filtered out auth tokens so calls fail
   #c.around_http_request do |request|
-  #  if request.uri =~ /ca.account.sony.com/
-  #    debugger
-  #    VCR.use_cassette('psn_auth', record: :new_episodes, &request)
+  #  if request.uri =~ /account.sony.com/
+  #    VCR.use_cassette('Auths/psn_auth', record: :new_episodes, &request)
+  #  elsif request.uri =~ /id.twitch.tv/
+  #    VCR.use_cassette('Auths/igdb_auth', record: :new_episodes, match_requests_on: [:uri, :headers], &request)
   #  end
+
   #  request.proceed
   #end
 
@@ -67,12 +73,12 @@ VCR.configure do |c|
   c.filter_sensitive_data('<PSN_NPSSO>') { ENV['PSN_NPSSO'] }
   c.filter_sensitive_data('<PSN_TOKEN>') { Rails.cache.read('psn_token') }
 
-  c.filter_sensitive_data('accesstoken') do |interaction|
-    if interaction.response.body&.include?('access_token')
-      token = JSON.parse(interaction.response.body)
-      token['access_token'] if token.is_a?(Hash)
-    end
-  end
+  #c.filter_sensitive_data('accesstoken') do |interaction|
+  #  if interaction.response.body&.include?('access_token')
+  #    token = JSON.parse(interaction.response.body)
+  #    token['access_token'] if token.is_a?(Hash)
+  #  end
+  #end
   c.filter_sensitive_data('idtoken') do |interaction|
     if interaction.response.body&.include?('id_token')
       token = JSON.parse(interaction.response.body)
@@ -88,8 +94,12 @@ VCR.configure do |c|
 
   # PSN auth code, regex stops this being <AUTH_CODE>
   c.filter_sensitive_data('v1.Ab23CD') do |interaction|
-    if (location = interaction.response.headers['Location']&.first)
+    if location = interaction.response.headers['Location']&.first
       code = location.match(/\?code=([A-Za-z0-9:\?_\-\.\/=]+)/)
+      code[1] if code.present?
+    elsif
+      body = interaction.response.headers['body']&.first
+      code = body.match(/\?code=([A-Za-z0-9:\?_\-\.\/=]+)/)
       code[1] if code.present?
     end
   end
@@ -141,6 +151,8 @@ RSpec.configure do |config|
     else
       example.run
     end
+
+    Rails.cache.clear
   end
 
   # Many RSpec users commonly either run the entire suite or an individual

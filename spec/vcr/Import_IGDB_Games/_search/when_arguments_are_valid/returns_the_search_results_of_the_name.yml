@@ -8,7 +8,7 @@ http_interactions:
       string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
     headers:
       User-Agent:
-      - Faraday v2.2.0
+      - Faraday v2.5.2
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 May 2022 17:51:51 GMT
+      - Fri, 27 Jan 2023 13:44:22 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Server:
-      - nginx/1.18.0
+      - nginx/1.22.0
       Access-Control-Allow-Origin:
       - "*"
       X-Ctxlog-Logid:
-      - 1-62950436-308a43a493d7216212148061
+      - 1-63d3d536-0f0da59f6b14142a75495373
     body:
       encoding: UTF-8
-      string: '{"access_token":"accesstoken","expires_in":5314769,"token_type":"bearer"}
+      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5326566,"token_type":"bearer"}
 
         '
-  recorded_at: Mon, 30 May 2022 17:51:49 GMT
+  recorded_at: Fri, 27 Jan 2023 13:44:22 GMT
 - request:
     method: post
     uri: https://api.igdb.com/v4/games
@@ -53,7 +53,7 @@ http_interactions:
       Client-Id:
       - "<IGDB_CLIENT_ID>"
       Authorization:
-      - Bearer accesstoken
+      - Bearer <IGDB_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -66,45 +66,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 30 May 2022 17:51:51 GMT
+      - Fri, 27 Jan 2023 13:44:23 GMT
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json
       Content-Length:
-      - '365'
+      - '442'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - f0c3deaa-9acc-428f-9a86-b0d280c85253
+      - 5b1de3d4-ddfa-43ea-b16d-cc8e31c0f1e6
       X-Amzn-Remapped-Content-Length:
-      - '365'
+      - '442'
       X-Amz-Apigw-Id:
-      - S82YuHADvHcFtCQ=
-      X-Amzn-Remapped-Server:
-      - Javalin
+      - fZ5AtF8EPHcFnTA=
       X-Count:
-      - '13'
+      - '16'
       X-Amzn-Remapped-Date:
-      - Mon, 30 May 2022 17:51:51 GMT
+      - Fri, 27 Jan 2023 13:44:23 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 329cb27be8d7871661ed5a94ecaacb28.cloudfront.net (CloudFront)
+      - 1.1 8e50319173d596b00efe562c6abee728.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - LHR50-P1
+      - MAN51-P1
       X-Amz-Cf-Id:
-      - oO6C0QyQY_bTnpFCzRyaR0LM3I5WD19T-dNkBK734DAAJqyh2P3msw==
+      - zUqb-C_sc72tYaj_aVavkVxFdZBUtcWwfVpi8Y-YTKUtn4BBRasI7g==
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Set-Cookie:
+      - __cf_bm=xm.wz3_W2oy8sZ4CGCuZDkqQCb00khcNDSZffVpGOVs-1674827063-0-AS/Ij8hMUkbMYQ9P8H4YN9S23y+L+2oKDd25+GN9UkUwH6Y29isl4GmjJAoMLGSrbvWYrOZ8eINUARoY6F3EVps=;
+        path=/; expires=Fri, 27-Jan-23 14:14:23 GMT; domain=.igdb.com; HttpOnly; Secure;
+        SameSite=None
+      Server-Timing:
+      - cf-q-config;dur=7.0000023697503e-06
       Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 713951f99c327576-LHR
+      - 7901ec390bd7075e-MAN
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -146,6 +148,30 @@ http_interactions:
               {
                 "id": 9,
                 "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 204350,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Part I",
+            "platforms": [
+              {
+                "id": 6,
+                "name": "PC (Microsoft Windows)"
+              },
+              {
+                "id": 167,
+                "name": "PlayStation 5"
               }
             ]
           },
@@ -245,27 +271,7 @@ http_interactions:
                 "name": "Adventure"
               }
             ],
-            "name": "The Last of Us Survival Edition",
-            "platforms": [
-              {
-                "id": 9,
-                "name": "PlayStation 3"
-              }
-            ]
-          },
-          {
-            "id": 102083,
-            "genres": [
-              {
-                "id": 5,
-                "name": "Shooter"
-              },
-              {
-                "id": 31,
-                "name": "Adventure"
-              }
-            ],
-            "name": "The Last of Us Post-Pandemic Edition",
+            "name": "The Last of Us: Survival Edition",
             "platforms": [
               {
                 "id": 9,
@@ -284,6 +290,50 @@ http_interactions:
             "name": "The Last of Us Part II: Ellie Edition"
           },
           {
+            "id": 102083,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us: Post-Pandemic Edition",
+            "platforms": [
+              {
+                "id": 9,
+                "name": "PlayStation 3"
+              }
+            ]
+          },
+          {
+            "id": 219027,
+            "name": "The Last of Us: Left Behind - Remastered"
+          },
+          {
+            "id": 215089,
+            "genres": [
+              {
+                "id": 5,
+                "name": "Shooter"
+              },
+              {
+                "id": 31,
+                "name": "Adventure"
+              }
+            ],
+            "name": "The Last of Us Part I: Firefly Edition",
+            "platforms": [
+              {
+                "id": 167,
+                "name": "PlayStation 5"
+              }
+            ]
+          },
+          {
             "id": 135956,
             "genres": [
               {
@@ -291,7 +341,13 @@ http_interactions:
                 "name": "Adventure"
               }
             ],
-            "name": "The Last of Us Part II: Special Edition"
+            "name": "The Last of Us Part II: Special Edition",
+            "platforms": [
+              {
+                "id": 48,
+                "name": "PlayStation 4"
+              }
+            ]
           },
           {
             "id": 89931,
@@ -330,5 +386,5 @@ http_interactions:
             ]
           }
         ]
-  recorded_at: Mon, 30 May 2022 17:51:50 GMT
+  recorded_at: Fri, 27 Jan 2023 13:44:22 GMT
 recorded_with: VCR 6.1.0
