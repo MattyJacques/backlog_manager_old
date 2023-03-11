@@ -4,37 +4,51 @@ module Import
     class Games
       ENDPOINT = 'games'
 
-      def self.search(title)
+      def self.search(title, limit = 20)
         return if title.blank?
 
         params = { fields: 'name, platforms.name, genres.name' }
         params[:search] = '"' + title + '"'
-        params[:limit] = 20
+        params[:limit] = limit
         Import::IGDB::Client.post(ENDPOINT, params)
       end
 
-      def self.import(igdb_id)
+      def self.import_by_id(igdb_id)
         return if igdb_id.blank?
 
-        data = get_igdb_data(igdb_id)
-        import_from_data(data)
+        params = import_param_fields
+        params[:where] = "id = #{igdb_id}"
+
+        import(params)
+      end
+
+      def self.import_by_name(name)
+        return if name.blank?
+
+        params = import_param_fields
+        params[:where] = "name = \"#{name}\""
+
+        import(params)
       end
 
       private
 
-      def self.get_igdb_data(id)
-        params = { fields: 'name, genres.name, platforms.platform_family.name,
-                            platforms.name, release_dates.date, release_dates.game,
-                            release_dates.platform, release_dates.region' }
-        params[:where] = "id = #{id}"
+      def self.import(params)
+        data = get_igdb_data(params)
+        import_from_data(data) if data.present?
+      end
+
+      def self.get_igdb_data(params)
         Import::IGDB::Client.post(ENDPOINT, params).first
       end
 
       def self.import_from_data(data)
+        raise 'Game already exists' if Game.where(igdb_id: data.id).count > 0
+
         game = import_game(data)
-        game.genres = import_genres(data.genres)
-        game.platforms = import_platforms(data.platforms)
-        game.releases = import_releases(game, data.release_dates)
+        game.genres = import_genres(data.genres) if data.genres.present?
+        game.platforms = import_platforms(data.platforms) if data.platforms.present?
+        game.releases = import_releases(game, data.release_dates) if data.release_dates.present?
 
         game
       end
@@ -56,10 +70,16 @@ module Import
       end
 
       def self.import_releases(game, dates)
-        dates.map do |date|
+        dates&.map do |date|
           platform = Platform.find_by!(igdb_id: date.platform)
           Release.convert_timestamp_and_create(game, platform, date.region, date.date)
         end
+      end
+
+      def self.import_param_fields
+        { fields: 'name, genres.name, platforms.platform_family.name,
+          platforms.name, release_dates.date, release_dates.game,
+          release_dates.platform, release_dates.region' }
       end
     end
   end

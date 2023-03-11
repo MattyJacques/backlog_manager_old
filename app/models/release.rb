@@ -27,6 +27,8 @@ class Release < ApplicationRecord
   private
 
   def self.unix_to_date(timestamp)
+    timestamp = 0 unless timestamp.present?
+    
     time = Time.at(timestamp).utc
     Date.new(time.year, time.month, time.day)
   end

@@ -2,13 +2,53 @@
 http_interactions:
 - request:
     method: post
+    uri: https://id.twitch.tv/oauth2/token
+    body:
+      encoding: UTF-8
+      string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Mar 2023 14:29:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '93'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.22.1
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctxlog-Logid:
+      - 1-640b3ed5-1b593b3f0b078a79238e8240
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5180880,"token_type":"bearer"}
+
+        '
+  recorded_at: Fri, 10 Mar 2023 14:29:41 GMT
+- request:
+    method: post
     uri: https://api.igdb.com/v4/games
     body:
       encoding: UTF-8
       string: |-
         fields name, genres.name, platforms.platform_family.name,
                   platforms.name, release_dates.date, release_dates.game,
-                  release_dates.platform, release_dates.region;where id = 1009;
+                  release_dates.platform, release_dates.region;where name = "The Last of Us";
     headers:
       Accept:
       - application/json
@@ -28,7 +68,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 00:28:20 GMT
+      - Fri, 10 Mar 2023 14:29:42 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -36,31 +76,31 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 2efc5ccc-ead7-479b-94eb-0b7d7746c7c9
+      - 69e58b86-bd8f-453e-8af2-882a131fe6c1
       X-Amzn-Remapped-Content-Length:
       - '676'
       X-Amz-Apigw-Id:
-      - BlytpGcLPHcF9yA=
+      - BkbBeGWWvHcFkyA=
       X-Count:
       - '1'
       X-Amzn-Remapped-Date:
-      - Sat, 11 Mar 2023 00:28:19 GMT
+      - Fri, 10 Mar 2023 14:29:42 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 95f360f450bf272a98ce1e9bee061af8.cloudfront.net (CloudFront)
+      - 1.1 3f691588ca081b6d917addc7d27405b4.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - LHR50-P8
+      - MAN51-P1
       X-Amz-Cf-Id:
-      - ejbWvzoR75G3KBOAh5IroeNnRcrRxJIcTgCImKk2aQqBivrmk1maNg==
+      - QrH-qHpiRmmCGF8_E_xYutbOw9okYzHBR4jirLhd_wLbdAnii0_P6Q==
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=z6qbiuZp3J8crLAoo0FXROT5gc45s9GZ8dKeYBX2lVc-1678494500-0-AWnoncuuPjS91u8FuIVrKUWbQkGVOfB9N1gU1tgfUetuVup2EwS8kmfTXc67CAycj4rFsMgf422zb/szwNI2WQ4=;
-        path=/; expires=Sat, 11-Mar-23 00:58:20 GMT; domain=.igdb.com; HttpOnly; Secure;
+      - __cf_bm=TgpjU_yFPMjuBzXgJp0P6DnPUPH01lCuULZ9bHcl1wE-1678458582-0-ARj59g3ZopVVYNqyTri939GzVc95GMnT3/XAKFhZclmocKR5TaD7PwLRogzKKAGcj6By+yBapRt7eQZA7shrf1E=;
+        path=/; expires=Fri, 10-Mar-23 14:59:42 GMT; domain=.igdb.com; HttpOnly; Secure;
         SameSite=None
       Server-Timing:
-      - cf-q-config;dur=6.9999987317715e-06
+      - cf-q-config;dur=1.7999998817686e-05
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -68,7 +108,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a5fad3e0d14075a-MAN
+      - 7a5c40570c1e0763-MAN
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -116,5 +156,5 @@ http_interactions:
             ]
           }
         ]
-  recorded_at: Sat, 11 Mar 2023 00:28:19 GMT
+  recorded_at: Fri, 10 Mar 2023 14:29:41 GMT
 recorded_with: VCR 6.1.0

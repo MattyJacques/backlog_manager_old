@@ -15,7 +15,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    game = Import::IGDB::Games.import(params[:igdb_id])
+    game = Import::IGDB::Games.import_by_id(params[:igdb_id])
     if game.present?
       redirect_to(game_path(game))
     end
