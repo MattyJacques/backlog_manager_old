@@ -25,13 +25,13 @@ http_interactions:
       Content-Length:
       - '0'
       X-Psn-Request-Id:
-      - fee0ed7c33c5247d1475f24838623489
+      - f769aafbe1588903f4256d3eb4635450
       X-Psn-Correlation-Id:
-      - '04078c02-5d59-4653-b988-1898bbe8e677'
+      - 6974fb5a-f1cb-4678-801b-d1cd2daeb1e5
       X-Requestid:
-      - fee0ed7c33c5247d1475f24838623489
+      - f769aafbe1588903f4256d3eb4635450
       X-Correlationid:
-      - '04078c02-5d59-4653-b988-1898bbe8e677'
+      - 6974fb5a-f1cb-4678-801b-d1cd2daeb1e5
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
@@ -39,7 +39,7 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v1.Ab23CD&cid=04078c02-5d59-4653-b988-1898bbe8e677
+      - com.scee.psxandroid.scecompcall://redirect/?code=v1.Ab23CD&cid=6974fb5a-f1cb-4678-801b-d1cd2daeb1e5
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Xss-Protection:
@@ -47,28 +47,28 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Date:
-      - Fri, 27 Jan 2023 13:44:42 GMT
+      - Fri, 24 Mar 2023 09:58:44 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=3B76A568ED866674EF2E5F6BF8F9CBA2~-1~YAAQl7D3SI9D+NGFAQAAaCx58wkvs5vczagYt3L74RFxK/Prsd+yP6Fsem9foIpDN51PS7TW4jSLDvPRvzbgBk/oDg8B10g+dLU5dwEafKmHZ2UAHGufTOqyHNEexNOuuPGGSYGISjCA0p6qsDcNTJbmasX1fMIvQ1+wF76lau4sm6s0NSglj806Jfqx0q7LWn1N1jC2Lg5RkN9bJgfVhTWy13gC3E8qxHl3zeqFCAuYTDULikyay32VrktqhlV++pBkvNCt6/VQsKUCUfg60ysz7p34uYvXdfdZfvHopuRw6NPsUaj6uPfCQLMUxUQ7uQzXPxLUSNUM0BL93jPDEjU+YWYYF1CSzgDjXrDWWEZwUdu+rJ/d4USJL8zmQU5/AWb9rQeojOUi0U4qAg==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 03 Feb 2023 13:44:42 GMT; Max-Age=604800;
+      - _abck=86E26E38B1FCB15CB7590DC20EB5C70C~-1~YAAQt9LerQIG7hGHAQAAhGsOEwkQCzglTvCZ6MGOjb1EbzQb4ubU+PM3nvNrD2mvVzKre9iLc1ELbxfJTGzZLg+uZo3hdnP9aZCEP3+XBNOdqm2bnSY6se3Y9ffgOhf6y/0rEr2XiPLiRqGNYitECI9K/zbzMQUu7VoRYpxnlUbMGV6O8nY32xWgRq8nFDrVxMFQRTAdPHyK6etpYukduJixSPa6MS1Hc24jjgblgKRZYFXtskmq36LPa0d/tGD87o8LIndkIw0JyxRFV+NikzgcXzqwKLKAvd+xOMOo8yWgoCecWaPPgW2X5eaZciXHe3fTcBzhrJky6xpyZxjusJD9fIIWRxMO5F5PMEWL6o0UKkNbtMg6JsyJE4yO0JK+YhcfiOp3Nj0O0i+3lA==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 31 Mar 2023 09:58:44 GMT; Max-Age=604800;
         Secure
-      - bm_sz=65ABB9CE44D81500D4EEEE2DF15735B8~YAAQl7D3SJBD+NGFAQAAaCx58xIrwmK6IIK0n/rfs12wXPu3QLHeE/QfujQ/o2AewcX82YTddAPwZ0DUFPZV7Md7RE6n2G0aEFuWPd+wCgvjfuTBms62yiI2O7+oR3viG4CRvouTbC1fABaZbcz9HCzl8u1ZAyGlD5KPxdF3RLzUW2Auv7C71EsWc91Nf1fvBHa2IHefXZ0zKdsdTKrEe7ogbsc7+GyeStPoXw0+vDKkJKZc4jCyMROKuYEj5UW6tW0TcryljsiuG7gpdNgMZXDcHFWU+uRkePCAxaW6diV0r9LcQ61Tm2yol1D+YTAMjQzq5xJu7vlxy64rDpcDsn6faycFBS9jFvyqwm9XqQ14UWD8Ht6XaeAOmZ4=~3556656~4470597;
-        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 17:44:42 GMT; Max-Age=14400
+      - bm_sz=4C739CA239F4BAAA0FB1DA2C045EC9F3~YAAQt9LerQMG7hGHAQAAhGsOExPauR769yQpsSmeb3OMs46n15zU6ZI6A/lSjs05ek02DyjPZhUR5R+8xeU5xE6qrxzk0rBtGSg0JqMjKC+zYJQb6T1C9s7hzSjOIUodglwKK7HQLUuFUX+nPQi0Te+fVGYDNY5rN8VZhzQDREuERTrE0a3lbMetMMnPvBX9GQGDjExTByhA606Z82r7jt5s3c8AMkP8XD2yB63PGKOcbyjRyIptqm/IadQxC+Qn/090zM+v0l5g1MDk06+9jRpB7eZa1BhjbWxl2mKSRIIDwHWVRZCXmMUT9k1FRFHXCfQd4BRF4AxB3pSwXWorADi3mw0EVJZFwZrbAzVSp7eij/5TmUI/dS0r7qI=~4272184~3291201;
+        Domain=.sony.com; Path=/; Expires=Fri, 24 Mar 2023 13:58:44 GMT; Max-Age=14400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 27 Jan 2023 13:44:41 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:43 GMT
 - request:
     method: post
     uri: https://ca.account.sony.com/api/authz/v3/oauth/token
     body:
       encoding: UTF-8
-      string: code=v3.QeUOt1&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&token_format=jwt
+      string: code=v3.fUEJ3c&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&token_format=jwt
     headers:
       User-Agent:
-      - Faraday v2.5.2
+      - Faraday v2.7.4
       Content-Type:
       - application/x-www-form-urlencoded
       Authorization:
@@ -87,34 +87,34 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       X-Psn-Request-Id:
-      - fdda80fe3ed81c618aaed21d1a9a7971
+      - 6527e2dfcb16c9e231c17521b32a36ad
       X-Psn-Correlation-Id:
-      - fac21922-9b5f-446e-99c2-c7fd509e3f68
+      - 3e854b92-ffd0-44a5-a8ed-166913647c0c
       X-Requestid:
-      - fdda80fe3ed81c618aaed21d1a9a7971
+      - 6527e2dfcb16c9e231c17521b32a36ad
       X-Correlationid:
-      - fac21922-9b5f-446e-99c2-c7fd509e3f68
+      - 3e854b92-ffd0-44a5-a8ed-166913647c0c
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
       - no-store
       Content-Length:
-      - '3696'
+      - '3775'
       Date:
-      - Fri, 27 Jan 2023 13:44:43 GMT
+      - Fri, 24 Mar 2023 09:58:45 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=F57BAA446854562B8A29655BF91A5C0B~-1~YAAQl7D3SOND+NGFAQAAFC558wn5mAuGkKf8LHOGx0hMks/p2WFedwVD2X95T5VQpjzjUG2mqfYHIQn+xwUDSHCjpBt9Iqwzw+9DyOXDLfFP3s5hi5Zu20lIY0MfEGAfW+vrf20S12OglCqsy+Bu4CE2FjQzlAQaSJRIPqKLnzwSwiOXQ66IsSuOpq57lNwgC4aD3pcUxPNpQKXno0UU1kE2ZaHxJKHpGeLkbmVHXg96eP8/rZ1vhVAR7DVN3C/Yff1ORc+wWPF9HedpN7KtHZ97z7QeTnpzoPfaEkCdRqoNV37AHI1SANdeYWepQj0AxJ5UvF5XBjEiF77hA+ljrANfIQF2R4sqwYd8S+rG8w2PlsaNWLTLTpnRNegbVbQp+T/vMUud3t4XH8dWWQ==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 03 Feb 2023 13:44:43 GMT; Max-Age=604800;
+      - _abck=98B858FCEA532CD7392553D61FF064D0~-1~YAAQt9LerT4G7hGHAQAA+mwOEwmH44KPghq/Y6OBl98bUS441yNLr7lFbHmgatzP2ghEvYXGH8634tiZC0KiIrOAMONueMomgXjLoKRQh1CyMtQ3l93tKxGbqj3HRsq3Jh77LvPCeLsgk8ZbDsJVAZIAziKnwMqtEBxOg8itz6p63HxPlkzoc+pO6tSQKA370CqQ2Nc0SzOazc+QOb+iC975puNwXdLo3tkvwPEfUgi9oMX24r6dkabsrHhOTqX1iCWi0aE/OFB9KJZpoWrwvYZFqqvFFRcZ+hV2WUfmjNK+6pkhBz8wipm5wjhE13v9SOJk1uo1SwJ1jsP4JA850vTQrPX5UqBAWxZFZ+et331FXLPmbcp9A93/GhTEiMX+lZDaXIkTGMbkcFQrBQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 31 Mar 2023 09:58:45 GMT; Max-Age=604800;
         Secure
-      - bm_sz=88BE360D2E88B3A089CAFBD7D54D625D~YAAQl7D3SORD+NGFAQAAFC558xK1YSIL94Fwn1KeISvdYOEfUzfsI8O1c9C+JLzc0SdPUDf1SDRTJtJHQmLKqQ1/haCfDECWpHgKFJltoO2PJ3U4KHPWdZP7f6miNBelN2u/ea7SldDzl6lluQznwODoYY2J11bicLx5dypdu58YtaMjAb6cvmj7kI5Q3iJc9Aze2zEZBp2mhDI2o+qndcmXT6QAvNKnJeProjzXRjLr0n5oNCXk+4h9aWcrdny6jVYoqIOEDMwzKwSY4vyhPKybAZCm7/+Sl2qa/Wz8B5y8IVNknQDNCRkAJYooUhIPRJEoZvJt7lyO2DoaY0xXz7maE8V+FzpJ5/CICDddArxE7L+Sq1+se7+XWoY=~3682369~3160373;
-        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 17:44:43 GMT; Max-Age=14400
+      - bm_sz=596AA784DEF8ADFC99981B3AB86B1A0B~YAAQt9LerT8G7hGHAQAA+mwOExM0fXlKQqVdcZsNcuwESaKoJdR10z57j1NZZUnrT6g7xH/PsS2c/BrDVF1rwRAGK8DNM24CWrmLGdebHhSHHcS8ZAiPXuw4sG6qcYUgaR4SuN6syW08DEQssENEityurBIMLWXLp3VHfnoORSD8b32LsZXhXsVmLTJmSZl/Qm/mWbV2FpYJ6LZQJWfSuxmQMHiR/L53Asl0yjS6AgyQ/Oxk+FeACErZ2yM3CfrWq0pLqV2fHlnMnqcqgwavaZ/xSptAnsYnVpryT+qiI2HKIM9LvyLITa6mCpAg5IidSW/kK/TqO/eserSXWWx1WrFIkOcd3HSbNyxXpENPPN3m4LHnPGeS7c10AfQ=~4604209~4404786;
+        Domain=.sony.com; Path=/; Expires=Fri, 24 Mar 2023 13:58:45 GMT; Max-Age=14400
     body:
       encoding: UTF-8
       string: '{"access_token":"<PSN_TOKEN>","token_type":"bearer","expires_in":3599,"scope":"psn:mobile.v2.core
         psn:clientapp","id_token":"idtoken","refresh_token":"refreshtoken","refresh_token_expires_in":5183999}'
-  recorded_at: Fri, 27 Jan 2023 13:44:42 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:44 GMT
 - request:
     method: get
     uri: https://ps5.np.playstation.net/api/trophy/v1/users/6588603711421927529/npCommunicationIds/NPWR22792_00/trophyGroups/all/trophies?npServiceName=trophy2
@@ -144,7 +144,7 @@ http_interactions:
       Cache-Control:
       - private
       Date:
-      - Fri, 27 Jan 2023 13:44:43 GMT
+      - Fri, 24 Mar 2023 09:58:46 GMT
       Connection:
       - keep-alive
       Strict-Transport-Security:
@@ -153,6 +153,6 @@ http_interactions:
       - nosniff
     body:
       encoding: UTF-8
-      string: '{"trophySetVersion":"01.00","hasTrophyGroups":false,"lastUpdatedDateTime":"2021-04-26T20:03:43Z","trophies":[{"trophyId":0,"trophyHidden":false,"earned":false,"trophyType":"platinum","trophyRare":0,"trophyEarnedRate":"0.1"},{"trophyId":1,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-02T09:37:10Z","trophyType":"bronze","trophyRare":1,"trophyEarnedRate":"6.1"},{"trophyId":2,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-11T20:54:21Z","trophyType":"gold","trophyRare":0,"trophyEarnedRate":"1.2"},{"trophyId":3,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-03-30T20:35:28Z","trophyType":"gold","trophyRare":1,"trophyEarnedRate":"15.0"},{"trophyId":4,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-11T21:33:19Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"3.9"},{"trophyId":5,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-12T21:24:16Z","trophyType":"bronze","trophyRare":1,"trophyEarnedRate":"6.7"},{"trophyId":6,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-26T19:57:28Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"3.7"},{"trophyId":7,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-13T20:28:51Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"2.3"},{"trophyId":8,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-26T20:03:42Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"3.5"},{"trophyId":9,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-01T21:38:50Z","trophyType":"gold","trophyRare":1,"trophyEarnedRate":"8.2"},{"trophyId":10,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-03-30T20:34:48Z","trophyType":"silver","trophyRare":2,"trophyEarnedRate":"31.4"},{"trophyId":11,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-03-31T20:15:18Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"3.7"},{"trophyId":12,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-07T16:24:01Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"2.7"},{"trophyId":13,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-03T20:52:12Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.5"},{"trophyId":14,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.8"},{"trophyId":15,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-03T23:10:32Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.1"},{"trophyId":16,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-07T17:08:10Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"3.8"},{"trophyId":17,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-09T20:41:08Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.2"},{"trophyId":18,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.2"},{"trophyId":19,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.5"},{"trophyId":20,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.6"},{"trophyId":21,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.1"},{"trophyId":22,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"1.6"},{"trophyId":23,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"1.2"},{"trophyId":24,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.2"},{"trophyId":25,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.3"},{"trophyId":26,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-06T20:53:55Z","trophyType":"silver","trophyRare":1,"trophyEarnedRate":"6.0"},{"trophyId":27,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-11T20:14:03Z","trophyType":"gold","trophyRare":0,"trophyEarnedRate":"0.3"},{"trophyId":28,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-02T09:23:30Z","trophyType":"gold","trophyRare":0,"trophyEarnedRate":"0.4"}],"rarestTrophies":[{"trophyId":15,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-03T23:10:32Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.1"}],"totalItemCount":29}'
-  recorded_at: Fri, 27 Jan 2023 13:44:42 GMT
+      string: '{"trophySetVersion":"01.00","hasTrophyGroups":false,"lastUpdatedDateTime":"2021-04-26T20:03:43Z","trophies":[{"trophyId":0,"trophyHidden":false,"earned":false,"trophyType":"platinum","trophyRare":0,"trophyEarnedRate":"0.1"},{"trophyId":1,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-02T09:37:10Z","trophyType":"bronze","trophyRare":1,"trophyEarnedRate":"6.1"},{"trophyId":2,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-11T20:54:21Z","trophyType":"gold","trophyRare":0,"trophyEarnedRate":"1.2"},{"trophyId":3,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-03-30T20:35:28Z","trophyType":"gold","trophyRare":1,"trophyEarnedRate":"14.8"},{"trophyId":4,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-11T21:33:19Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"3.9"},{"trophyId":5,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-12T21:24:16Z","trophyType":"bronze","trophyRare":1,"trophyEarnedRate":"6.7"},{"trophyId":6,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-26T19:57:28Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"3.6"},{"trophyId":7,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-13T20:28:51Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"2.3"},{"trophyId":8,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-26T20:03:42Z","trophyType":"bronze","trophyRare":0,"trophyEarnedRate":"3.6"},{"trophyId":9,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-01T21:38:50Z","trophyType":"gold","trophyRare":1,"trophyEarnedRate":"8.1"},{"trophyId":10,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-03-30T20:34:48Z","trophyType":"silver","trophyRare":2,"trophyEarnedRate":"30.9"},{"trophyId":11,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-03-31T20:15:18Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"3.7"},{"trophyId":12,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-07T16:24:01Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"2.7"},{"trophyId":13,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-03T20:52:12Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.5"},{"trophyId":14,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.8"},{"trophyId":15,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-03T23:10:32Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.1"},{"trophyId":16,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-07T17:08:10Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"3.8"},{"trophyId":17,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-09T20:41:08Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.2"},{"trophyId":18,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.2"},{"trophyId":19,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.5"},{"trophyId":20,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.6"},{"trophyId":21,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.1"},{"trophyId":22,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"1.5"},{"trophyId":23,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"1.2"},{"trophyId":24,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.2"},{"trophyId":25,"trophyHidden":true,"earned":false,"trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.3"},{"trophyId":26,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-06T20:53:55Z","trophyType":"silver","trophyRare":1,"trophyEarnedRate":"5.9"},{"trophyId":27,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-11T20:14:03Z","trophyType":"gold","trophyRare":0,"trophyEarnedRate":"0.3"},{"trophyId":28,"trophyHidden":false,"earned":true,"earnedDateTime":"2021-04-02T09:23:30Z","trophyType":"gold","trophyRare":0,"trophyEarnedRate":"0.4"}],"rarestTrophies":[{"trophyId":15,"trophyHidden":true,"earned":true,"earnedDateTime":"2021-04-03T23:10:32Z","trophyType":"silver","trophyRare":0,"trophyEarnedRate":"0.1"}],"totalItemCount":29}'
+  recorded_at: Fri, 24 Mar 2023 09:58:44 GMT
 recorded_with: VCR 6.1.0

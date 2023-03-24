@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class='container'>
+      <a class="navbar-brand" href="/">
+        <%= image_tag("site_logo.png", width: "45", height: "30", class: "d-inline-block align-top", alt: "logo") %>
+        BacklogManager
+      </a>
+
+      <ul class="nav nav-pills navbar-dark">
+        <li class="nav-item">
+          <a class="nav-link <%= 'active' if current_page?(controller: 'games') %>" href="/games">Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= 'active' if current_page?(controller: 'genres') %>" href="/genres">Genres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= 'active' if current_page?(controller: 'platforms') %>" href="/platforms">Platforms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= 'active' if current_page?(controller: 'platform_families') %>" href="/platform_families">Platform Families</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

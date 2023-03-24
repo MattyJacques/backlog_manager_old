@@ -25,13 +25,13 @@ http_interactions:
       Content-Length:
       - '0'
       X-Psn-Request-Id:
-      - af84139725231b72d9f299f79ce60c2e
+      - '0952213cc2c5e68a93ad934dd87a83f9'
       X-Psn-Correlation-Id:
-      - 80709e40-358d-47f3-b04d-69051cd52bc6
+      - 212e93d1-c685-428c-b703-f142f4bb14ed
       X-Requestid:
-      - af84139725231b72d9f299f79ce60c2e
+      - '0952213cc2c5e68a93ad934dd87a83f9'
       X-Correlationid:
-      - 80709e40-358d-47f3-b04d-69051cd52bc6
+      - 212e93d1-c685-428c-b703-f142f4bb14ed
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
@@ -39,7 +39,7 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=80709e40-358d-47f3-b04d-69051cd52bc6
+      - https://my.account.sony.com/central/signin/?access_type=offline&client_id=<PSN_CLIENT_ID>&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&response_type=code&scope=psn%3Amobile.v2.core+psn%3Aclientapp&auth_ver=v3&error=login_required&error_code=4165&error_description=User+is+not+authenticated&no_captcha=false&cid=212e93d1-c685-428c-b703-f142f4bb14ed
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Xss-Protection:
@@ -47,17 +47,17 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Date:
-      - Fri, 27 Jan 2023 13:44:27 GMT
+      - Fri, 24 Mar 2023 09:58:30 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=87C64968F7B6276EC3EB2455557218EB~-1~YAAQl7D3SPw9+NGFAQAAc/F48wlOvpPlrqszM2XIksOOvDVFHgJDfcOtPEkEgZiPhVtkS5os4BwdriUrEM4Ps+y6lZiCy/xJ2znSNmdaqoVBEyoXya3YRY14IhPjeyq1AtuHAA7rTGas7lPq4afNj9iiINPOCU/+32L09UB6Hql60XvG1jmbs5tPvPET2ac1wk3jwKhy9UrDEdP4Pl/XwuJ7wPMCqofmfleJT6OgW4pMbOoYNKYFJ0XCuJl1zzeRHO6W8uEWeVnBCgceqnuACXAPXO4A/p4Mw8qUgsus2CACDRZwNBb5E1a09MlKO/rF+b3tAdQCH5x3qmcAB+qqsgCwuCBqB5tSpoKTg9w0kDf2BNi0oA0N8oBb+mDReJFR7Kat+r3rhU9jm9/nxg==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 03 Feb 2023 13:44:27 GMT; Max-Age=604800;
+      - _abck=069BBF1D0859EB53FBCA539C0FC40CFA~-1~YAAQt9Lerc4A7hGHAQAA6TEOEwkNBZraImRD7DBs0EWtrtUkOX9uOLrKAvRzSccKIPW6U1ev42kiLlp42sfJYB0mzCwdxCGBPDA8npUkt0dTsIX4Kyb0NymlW0WVAmSATrWHB2IfHJYM9LFDTKbrv4cIEcNicKNkC74XlCUGqqFDYgATojgCYEyPAmEbUSUsBvcC7/tf2nf6XQCzVaHdkDIn1NK8ouDD/q3G7d29Kg1v7NSYdb7vBgBYFhHK1O2CnhGqXIcDfhokluNHprcX5cg8Mqvn+dURgAjgxnGfaVVPrCm0YexLnkXfLmMKRIm5NnhUcblXRyBM6UkafO08op/57j//CEgfPQHURrnXvpmWOqiTwayapgOTgCLb8vdMLhtJ7cauV0jc2x3bzg==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 31 Mar 2023 09:58:30 GMT; Max-Age=604800;
         Secure
-      - bm_sz=A0CEFD085B56D941EC3E8BE19B532E69~YAAQl7D3SP09+NGFAQAAc/F48xINhhKuSv3QvaQbfxmFvFtYnflqtPR50fIgx5QTveuPH++Go7Ocq0adZm7samf97t+LWfXhgDpBeaq8f3yHGaQK/f08n1syoCAk4C+/q0L0p+VPzHMGUXT7tDcu4xOdbf1SQg5QJtgoFXmUUr7JKKCOOTvUEIH/gdLo76rpyQDheck2lEPkuAB1viRLxrBijefxU7TFFIithBTa4G7HYrAz70orfdSu6dcwTgNzyOvF2AGkLe+zNF0gICDeagx7swg/pLlR/HTDTLlgG5JLdxgpeUMUtxHRZzstQ39ouGx0PaYFr/8hn2opINuPlfp2gH0q4IaADDncOIl6traR/imXfF71C2NFL7M=~3425849~3684417;
-        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 17:44:27 GMT; Max-Age=14400
+      - bm_sz=ACCC845D6943013F2FBEAE87D5C9BD73~YAAQt9Lerc8A7hGHAQAA6TEOExPm1nfod7uTyWBjBz/NpcB+psJ0CYuk4zh6fUGkRDFWijIG6c7m47OMqA/v2p6e4i+T0lftHtSQnns06xH0RjdwRmKk+7E7+1zkfsyUBt5J67oNJB8F6S8qYAtJjvoUl5kQ3f05ohmUc17Hr737tx6ZpBbe8IuOkK535ogR+/5PkNIOpzU2SSXQyh/nFaN+b73h3RtHbFR6+1pNN/Lh7CLsGL/1ZtbzmTPeMJ01sz9T00l1D0iWE8/2F3U3/SWBdUOg/Rmov1Eej7QIHhQ+Gd4aEv+PvhpQhC6M/p5lb9zgUQZseX0W8w13DMvbP4AoSQpILPDKfpR4kFGJ1bEMb9dybjfJM/rV9ZQ=~3158320~3556146;
+        Domain=.sony.com; Path=/; Expires=Fri, 24 Mar 2023 13:58:29 GMT; Max-Age=14399
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 27 Jan 2023 13:44:26 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:28 GMT
 recorded_with: VCR 6.1.0

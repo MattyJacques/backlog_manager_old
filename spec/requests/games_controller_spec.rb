@@ -62,6 +62,11 @@ RSpec.describe 'Games', type: :request do
   end
 
   describe 'POST /create', :vcr do
+
+    before do
+      Rails.cache.clear
+    end
+    
     it 'imports game from igdb' do
       expect {
         post games_url, params: { igdb_id: 1009 }

@@ -25,13 +25,13 @@ http_interactions:
       Content-Length:
       - '0'
       X-Psn-Request-Id:
-      - bd9783faf4d603ad8598ef9f11a768db
+      - ef6826a6592a1fd396afecc843e3760d
       X-Psn-Correlation-Id:
-      - 00abba50-9d44-4294-9e16-8b13bb2d24fb
+      - 52f70b92-f008-4e94-98bf-daed4f47ae86
       X-Requestid:
-      - bd9783faf4d603ad8598ef9f11a768db
+      - ef6826a6592a1fd396afecc843e3760d
       X-Correlationid:
-      - 00abba50-9d44-4294-9e16-8b13bb2d24fb
+      - 52f70b92-f008-4e94-98bf-daed4f47ae86
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
@@ -39,7 +39,7 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - com.scee.psxandroid.scecompcall://redirect/?code=v1.Ab23CD&cid=00abba50-9d44-4294-9e16-8b13bb2d24fb
+      - com.scee.psxandroid.scecompcall://redirect/?code=v1.Ab23CD&cid=52f70b92-f008-4e94-98bf-daed4f47ae86
       Strict-Transport-Security:
       - max-age=31536000 ; includeSubDomains
       X-Xss-Protection:
@@ -47,28 +47,28 @@ http_interactions:
       X-Frame-Options:
       - DENY
       Date:
-      - Fri, 27 Jan 2023 13:44:37 GMT
+      - Fri, 24 Mar 2023 09:58:39 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=0CD55F4CCFAD4FE561A9FBFC185CDC5D~-1~YAAQl7D3SENB+NGFAQAA+hZ58wnfpEshYJ2ah6NmCL6smqmbSW8LuxOCbSUgX1tZT8j4ugbS4cUMWYvDJi8d6ILBO+tNKo52fiuzAbJFl9GqQ1wjC5h8bmvwAWdlHkVBe+0J2u7TD/ZYcpF6veKu4GyOMaA3JvRkF5BItlEa9Xun6Qbh9EYnac9u1WgDW4fKRdxh0tRJwQnShO2uyFYoyAwgxctfwXLANyktddhpMDwVGa9KDEm1wf6w1HaUSm+LhBYHxgCC8/XR2shaB8lkEDWos02cGIpsu8OT8eIgKfRZRAnvRnygXMOINiSXvOvu3APfhqUiSp2EG0+IPsvvv4lFOv2KySwLm4nKfCqEUKsCajTUaapCXj5/ajVFwgPJMhsyOckYmsqbCYSayA==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 03 Feb 2023 13:44:37 GMT; Max-Age=604800;
+      - _abck=8F384C798F7A461FFA8481855B671242~-1~YAAQt9LeresD7hGHAQAAr1YOEwlY1NHBENqwqliFc+h1XBGyQUUbJD4Io0lDE1IbvALVm1KJJD/U7KiaxLzrWQFtlDfuuQ7aVrcA1CpKZcHJRKOa6XUZzYxa8qFTzlnyeH6AQWePsqaFCJqONQPZgyTs4fiBMJPx2MAiCUoHqPUxrQ081RmEB8SzucCwAK+59yIbVuzeqW6thzn+DVYySUCDnBa6TupoXzh3QhwOjoJyV8wMzfVxewKeKbI3qoFEgRhsmnJfzSBX66WM7oqvX+M8BrLi83LjsWpEzzMVy8PF8mTAO6DMchgz56eESOWJaDUiv56jY4Sr6qgeCZtkmoa5LGT0RZ6H9gE7aTqR4tfo7vew5Drw+nGUP7yZZxjqSNcFm4YkejdeRhR0wQ==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 31 Mar 2023 09:58:39 GMT; Max-Age=604800;
         Secure
-      - bm_sz=F2F3E2D3A9AE29B1CBF61F77ED58990E~YAAQl7D3SERB+NGFAQAA+hZ58xJQjIAW7151jGCBEokKwzP/NlojDFY0vraadGd+CBjF/jlv8sDNH+zLS0QwVoZw2T2aiDzsOQ7i+QoMeChXzqi5TAjHloTUOWz5SR8A2MHCmMIhCgumOdgCT/mq5zg6sNSCJ/H0k7qP8qpuahAAdH4DBkKd06Q4aEXAIVGqnV+RCZc8KinR/PeZZqNIWhFm4OMXkawfrWRWhEOxDgHYFtWniIeJf9YI2qQaEAqEkhBzCiHlEq634pB+6IMZDxYndkO4DyJsjQzTOufhMmW8T+6Gz56aDE5NU7VX1zwivBtn/hGOYoILuHmYVBuyW6Rpjq3qbvECMPtUKHGqVDtTCsF35mrQgRoegsw=~3223856~3293508;
-        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 17:44:37 GMT; Max-Age=14400
+      - bm_sz=4CB54847AE92C190984A2171C773E5FA~YAAQt9LerewD7hGHAQAAsFYOExNf/RJ2KZbPq/2sFz2rSW5ayyPAM4S2mcXoBRI/ipAJwxCyTCCxHYJHmr9oh4xXtnW6bJ2/kKc1zn6AH92jv8uPb/4wpIz4WOAputfFzOA54HFp7xHD3+pbd3UkF22uziEbvc6J2/7oZDbOsxAvPJRZzPT+T8vzSDfE3to2iWFkOkgK8o29vunZqP5o/+PjmGe49apP0yQa4VJ5/ID5EbuvHT49nQlg5e5w7Q09ndr/4NByDaqx56Pht8D3f1VozC/MF0OQDHEOaRkhOp8yjsPaV+fNiONW3X0keRHzqZIjXKcqR8TOZQXITC0OmhOhbcpwbSKy8ZfMjoz75+g4t/AjV2R4MpXB6VU=~4338229~3683398;
+        Domain=.sony.com; Path=/; Expires=Fri, 24 Mar 2023 13:58:39 GMT; Max-Age=14400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 27 Jan 2023 13:44:36 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:38 GMT
 - request:
     method: post
     uri: https://ca.account.sony.com/api/authz/v3/oauth/token
     body:
       encoding: UTF-8
-      string: code=v3.nSU34h&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&token_format=jwt
+      string: code=v3.qyjRL2&grant_type=authorization_code&redirect_uri=com.scee.psxandroid.scecompcall%3A%2F%2Fredirect&token_format=jwt
     headers:
       User-Agent:
-      - Faraday v2.5.2
+      - Faraday v2.7.4
       Content-Type:
       - application/x-www-form-urlencoded
       Authorization:
@@ -87,34 +87,34 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       X-Psn-Request-Id:
-      - 89ee24ef8c234834980f65c481c5f3b0
+      - c85b99fe37c8850ab1abf4c5e73c3e34
       X-Psn-Correlation-Id:
-      - 39f9879b-76de-4129-b992-6594dfe0bb56
+      - 3e5842ae-bf42-49aa-bd06-6919b7eb7de6
       X-Requestid:
-      - 89ee24ef8c234834980f65c481c5f3b0
+      - c85b99fe37c8850ab1abf4c5e73c3e34
       X-Correlationid:
-      - 39f9879b-76de-4129-b992-6594dfe0bb56
+      - 3e5842ae-bf42-49aa-bd06-6919b7eb7de6
       X-Content-Type-Options:
       - nosniff
       Cache-Control:
       - no-store
       Content-Length:
-      - '3696'
+      - '3775'
       Date:
-      - Fri, 27 Jan 2023 13:44:37 GMT
+      - Fri, 24 Mar 2023 09:58:39 GMT
       Connection:
       - keep-alive
       Set-Cookie:
-      - _abck=90D90150555F424BD96B4A32F50718BB~-1~YAAQl7D3SGhB+NGFAQAAURh58wlnCdjDiayMfUI6Wf/uP01e+n1VhEj5GYIzSv0j5qScFMm2Oz5lgFhuubNOyXxCexGijNuUI3/WZhhxUOxO3hElhVzk4NGyORKQult51dxxYgnwbcFi16MbEm0NDOx0lZwRAnaoZMiqUkEL/GSBoO6BEaok64N46TH/VwlCD6RV2Ce1yW8tUhlfr/W1BkwJ145ZOPfE+C7P4RJ3ajrw9w69RPk6gOOQbSTuzDL6YqurG6j8AI3CXp3D+ASXkKQ6QpulFYUstHgUZE/LQxIjRTcusrn2zOF53vFwWdpbqirk9NTckBtI+WOel4sHTb8STQxSHf4l8vPozE0/sEyTHnz96A0MaPsh5c5WzOloWQALgyGWqzVr/Uv9hw==~-1~-1~-1;
-        Domain=.sony.com; Path=/; Expires=Fri, 03 Feb 2023 13:44:37 GMT; Max-Age=604800;
+      - _abck=9B1FEE9763D804C04175F6FA2BF4B3A3~-1~YAAQt9LerRkE7hGHAQAAUVgOEwmRTvM3qn98MiSubMJwcSBgccGaAuGTc+8WMjq0v6wJKEcKVtTd4xme9qSiJ7F+RLU6/pAPa6EzzEiAqhyo7jPSS65dwmLtM0tTnSQyx6UaUtQ9mSEPPKg4+j419Rmcp/tx07h17OkQCPkBYYQMK7Yjyo3fyrHca6npBiShZTFZef8SAv45J+Is8Y4nT/vpHmpSuRSRmjPbbiYJ9+Qgp3F7Nfa0kD1DPZQS6iBNuUvJP+fmbV2WSESgl6tBAPQ5a1Jg04e/uKDVUtfQosoNL3WpoDmRdg+GV8KzSpD63SJKRsKSI8sUiu66IvxriYhAatr5RXMcmAo7dwextbSksrnxQnt/Mj6aPKMY+NftlawHE5lrcPQ69h0Bcg==~-1~-1~-1;
+        Domain=.sony.com; Path=/; Expires=Fri, 31 Mar 2023 09:58:39 GMT; Max-Age=604800;
         Secure
-      - bm_sz=CBE26DA286DD17CAFDAA310B3270CB16~YAAQl7D3SGlB+NGFAQAAURh58xKvnE1sufeD484/f89ZMdopHgHPMr9AxtjCC4OYkFy/O6E2JxZkGRWDCr7qDf4ynIFp05JudiFYHg3sqiZiZ3/YOof0gxvNDi1ueHkD18qIKhyIjfGtA8yuSAQEGDt3N91rf/Al8RvXsDPoT5MvRHn/XwlF9IfaRChuvlxCpHUk0FdSZmDaeUPFec+5hVNEK2bTmtPFFS2jDEQ/vM5Vwzj6EJiNOokCcnFUNpXYoZjwkPaCu7kMOKzSKeWZnehpZLKpBrJpW+17oVDnhfX2Qfz+U3cyrcFYnTHtx2aekCrniQcgaTqJocsEpAFlEWfpjE0yvWqgzgRZBibx1bERMdfkSyHLrxfjJLI=~3223856~3293508;
-        Domain=.sony.com; Path=/; Expires=Fri, 27 Jan 2023 17:44:37 GMT; Max-Age=14400
+      - bm_sz=5BCA06814395A9A508598DABA4A21F26~YAAQt9LerRoE7hGHAQAAUVgOExP4O4Olea3vbMgbCmBBkeMsi+7Lap69+JoMrQMArIuPc8BM6Y7iqtzXeB5tAhtzo8ewGAhc02Xa3Tsc/YUhl8ZJIQvh5jtVSTYe1BbZjwNO3oJRr7sKC7kL6X+F0hP3QUZlO30Qk/cQr/lF/SinuJJETubJHo04tO9jVLsx+V0PkwdvtvGeGudjp/ernn/ZBLez5ggc5gR09mVwj3NMvUvczX9Kfg0MoCQVH8Eh7kJ8Wj1wBAU5AM9/Ob3mdYQ5tE37qZZt5eZX+tCGjo0laaKIK1Gu2a9IHjGIWbNQIzhaJq9K3hEWQk+5RzZvHNXVeUBipmz7OEVDw5gKRWHlLlRzLDKTelx+OWg=~4338229~3683398;
+        Domain=.sony.com; Path=/; Expires=Fri, 24 Mar 2023 13:58:39 GMT; Max-Age=14400
     body:
       encoding: UTF-8
       string: '{"access_token":"<PSN_TOKEN>","token_type":"bearer","expires_in":3599,"scope":"psn:mobile.v2.core
         psn:clientapp","id_token":"idtoken","refresh_token":"refreshtoken","refresh_token_expires_in":5183999}'
-  recorded_at: Fri, 27 Jan 2023 13:44:36 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:38 GMT
 - request:
     method: get
     uri: https://ps5.np.playstation.net/api/trophy/v1/users/me/trophyTitles?limit=10&offset=0
@@ -138,13 +138,13 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '6024'
+      - '5635'
       Server:
       - Apache
       Cache-Control:
       - private
       Date:
-      - Fri, 27 Jan 2023 13:44:38 GMT
+      - Fri, 24 Mar 2023 09:58:40 GMT
       Connection:
       - keep-alive
       Strict-Transport-Security:
@@ -152,8 +152,16 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJ0cm9waHlUaXRsZXMiOlt7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IxNzIyN18wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMiIsInRyb3BoeVRpdGxlTmFtZSI6Ik1pbmkgTWV0cm8iLCJ0cm9waHlUaXRsZURldGFpbCI6Ik1pbmkgTWV0cm8iLCJ0cm9waHlUaXRsZUljb25VcmwiOiJodHRwczovL2ltYWdlLmFwaS5wbGF5c3RhdGlvbi5jb20vdHJvcGh5L25wL05QV1IxNzIyN18wMF8wMEZEQzJEOTk0RUE5NDZFMDI2MDE3RjBFQkM4REQwOTQ1NTUwMjQxQzkvNjlEQjRCQTlGODBGMkI0MDg2Njk0MjdBN0VEMkEyNjQ2MTZCNUQ5Ny5QTkciLCJ0cm9waHlUaXRsZVBsYXRmb3JtIjoiUFM0IiwiaGFzVHJvcGh5R3JvdXBzIjpmYWxzZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MzIsInNpbHZlciI6MTAsImdvbGQiOjMsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjQ4LCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjIwLCJzaWx2ZXIiOjcsImdvbGQiOjAsInBsYXRpbnVtIjowfSwiaGlkZGVuRmxhZyI6ZmFsc2UsImxhc3RVcGRhdGVkRGF0ZVRpbWUiOiIyMDIzLTAxLTI3VDEzOjM5OjQxWiJ9LHsibnBTZXJ2aWNlTmFtZSI6InRyb3BoeSIsIm5wQ29tbXVuaWNhdGlvbklkIjoiTlBXUjA1ODk0XzAwIiwidHJvcGh5U2V0VmVyc2lvbiI6IjAxLjAwIiwidHJvcGh5VGl0bGVOYW1lIjoiQm91bmQgYnkgRmxhbWUiLCJ0cm9waHlUaXRsZURldGFpbCI6IkJvdW5kIGJ5IEZsYW1lIiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMDU4OTRfMDBfMDA0RDdEQ0Q4REQ1M0RERkE4NUNEMEUyNjZFMTU1OTdCNzYxRTM0QUMwL0QyQTZCMjk5NDRBNzVGQUNFQzlEMjgzRTQwMjkxRTM3NDIwQ0RENEIuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6ZmFsc2UsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjI5LCJzaWx2ZXIiOjksImdvbGQiOjMsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjEwMCwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjoyOSwic2lsdmVyIjo5LCJnb2xkIjozLCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMy0wMS0yNVQxNzo1Mzo1OVoifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IwOTg4MF8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMCIsInRyb3BoeVRpdGxlTmFtZSI6IjcgRGF5cyB0byBEaWUiLCJ0cm9waHlUaXRsZURldGFpbCI6IlRoZSB0cm9waHkgc2V0IGZvciA3IERheXMgdG8gRGllLiIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vaW1hZ2UuYXBpLnBsYXlzdGF0aW9uLmNvbS90cm9waHkvbnAvTlBXUjA5ODgwXzAwXzAwRDAwRkZDRDA5OTQ3OTgzNENEQjk2NTQwQTFEN0NFOThEMjkzNTc4Qi8yOTAxMjAyNUFCODNGQTRGN0YzODdEMjU3QzAwQkIxM0VERkE0QUUwLlBORyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzQiLCJoYXNUcm9waHlHcm91cHMiOmZhbHNlLCJkZWZpbmVkVHJvcGhpZXMiOnsiYnJvbnplIjozMiwic2lsdmVyIjo4LCJnb2xkIjozLCJwbGF0aW51bSI6MX0sInByb2dyZXNzIjoxMDAsImVhcm5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MzIsInNpbHZlciI6OCwiZ29sZCI6MywicGxhdGludW0iOjF9LCJoaWRkZW5GbGFnIjpmYWxzZSwibGFzdFVwZGF0ZWREYXRlVGltZSI6IjIwMjMtMDEtMjRUMjI6MTM6MjFaIn0seyJucFNlcnZpY2VOYW1lIjoidHJvcGh5IiwibnBDb21tdW5pY2F0aW9uSWQiOiJOUFdSMTQ0NTVfMDAiLCJ0cm9waHlTZXRWZXJzaW9uIjoiMDEuMDEiLCJ0cm9waHlUaXRsZU5hbWUiOiJTcGFjZSBIdWxrOiBUYWN0aWNzIiwidHJvcGh5VGl0bGVEZXRhaWwiOiJTcGFjZSBIdWxrOiBUYWN0aWNzIiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMTQ0NTVfMDBfMDBERERGNDUxRDFBNTI2RDYwNTJFMDAxMDRDRjlFQzcxMDlDN0EyQjNCLzIyODk2NDQ3REQ5Q0ZCODc0QTk2OTJDMTQ5OUVGMjJEQzU3NTJCMjkuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6ZmFsc2UsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjYsInNpbHZlciI6MTgsImdvbGQiOjQsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjEwMCwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjo2LCJzaWx2ZXIiOjE4LCJnb2xkIjo0LCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMy0wMS0yM1QxOTozNzo1OVoifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IwNjY5M18wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wNCIsInRyb3BoeVRpdGxlTmFtZSI6IkJhdHRsZWZpZWxk4oSiIEhhcmRsaW5lIFRyb3BoaWVzIiwidHJvcGh5VGl0bGVEZXRhaWwiOiJUaGUgVHJvcGh5IGNvbGxlY3Rpb24gZm9yIEJhdHRsZWZpZWxk4oSiIEhhcmRsaW5lIiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMDY2OTNfMDBfMDBFMEREMEI3NTIyODJERTJGRDJDNEY2MkRGRkUyN0ZGNUYxMkEyRUFGLzlFQzY3NkE0QzY0MUI2NzNGMjY1QzIzM0IwNjkyQUY4Q0Q3NzFEOUQuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6dHJ1ZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MzMsInNpbHZlciI6MjQsImdvbGQiOjUsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjEwMCwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjozMywic2lsdmVyIjoyNCwiZ29sZCI6NSwicGxhdGludW0iOjF9LCJoaWRkZW5GbGFnIjpmYWxzZSwibGFzdFVwZGF0ZWREYXRlVGltZSI6IjIwMjMtMDEtMjBUMDU6NDM6MTRaIn0seyJucFNlcnZpY2VOYW1lIjoidHJvcGh5IiwibnBDb21tdW5pY2F0aW9uSWQiOiJOUFdSMTAwODdfMDAiLCJ0cm9waHlTZXRWZXJzaW9uIjoiMDEuMDAiLCJ0cm9waHlUaXRsZU5hbWUiOiJEaVJUIFJhbGx5IiwidHJvcGh5VGl0bGVEZXRhaWwiOiJEaVJUIFJhbGx5IiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMTAwODdfMDBfMDAzRUY2QzJDNkI2NDA4MUMyNkUzNkRFNzU4QjRFMDczNkFBQTQ1NzA2LzA5N0VBRDE5NTZCREE2MUJEOUM1MzAyRkFGNTQ4OUU5QzZBNEJDRUEuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6ZmFsc2UsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjM3LCJzaWx2ZXIiOjgsImdvbGQiOjIsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjEwMCwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjozNywic2lsdmVyIjo4LCJnb2xkIjoyLCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMy0wMS0yMFQwNTozOToxNloifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IxMzk1NF8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMSIsInRyb3BoeVRpdGxlTmFtZSI6Ik9OUlVTSOKEoiIsInRyb3BoeVRpdGxlRGV0YWlsIjoiT05SVVNIIFRyb3BoaWVzIiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMTM5NTRfMDBfMDAyMjZDQjM1MEQxNDdGMkY0NTRDNjk0RjE4QkY1REExOTg2QjZBQzdFLzVGQkNCOTVCNzg3QUU2OEU4REQ2Mjk3NTU5MDUxNkRFQzcwM0UxRUYuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6ZmFsc2UsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjE5LCJzaWx2ZXIiOjcsImdvbGQiOjYsInBsYXRpbnVtIjoxfSwicHJvZ3Jlc3MiOjEwMCwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjoxOSwic2lsdmVyIjo3LCJnb2xkIjo2LCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMy0wMS0yMFQwNTozNjo1M1oifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IxMjMzNl8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMiIsInRyb3BoeVRpdGxlTmFtZSI6IkRpUlQgNCIsInRyb3BoeVRpdGxlRGV0YWlsIjoiRGlSVCA0IiwidHJvcGh5VGl0bGVJY29uVXJsIjoiaHR0cHM6Ly9pbWFnZS5hcGkucGxheXN0YXRpb24uY29tL3Ryb3BoeS9ucC9OUFdSMTIzMzZfMDBfMDA1NUU3RDIyOEQ3RTE1NzI2RDVDMEUyM0U1QjY4QzYwMUU2RjVEMEQ0L0RGMzEzOUY2NTAzOEQ0NTBEQzM2QjVBNzFBQTgyOTM1NDU4MEY0NTEuUE5HIiwidHJvcGh5VGl0bGVQbGF0Zm9ybSI6IlBTNCIsImhhc1Ryb3BoeUdyb3VwcyI6ZmFsc2UsImRlZmluZWRUcm9waGllcyI6eyJicm9uemUiOjM1LCJzaWx2ZXIiOjExLCJnb2xkIjoyLCJwbGF0aW51bSI6MX0sInByb2dyZXNzIjoxMDAsImVhcm5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MzUsInNpbHZlciI6MTEsImdvbGQiOjIsInBsYXRpbnVtIjoxfSwiaGlkZGVuRmxhZyI6ZmFsc2UsImxhc3RVcGRhdGVkRGF0ZVRpbWUiOiIyMDIzLTAxLTIwVDA1OjM0OjIzWiJ9LHsibnBTZXJ2aWNlTmFtZSI6InRyb3BoeSIsIm5wQ29tbXVuaWNhdGlvbklkIjoiTlBXUjA1OTYxXzAwIiwidHJvcGh5U2V0VmVyc2lvbiI6IjAxLjAyIiwidHJvcGh5VGl0bGVOYW1lIjoiRXZlcnlib2R5J3MgR29sZuKEoiIsInRyb3BoeVRpdGxlRGV0YWlsIjoiVGhpcyBpcyB0aGUgdHJvcGh5IHNldCBmb3IgRXZlcnlib2R5J3MgR29sZuKEoiIsInRyb3BoeVRpdGxlSWNvblVybCI6Imh0dHBzOi8vaW1hZ2UuYXBpLnBsYXlzdGF0aW9uLmNvbS90cm9waHkvbnAvTlBXUjA1OTYxXzAwXzAwODdCMUUyMjM2MDM5NDlCNUExRjE0NDQ5Mjc2REQ0REUxNEJCM0M4OS8xRTFDRjVDQzdDNDg4QzlCRDhDQjg4OEY3NzZGMUY2NEY2OTIwMjdBLlBORyIsInRyb3BoeVRpdGxlUGxhdGZvcm0iOiJQUzQiLCJoYXNUcm9waHlHcm91cHMiOmZhbHNlLCJkZWZpbmVkVHJvcGhpZXMiOnsiYnJvbnplIjoxNSwic2lsdmVyIjoxMCwiZ29sZCI6NSwicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6MTAwLCJlYXJuZWRUcm9waGllcyI6eyJicm9uemUiOjE1LCJzaWx2ZXIiOjEwLCJnb2xkIjo1LCJwbGF0aW51bSI6MX0sImhpZGRlbkZsYWciOmZhbHNlLCJsYXN0VXBkYXRlZERhdGVUaW1lIjoiMjAyMy0wMS0yMFQwNTozMjoxM1oifSx7Im5wU2VydmljZU5hbWUiOiJ0cm9waHkiLCJucENvbW11bmljYXRpb25JZCI6Ik5QV1IxOTUxNF8wMCIsInRyb3BoeVNldFZlcnNpb24iOiIwMS4wMCIsInRyb3BoeVRpdGxlTmFtZSI6IlVudGl0bGVkIEdvb3NlIEdhbWUiLCJ0cm9waHlUaXRsZURldGFpbCI6IkhPTksiLCJ0cm9waHlUaXRsZUljb25VcmwiOiJodHRwczovL2ltYWdlLmFwaS5wbGF5c3RhdGlvbi5jb20vdHJvcGh5L25wL05QV1IxOTUxNF8wMF8wMEFGRDQ1NDE0Q0U0NzRCRkJBNzkyRjdDQzM5NTBCMjI0MDE0MjhBN0YvQUM1QzhFQ0U3QzM2QURDMTA4NkVENkVDRTZERjc5MjcyMUQwNjVCOS5QTkciLCJ0cm9waHlUaXRsZVBsYXRmb3JtIjoiUFM0IiwiaGFzVHJvcGh5R3JvdXBzIjpmYWxzZSwiZGVmaW5lZFRyb3BoaWVzIjp7ImJyb256ZSI6MTQsInNpbHZlciI6MSwiZ29sZCI6OSwicGxhdGludW0iOjF9LCJwcm9ncmVzcyI6MCwiZWFybmVkVHJvcGhpZXMiOnsiYnJvbnplIjowLCJzaWx2ZXIiOjAsImdvbGQiOjAsInBsYXRpbnVtIjowfSwiaGlkZGVuRmxhZyI6ZmFsc2UsImxhc3RVcGRhdGVkRGF0ZVRpbWUiOiIyMDIzLTAxLTE3VDE0OjAwOjEyWiJ9XSwibmV4dE9mZnNldCI6MTAsInRvdGFsSXRlbUNvdW50IjoxNzd9
-  recorded_at: Fri, 27 Jan 2023 13:44:37 GMT
+      encoding: UTF-8
+      string: '{"trophyTitles":[{"npServiceName":"trophy","npCommunicationId":"NPWR10258_00","trophySetVersion":"01.02","trophyTitleName":"Dungeons
+        2","trophyTitleDetail":"Dungeons 2","trophyTitleIconUrl":"https://image.api.playstation.com/trophy/np/NPWR10258_00_0058585F08CB7F2AF947F9EABD6D88FCA35AD5D205/1F68A03ABFCACE82C494917A136F039BE5B3DAE4.PNG","trophyTitlePlatform":"PS4","hasTrophyGroups":false,"definedTrophies":{"bronze":4,"silver":7,"gold":8,"platinum":1},"progress":78,"earnedTrophies":{"bronze":4,"silver":6,"gold":6,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-23T22:20:19Z"},{"npServiceName":"trophy","npCommunicationId":"NPWR11783_00","trophySetVersion":"01.01","trophyTitleName":"Victor
+        Vran","trophyTitleDetail":"Trophy collection for Victor Vran","trophyTitleIconUrl":"https://image.api.playstation.com/trophy/np/NPWR11783_00_0014F4ED80ACF59CBDD6F2D8DAF254B99E1D8B1814/463F610C90FC5412C4FF18B655B9652FC4CD0E42.PNG","trophyTitlePlatform":"PS4","hasTrophyGroups":true,"definedTrophies":{"bronze":52,"silver":16,"gold":2,"platinum":1},"progress":31,"earnedTrophies":{"bronze":30,"silver":0,"gold":0,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-19T21:34:07Z"},{"npServiceName":"trophy","npCommunicationId":"NPWR16967_00","trophySetVersion":"01.00","trophyTitleName":"Ghost
+        of a Tale","trophyTitleDetail":"Ghost of a Tale","trophyTitleIconUrl":"https://image.api.playstation.com/trophy/np/NPWR16967_00_00398C32455A2476779B0B6720F5B70C580AC0BB1B/BF9D8651F57B63223D808EBB40C7322753F28135.PNG","trophyTitlePlatform":"PS4","hasTrophyGroups":false,"definedTrophies":{"bronze":4,"silver":9,"gold":7,"platinum":1},"progress":100,"earnedTrophies":{"bronze":4,"silver":9,"gold":7,"platinum":1},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-15T22:23:29Z"},{"npServiceName":"trophy","npCommunicationId":"NPWR09485_00","trophySetVersion":"01.02","trophyTitleName":"The
+        Vanishing of Ethan Carter","trophyTitleDetail":"The Vanishing of Ethan Carter","trophyTitleIconUrl":"https://image.api.playstation.com/trophy/np/NPWR09485_00_007134CF7A438BF2D2E5F560A10399209DFCF5273E/CF344ACF6895FF600672EC0EDE25588449F4FDAF.PNG","trophyTitlePlatform":"PS4","hasTrophyGroups":false,"definedTrophies":{"bronze":12,"silver":1,"gold":1,"platinum":0},"progress":100,"earnedTrophies":{"bronze":12,"silver":1,"gold":1,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-11T00:19:12Z"},{"npServiceName":"trophy2","npCommunicationId":"NPWR25113_00","trophySetVersion":"01.01","trophyTitleName":"Monster
+        Energy Supercross - The Official Videogame 5","trophyTitleIconUrl":"https://psnobj.prod.dl.playstation.net/psnobj/NPWR25113_00/e32a472c-2913-47d0-84dc-f6794c3aabb3.png","trophyTitlePlatform":"PS5","hasTrophyGroups":false,"definedTrophies":{"bronze":42,"silver":5,"gold":3,"platinum":1},"progress":62,"earnedTrophies":{"bronze":36,"silver":4,"gold":0,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-10T21:43:39Z"},{"npServiceName":"trophy2","npCommunicationId":"NPWR24581_00","trophySetVersion":"01.00","trophyTitleName":"OlliOlli
+        World\n","trophyTitleIconUrl":"https://psnobj.prod.dl.playstation.net/psnobj/NPWR24581_00/ca2b9e4b-aa2f-4289-80f2-b4c0c4c56398.png","trophyTitlePlatform":"PS5","hasTrophyGroups":true,"definedTrophies":{"bronze":32,"silver":17,"gold":5,"platinum":1},"progress":4,"earnedTrophies":{"bronze":4,"silver":0,"gold":0,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-08T08:00:22Z"},{"npServiceName":"trophy2","npCommunicationId":"NPWR22305_00","trophySetVersion":"01.00","trophyTitleName":"Wreckfest","trophyTitleIconUrl":"https://psnobj.prod.dl.playstation.net/psnobj/NPWR22305_00/d2fcf97e-1676-4ce9-a09a-f75bcda1d119.PNG","trophyTitlePlatform":"PS5","hasTrophyGroups":false,"definedTrophies":{"bronze":2,"silver":11,"gold":7,"platinum":1},"progress":100,"earnedTrophies":{"bronze":2,"silver":11,"gold":7,"platinum":1},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-05T14:58:42Z"},{"npServiceName":"trophy","npCommunicationId":"NPWR05248_00","trophySetVersion":"01.01","trophyTitleName":"Blacklight:
+        Retribution","trophyTitleDetail":"Trophies for Blacklight Retribution","trophyTitleIconUrl":"https://image.api.playstation.com/trophy/np/NPWR05248_00_006BFE7970C78664169E69FF61357EDF513D78A629/DB1DA8B3DA42550BF7071F8381E318BDF024E191.PNG","trophyTitlePlatform":"PS4","hasTrophyGroups":true,"definedTrophies":{"bronze":22,"silver":1,"gold":0,"platinum":0},"progress":66,"earnedTrophies":{"bronze":16,"silver":0,"gold":0,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-02T18:18:37Z"},{"npServiceName":"trophy2","npCommunicationId":"NPWR25179_00","trophySetVersion":"01.00","trophyTitleName":"FIFA
+        22 Trophies","trophyTitleIconUrl":"https://psnobj.prod.dl.playstation.net/psnobj/NPWR25179_00/9f7d91bf-019d-4734-bbda-319bb01ca4e0.png","trophyTitlePlatform":"PS5","hasTrophyGroups":false,"definedTrophies":{"bronze":17,"silver":17,"gold":3,"platinum":1},"progress":33,"earnedTrophies":{"bronze":13,"silver":2,"gold":1,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-03-01T20:29:50Z"},{"npServiceName":"trophy2","npCommunicationId":"NPWR28403_00","trophySetVersion":"01.01","trophyTitleName":"FIFA
+        23 Trophies","trophyTitleIconUrl":"https://psnobj.prod.dl.playstation.net/psnobj/NPWR28403_00/8eda0c07-7ba3-4ea9-9445-6450608f29ec.png","trophyTitlePlatform":"PS5","hasTrophyGroups":false,"definedTrophies":{"bronze":24,"silver":12,"gold":3,"platinum":1},"progress":0,"earnedTrophies":{"bronze":0,"silver":0,"gold":0,"platinum":0},"hiddenFlag":false,"lastUpdatedDateTime":"2023-02-28T17:20:49Z"}],"nextOffset":10,"totalItemCount":192}'
+  recorded_at: Fri, 24 Mar 2023 09:58:39 GMT
 recorded_with: VCR 6.1.0

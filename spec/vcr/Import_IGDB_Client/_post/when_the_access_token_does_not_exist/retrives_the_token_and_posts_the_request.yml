@@ -8,7 +8,7 @@ http_interactions:
       string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
     headers:
       User-Agent:
-      - Faraday v2.5.2
+      - Faraday v2.7.4
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 01 Feb 2023 22:37:11 GMT
+      - Fri, 24 Mar 2023 09:58:20 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Server:
-      - nginx/1.22.0
+      - nginx
       Access-Control-Allow-Origin:
       - "*"
       X-Ctxlog-Logid:
-      - 1-63dae996-19f4ca8505d762c30892675b
+      - 1-641d743b-46a2de5c00307adc2d59db7c
     body:
       encoding: UTF-8
-      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5074622,"token_type":"bearer"}
+      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5599120,"token_type":"bearer"}
 
         '
-  recorded_at: Wed, 01 Feb 2023 22:37:10 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:19 GMT
 - request:
     method: post
     uri: https://api.igdb.com/v4/games
@@ -65,7 +65,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 01 Feb 2023 22:37:11 GMT
+      - Fri, 24 Mar 2023 09:58:20 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -73,31 +73,29 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 9017bbb0-3a3d-4738-ac13-99c6d4f0d9ac
+      - 85cef9fe-deb5-4d20-816d-37dd30d8f39e
       X-Amzn-Remapped-Content-Length:
       - '56'
       X-Amz-Apigw-Id:
-      - frlvuHNKvHcF9EA=
+      - CR8ZfGVIvHcFyMA=
       X-Count:
       - '1'
       X-Amzn-Remapped-Date:
-      - Wed, 01 Feb 2023 22:37:11 GMT
+      - Fri, 24 Mar 2023 09:58:20 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 a3ef506c047603361a1618325060e832.cloudfront.net (CloudFront)
+      - 1.1 fee1af928fb542120a907076855ee8f0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LHR50-P8
       X-Amz-Cf-Id:
-      - DLBN8Cc6B_YCOmSJ6HQYUOleZHQsfh-WxMwl0sRId8YizvESKnv9Mw==
+      - zTx08UgdpKdjOpHRPOuQ5hrLhV8GAbZPyyr3g8nPzgWyR4jTtyfFFA==
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Uuxkn.xnSkz2hN5.xG0EjDrNV_mhp_3RM8mxP5oFJjI-1675291031-0-ARg3lyAkBE9Sd0DwKPR/QSlaxv6bIX1DAi62rtqiLSIXvm6d8GeRX5LpAfQPxSvyjW1CuHy/CVeydVaI56pmyyw=;
-        path=/; expires=Wed, 01-Feb-23 23:07:11 GMT; domain=.igdb.com; HttpOnly; Secure;
+      - __cf_bm=G8oNgMYEQK_I50gh.OdwNZ51eMJaB1cjuoGOOWKiT7Q-1679651900-0-ASgfPHO42EaxE4AxImfAofaSn+jJRXmd5peWe44e8Kg6pEG6qGhZNnODUEWde9RynuECLn3JuJtMhqxfl4Z1oEc=;
+        path=/; expires=Fri, 24-Mar-23 10:28:20 GMT; domain=.igdb.com; HttpOnly; Secure;
         SameSite=None
-      Server-Timing:
-      - cf-q-config;dur=9.0000003183377e-06
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -105,7 +103,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 792e2b916d903601-MAN
+      - 7ace0e1978e60751-MAN
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -115,5 +115,5 @@ http_interactions:
             "name": "The Last of Us"
           }
         ]
-  recorded_at: Wed, 01 Feb 2023 22:37:11 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:19 GMT
 recorded_with: VCR 6.1.0

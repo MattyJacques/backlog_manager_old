@@ -8,7 +8,7 @@ http_interactions:
       string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
     headers:
       User-Agent:
-      - Faraday v2.5.2
+      - Faraday v2.7.4
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 27 Jan 2023 13:44:25 GMT
+      - Fri, 24 Mar 2023 09:58:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Server:
-      - nginx/1.22.0
+      - nginx
       Access-Control-Allow-Origin:
       - "*"
       X-Ctxlog-Logid:
-      - 1-63d3d538-0752200b612dd7f738913a94
+      - 1-641d7441-7d70f26d3f423d501183b600
     body:
       encoding: UTF-8
-      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5324312,"token_type":"bearer"}
+      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5243259,"token_type":"bearer"}
 
         '
-  recorded_at: Fri, 27 Jan 2023 13:44:24 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:24 GMT
 - request:
     method: post
     uri: https://api.igdb.com/v4/games
@@ -47,8 +47,8 @@ http_interactions:
       encoding: UTF-8
       string: |-
         fields name, genres.name, platforms.platform_family.name,
-                                    platforms.name, release_dates.date, release_dates.game,
-                                    release_dates.platform, release_dates.region;where id = 1009;
+                  platforms.name, release_dates.date, release_dates.game,
+                  release_dates.platform, release_dates.region;where id = 1009;
     headers:
       Accept:
       - application/json
@@ -68,7 +68,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 27 Jan 2023 13:44:25 GMT
+      - Fri, 24 Mar 2023 09:58:26 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -76,31 +76,29 @@ http_interactions:
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 33ef7981-b2ed-4a47-b7a4-334a12a7f59c
+      - a75fd453-8d75-4be1-8750-e3f73912a1b3
       X-Amzn-Remapped-Content-Length:
       - '676'
       X-Amz-Apigw-Id:
-      - fZ5BBGDBvHcFoTw=
+      - CR8aaHujvHcFY8A=
       X-Count:
       - '1'
       X-Amzn-Remapped-Date:
-      - Fri, 27 Jan 2023 13:44:25 GMT
+      - Fri, 24 Mar 2023 09:58:26 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 04cb9a524a2f5b52f2abb84002971492.cloudfront.net (CloudFront)
+      - 1.1 fee1af928fb542120a907076855ee8f0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LHR50-P8
       X-Amz-Cf-Id:
-      - F3iDRixPTQa3SPgL6H6m05Aw2v4REJhUCfNVB32jRS6S_M9JgV3C4w==
+      - e87K2YLp68hVHeJtyAxs4LBoqQWNbod-XhiewwhaHbOBODKn21i53g==
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Tg9MlYftG8_SPZHTDe1pRIZtDn4ORvBIGYG5tFqu9K4-1674827065-0-ATkW5j5bNiDJ/00kHe9quIqHtWa7O59xbg3L6TlFMZAS9g3t9tm2tRD7GV/EUtUuWom4tMjWzimOeGVZPvLOzZk=;
-        path=/; expires=Fri, 27-Jan-23 14:14:25 GMT; domain=.igdb.com; HttpOnly; Secure;
+      - __cf_bm=2uou2FvSAQ97kbGKPBuHRatfXIWbx3BSVsJ2T77ofvU-1679651906-0-AX+fMKIckfdHItFJ7EzVaok7724/hX44UzR+ktXaQda12FaVhwxF++NpX6N02HEzcvdNoGay4SKknTNhNWg/GM8=;
+        path=/; expires=Fri, 24-Mar-23 10:28:26 GMT; domain=.igdb.com; HttpOnly; Secure;
         SameSite=None
-      Server-Timing:
-      - cf-q-config;dur=7.0000023697503e-06
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -108,7 +106,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7901ec471f900742-MAN
+      - 7ace0e3c6a62074b-MAN
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -154,5 +154,5 @@ http_interactions:
             ]
           }
         ]
-  recorded_at: Fri, 27 Jan 2023 13:44:24 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:25 GMT
 recorded_with: VCR 6.1.0

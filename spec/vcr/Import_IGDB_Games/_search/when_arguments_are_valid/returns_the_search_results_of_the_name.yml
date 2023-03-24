@@ -8,7 +8,7 @@ http_interactions:
       string: client_id=<IGDB_CLIENT_ID>&client_secret=<IGDB_CLIENT_SECRET>&grant_type=client_credentials
     headers:
       User-Agent:
-      - Faraday v2.5.2
+      - Faraday v2.7.4
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 27 Jan 2023 13:44:22 GMT
+      - Fri, 24 Mar 2023 09:58:23 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,17 +29,17 @@ http_interactions:
       Connection:
       - keep-alive
       Server:
-      - nginx/1.22.0
+      - nginx
       Access-Control-Allow-Origin:
       - "*"
       X-Ctxlog-Logid:
-      - 1-63d3d536-0f0da59f6b14142a75495373
+      - 1-641d743f-20868eba2c08fa7e2584e59a
     body:
       encoding: UTF-8
-      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5326566,"token_type":"bearer"}
+      string: '{"access_token":"<IGDB_TOKEN>","expires_in":5442039,"token_type":"bearer"}
 
         '
-  recorded_at: Fri, 27 Jan 2023 13:44:22 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:22 GMT
 - request:
     method: post
     uri: https://api.igdb.com/v4/games
@@ -66,39 +66,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 27 Jan 2023 13:44:23 GMT
+      - Fri, 24 Mar 2023 09:58:24 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '442'
+      - '441'
       Connection:
       - keep-alive
       X-Amzn-Requestid:
-      - 5b1de3d4-ddfa-43ea-b16d-cc8e31c0f1e6
+      - 5bf10460-636d-4f4f-b26a-b574cdb7ee8e
       X-Amzn-Remapped-Content-Length:
-      - '442'
+      - '441'
       X-Amz-Apigw-Id:
-      - fZ5AtF8EPHcFnTA=
+      - CR8aIF-RPHcFeYw=
       X-Count:
       - '16'
       X-Amzn-Remapped-Date:
-      - Fri, 27 Jan 2023 13:44:23 GMT
+      - Fri, 24 Mar 2023 09:58:24 GMT
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 8e50319173d596b00efe562c6abee728.cloudfront.net (CloudFront)
+      - 1.1 9c8e998b26c0501e35fbd9ad8ec89efa.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - MAN51-P1
       X-Amz-Cf-Id:
-      - zUqb-C_sc72tYaj_aVavkVxFdZBUtcWwfVpi8Y-YTKUtn4BBRasI7g==
+      - jVby637TVbT11-Q6fV1cBlohgFEVReX7qXZyiNg9SXh1JZX-gZr5Vw==
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=xm.wz3_W2oy8sZ4CGCuZDkqQCb00khcNDSZffVpGOVs-1674827063-0-AS/Ij8hMUkbMYQ9P8H4YN9S23y+L+2oKDd25+GN9UkUwH6Y29isl4GmjJAoMLGSrbvWYrOZ8eINUARoY6F3EVps=;
-        path=/; expires=Fri, 27-Jan-23 14:14:23 GMT; domain=.igdb.com; HttpOnly; Secure;
+      - __cf_bm=Nm6Wt6WCq2DggvFj2kuHaout.H_dAAbPElP0j5eXWOg-1679651904-0-ARtT9965JlTf/FE4ykAf5xI6KxzY+93+gvGOgOgqxcIJMg6UuedmWSjiEZ7g76dcuJFZ6nsaZ4FXIETCtej+JhI=;
+        path=/; expires=Fri, 24-Mar-23 10:28:24 GMT; domain=.igdb.com; HttpOnly; Secure;
         SameSite=None
-      Server-Timing:
-      - cf-q-config;dur=7.0000023697503e-06
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -106,7 +104,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7901ec390bd7075e-MAN
+      - 7ace0e311a90074a-MAN
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -231,7 +231,7 @@ http_interactions:
                 "name": "Adventure"
               }
             ],
-            "name": "The Last of Us Ellie Edition",
+            "name": "The Last of Us: Ellie Edition",
             "platforms": [
               {
                 "id": 9,
@@ -251,7 +251,7 @@ http_interactions:
                 "name": "Adventure"
               }
             ],
-            "name": "The Last of Us Joel Edition",
+            "name": "The Last of Us: Joel Edition",
             "platforms": [
               {
                 "id": 9,
@@ -386,5 +386,5 @@ http_interactions:
             ]
           }
         ]
-  recorded_at: Fri, 27 Jan 2023 13:44:22 GMT
+  recorded_at: Fri, 24 Mar 2023 09:58:23 GMT
 recorded_with: VCR 6.1.0

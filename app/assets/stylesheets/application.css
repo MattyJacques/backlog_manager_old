@@ -1,5 +1,9 @@
 /* Application styles */
 
+body {
+  font-family: Helvetica, sans-serif;
+}
+
 .paddingBetweenCols td {
   padding: 0 15px 0 0;
 }
