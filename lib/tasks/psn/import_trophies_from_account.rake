@@ -6,13 +6,19 @@ namespace :psn do
 
     psn_titles.each do |title|
       game_title = title[:name].gsub(Regexp.union('®', '™', ' Trophies'), '')
-      game_title = game_title.gsub(/’/, '\'')
+      game_title = game_title.gsub(/’/, '\'').strip
 
       if Import::IGDB::Games.import_by_name(game_title).present?
-        puts ("Imported #{game_title} successfully")
+        puts("Imported #{game_title} successfully")
       else
-        puts("Failed to import #{game_title}")
-        failed_titles << game_title
+        puts("Failed to import #{game_title}, retrying with titleized name")
+
+        if Import::IGDB::Games.import_by_name(game_title.titleize).present?
+          puts("Imported #{game_title.titleize} successfully")
+        else
+          puts("Failed to import #{game_title.titleize}")
+          failed_titles << game_title
+        end
       end
 
     rescue StandardError => error
