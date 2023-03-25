@@ -16,15 +16,12 @@
         <li class="nav-item">
           <a class="nav-link <%= 'active' if current_page?(controller: 'platforms') %>" href="/platforms">Platforms</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link <%= 'active' if current_page?(controller: 'platform_families') %>" href="/platform_families">Platform Families</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Import
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href<%= new_game_path %> method=get>IGDB</a></li>
+            <li><a class="dropdown-item" href=<%= new_game_path %> method=get>IGDB</a></li>
             <li><a class="dropdown-item disabled" href="#">PSN</a></li>
             <li><a class="dropdown-item disabled" href="#">Steam</a></li>
             <li><hr class="dropdown-divider"></li>
