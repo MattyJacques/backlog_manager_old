@@ -6,7 +6,7 @@
         BacklogManager
       </a>
 
-      <ul class="nav nav-pills navbar-dark">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link <%= 'active' if current_page?(controller: 'games') %>" href="/games">Games</a>
         </li>
@@ -18,6 +18,18 @@
         </li>
         <li class="nav-item">
           <a class="nav-link <%= 'active' if current_page?(controller: 'platform_families') %>" href="/platform_families">Platform Families</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Import
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href<%= new_game_path %> method=get>IGDB</a></li>
+            <li><a class="dropdown-item disabled" href="#">PSN</a></li>
+            <li><a class="dropdown-item disabled" href="#">Steam</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item disabled" href="#">Something else here</a></li>
+          </ul>
         </li>
       </ul>
     </div>
