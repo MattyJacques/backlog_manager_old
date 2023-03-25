@@ -6,14 +6,14 @@
   <table class="listing" summary="Platform list">
     <tr class="header">
       <th></th>
-      <th>Platform</th>
+      <th>Name</th>
       <th>Family</th>
     </tr>
     <% @platforms.each do |platform| %>
     <tr>
       <td><%= platform.id %></td>
       <td><%= link_to(platform.name, platform_path(platform), :class => 'action show') %></td>
-      
+
       <% if platform.platform_family.present? %>
         <td><%= link_to(platform.platform_family.name, platform_family_path(platform.platform_family), :class => 'action show') %></td>
       <% end %>
