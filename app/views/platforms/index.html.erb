@@ -1,10 +1,8 @@
-<% content_for(:title) { "Platforms" } %>
-
-<div class="platforms index">
+<div>
   <h2>Platforms</h2>
 
-  <table class="listing" summary="Platform list">
-    <tr class="header">
+  <table>
+    <tr>
       <th></th>
       <th>Name</th>
       <th>Family</th>
@@ -12,10 +10,12 @@
     <% @platforms.each do |platform| %>
     <tr>
       <td><%= platform.id %></td>
-      <td><%= link_to(platform.name, platform_path(platform), :class => 'action show') %></td>
+      <td><%= link_to(platform.name, platform_path(platform), action: 'show', class: 'nav-link') %></td>
 
       <% if platform.platform_family.present? %>
-        <td><%= link_to(platform.platform_family.name, platform_family_path(platform.platform_family), :class => 'action show') %></td>
+        <td><%= link_to(platform.platform_family.name, platform_family_path(platform.platform_family), action: 'show', class: 'nav-link') %></td>
+      <% else %>
+        <td></td>
       <% end %>
     </tr>
     <% end %>

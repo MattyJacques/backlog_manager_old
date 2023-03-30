@@ -1,17 +1,15 @@
-<% content_for(:title) { "Platform Families" } %>
-
-<div class="platform_families index">
+<div>
   <h2>Platform Families</h2>
 
-  <table class="listing" summary="Platform Family list">
-    <tr class="header">
+  <table>
+    <tr>
       <th></th>
       <th>Name</th>
     </tr>
     <% @platform_families.each do |family| %>
     <tr>
       <td><%= family.id %></td>
-      <td><%= link_to(family.name, platform_family_path(family), :class => 'action show') %></td>
+      <td><%= link_to(family.name, platform_family_path(family), action: 'show', class: 'nav-link') %></td>
     </tr>
     <% end %>
   </table>

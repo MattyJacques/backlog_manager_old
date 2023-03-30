@@ -1,18 +1,21 @@
-<table class="table table-dark table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Platform</th>
-      <th scope="col">Progress</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @psn_games.each do |game| %>
+<div>
+  <h2>Import From PSN</h2>
+  <table>
+    <thead>
       <tr>
-        <td><%= game[:name] %></td>
-        <td><%= game[:platform] %></td>
-        <td><%= game[:progress] %>%</td>
+        <th scope="col">Name</th>
+        <th scope="col">Platform</th>
+        <th scope="col">Progress</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @psn_games.each do |game| %>
+        <tr>
+          <td><%= game[:name] %></td>
+          <td><%= game[:platform] %></td>
+          <td><%= game[:progress] %>%</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
