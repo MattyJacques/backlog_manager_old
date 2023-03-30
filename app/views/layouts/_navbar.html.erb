@@ -1,12 +1,12 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
     <div class='container'>
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand pt-1" href="/">
         <%= image_tag("site_logo.png", width: "45", height: "30", class: "d-inline-block align-top", alt: "logo") %>
         BacklogManager
       </a>
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link <%= 'active' if current_page?(controller: 'games') %>" href="/games">Games</a>
         </li>
@@ -21,7 +21,7 @@
             Import
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href=<%= new_game_path %> method=get>IGDB</a></li>
+            <li><a class="dropdown-item" href=<%= new_game_path %>>IGDB</a></li>
             <li><a class="dropdown-item disabled" href="#">PSN</a></li>
             <li><a class="dropdown-item disabled" href="#">Steam</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -29,6 +29,15 @@
           </ul>
         </li>
       </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="disabled form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <div class="text-end">
+        <button type="button" class="disabled btn btn-outline-light me-2">Login</button>
+        <button type="button" class="disabled btn btn-warning">Sign-up</button>
+      </div>
     </div>
   </nav>
 </header>
