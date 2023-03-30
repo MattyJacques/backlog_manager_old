@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'import/igdb'
+  get 'import/psn'
   # Defines the root path route ("/")
   root "games#index"
 
