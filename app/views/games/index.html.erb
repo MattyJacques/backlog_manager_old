@@ -6,6 +6,7 @@
       <tr>
         <th></th>
         <th>Name</th>
+        <th>Platforms</th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
         <tr>
           <td><%= game.id %></td>
           <td><%= link_to(game.name, game_path(game), action: 'show', class: 'nav-link') %></td>
+          <td><%= game.platforms.map { |p| p.name }.join(',') %></td>
         </tr>
       <% end %>
     </tbody>

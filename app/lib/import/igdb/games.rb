@@ -4,11 +4,12 @@ module Import
     class Games
       ENDPOINT = 'games'
 
-      def self.search(title, limit = 20)
+      def self.search(title, platform_id: nil, limit: 20)
         return if title.blank?
 
         params = { fields: 'name, platforms.name, genres.name' }
-        params[:search] = '"' + title + '"'
+        params[:search] = "\"#{title}\""
+        params[:where] = "platforms = (#{platform_id})" if platform_id.present?
         params[:limit] = limit
         Import::IGDB::Client.post(ENDPOINT, params)
       end
@@ -65,7 +66,10 @@ module Import
         platforms.map do |platform|
           family_data = platform.platform_family
           family = PlatformFamily.find_or_create(family_data&.id, family_data&.name)
-          Platform.find_or_create_by!(name: platform.name, igdb_id: platform.id, platform_family: family)
+          Platform.find_or_create_by!(name: platform.name,
+                                      abbreviation: platform.abbreviation,
+                                      igdb_id: platform.id,
+                                      platform_family: family)
         end
       end
 
@@ -78,7 +82,7 @@ module Import
 
       def self.import_param_fields
         { fields: 'name, genres.name, platforms.platform_family.name,
-          platforms.name, release_dates.date, release_dates.game,
+          platforms.name, platforms.abbreviation, release_dates.date, release_dates.game,
           release_dates.platform, release_dates.region' }
       end
     end

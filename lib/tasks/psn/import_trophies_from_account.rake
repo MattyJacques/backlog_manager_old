@@ -39,7 +39,7 @@ namespace :psn do
 
     if answer == 'y'
       failed_titles.each do |game_title|
-        result = Import::IGDB::Games.search(game_title, 1)
+        result = Import::IGDB::Games.search(game_title, limit: 1)
         if result.present?
           puts "Is #{result[0].name} a match for #{game_title}? (y for yes, any other char for no)"
           answer = gets.chomp

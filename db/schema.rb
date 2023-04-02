@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_210634) do
 
   create_table "platforms", force: :cascade do |t|
     t.string "name", null: false
+    t.string "abbreviation"
     t.integer "igdb_id", null: false
     t.integer "platform_family_id"
     t.datetime "created_at", null: false

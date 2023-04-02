@@ -3,17 +3,21 @@
   <table>
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Platform</th>
-        <th scope="col">Progress</th>
+        <th scope="col">Trophy List Name</th>
+        <th scope="col">Trophy List Platform</th>
+        <th scope="col">IGDB Name</th>
+        <th scope="col">IGDB Platform</th>
+        <th scope="col">IGDB ID</th>
       </tr>
     </thead>
     <tbody>
-      <% @psn_games.each do |game| %>
+      <% @games.each do |game| %>
         <tr>
-          <td><%= game[:name] %></td>
-          <td><%= game[:platform] %></td>
-          <td><%= game[:progress] %>%</td>
+          <td><%= game[:psn_name] %></td>
+          <td><%= game[:psn_platform] %></td>
+          <td><%= game[:igdb_name] %></td>
+          <td><%= game[:igdb_platform] %></td>
+          <td><%= game[:igdb_id] %></td>
         </tr>
       <% end %>
     </tbody>

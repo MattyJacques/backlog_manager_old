@@ -5,13 +5,14 @@
     <tr>
       <th></th>
       <th>Name</th>
+      <th>Abbreviation</th>
       <th>Family</th>
     </tr>
     <% @platforms.each do |platform| %>
     <tr>
       <td><%= platform.id %></td>
       <td><%= link_to(platform.name, platform_path(platform), action: 'show', class: 'nav-link') %></td>
-
+      <td><%= platform.abbreviation %></td>
       <% if platform.platform_family.present? %>
         <td><%= link_to(platform.platform_family.name, platform_family_path(platform.platform_family), action: 'show', class: 'nav-link') %></td>
       <% else %>
