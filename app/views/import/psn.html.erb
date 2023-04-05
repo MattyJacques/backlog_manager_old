@@ -8,6 +8,7 @@
         <th scope="col">IGDB Name</th>
         <th scope="col">IGDB Platform</th>
         <th scope="col">IGDB ID</th>
+        <th scope="col">Manual Search</th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
           <td><%= game[:igdb_name] %></td>
           <td><%= game[:igdb_platform] %></td>
           <td><%= game[:igdb_id] %></td>
+          <td><input type='button' class= "btn btn-primary" onclick="searchIGDB();" value="Search"></td>
         </tr>
       <% end %>
     </tbody>

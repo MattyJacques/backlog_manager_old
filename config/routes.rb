@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'import/igdb'
-  get 'import/psn'
   # Defines the root path route ("/")
   root "games#index"
 
@@ -12,6 +10,16 @@ Rails.application.routes.draw do
   resources :genres, except: [:new, :edit, :create, :update, :destroy]
   resources :platforms, except: [:new, :edit, :create, :update, :destroy]
   resources :platform_families, except: [:new, :edit, :create, :update, :destroy]
+
+  get 'import/igdb'
+  get 'import/psn'
+
+  namespace :api do
+    namespace :v1 do
+      get 'igdb/search'
+      post 'igdb/import'
+    end
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
