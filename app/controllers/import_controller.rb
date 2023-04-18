@@ -3,17 +3,7 @@ class ImportController < ApplicationController
   end
 
   def psn
-    psn_games = Import::PSN::Trophy.all_titles
-    @games = []
-
-    psn_games.each do |psn_game|
-      @games.append(
-        {
-          psn_name: psn_game[:name],
-          psn_platform: psn_game[:platform]
-        }
-      )
-    end
+    @games = helpers.get_psn_titles
   end
 
   def psnOLD
