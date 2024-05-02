@@ -19,6 +19,8 @@ module IGDB
             "#{key} #{value};"
           end.join
 
+          Rails.logger.debug { "IGDB request data: #{data}" }
+
           with_retry_on_auth_error do
             HTTParty.post(uri,
                           headers: { 'Client-ID' => ENV.fetch('IGDB_CLIENT_ID', nil),

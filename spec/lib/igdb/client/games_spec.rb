@@ -17,7 +17,7 @@ RSpec.describe IGDB::Client::Games do
       end
 
       it 'returns the search results that match name and platform' do
-        results = described_class.search('The Last of Us', ps4)
+        results = described_class.search('The Last of Us', [ps4])
 
         expect(results.count).to be_positive
         results.each do |result|

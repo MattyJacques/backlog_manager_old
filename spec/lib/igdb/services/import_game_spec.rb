@@ -26,7 +26,7 @@ RSpec.describe IGDB::Services::ImportGame do
           expect(game).to receive(:genres=).with([genre, genre])
           expect(game).to receive(:save!)
 
-          described_class.import('The Last of Us', platform)
+          described_class.import('The Last of Us', [platform])
         end
       end
     end

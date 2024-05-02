@@ -35,7 +35,7 @@ module PSN
         #
         # account_id [String] PSN Account ID
         def played_game_data(account_id)
-          get("#{BASE_PATH}/gamelist/v2/users/#{account_id}/titles")
+          get("#{BASE_PATH}/gamelist/v2/users/#{account_id}/titles", query: { offset: 0, limit: 100 })
         end
 
         # Get the recently played data for the authourised PSN account

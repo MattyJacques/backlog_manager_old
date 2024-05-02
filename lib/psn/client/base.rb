@@ -8,7 +8,8 @@ module PSN
         def get(path, options = {})
           Rails.logger.info("Sending request to PSN: #{path}, options: #{options}")
 
-          do_get_request(path, options)
+          response = do_get_request(path, options)
+          handle_response(response)
         end
 
         private
@@ -17,6 +18,21 @@ module PSN
           with_retry_on_auth_error do
             HTTParty.get(path, headers: { 'Authorization' => "Bearer #{token}" }, **options, verify: false)
           end
+        end
+
+        def handle_response(response)
+          return response if response.code < 400
+
+          Rails.logger.error("PSN request failed with code: #{response.code}, body: #{response.body}")
+
+          check_for_hidden_error(response)
+          raise PSN::Client::Errors::PSNError(response['error']['message'])
+        end
+
+        def check_for_hidden_error(response)
+          return unless response.code == 403 && response['error']['message'] == 'Not permitted by access control'
+
+          raise PSN::Client::Errors::HiddenDataError
         end
 
         def with_retry_on_auth_error

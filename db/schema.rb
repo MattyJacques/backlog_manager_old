@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_06_095817) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_06_095817) do
   create_table "account_trophy_lists", force: :cascade do |t|
     t.integer "psn_account_id", null: false
     t.integer "trophy_list_id", null: false
