@@ -35,7 +35,7 @@ module PSN
         end
 
         def platform(platforms_string)
-          Platform.find_by(abbreviation: platforms_string.split(',').first)
+          Platform.where(abbreviation: platforms_string.split(','))
         end
       end
     end
