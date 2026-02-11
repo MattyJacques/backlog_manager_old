@@ -19,7 +19,8 @@ RSpec.describe IGDB::Services::ImportGame do
             'cover' => { 'url' => 'http://example.com/cover.png' },
             'first_release_date' => 1_371_168_000,
             'genres' => [{ 'id' => 1, 'name' => 'Adventure' }, { 'id' => 2, 'name' => 'Shooter' }],
-            'platforms' => [{ 'id' => 48, 'name' => 'PlayStation 4', 'platform_family' => { 'id' => 1, 'name' => 'PlayStation' } }],
+            'platforms' => [{ 'id' => 48, 'name' => 'PlayStation 4',
+                              'platform_family' => { 'id' => 1, 'name' => 'PlayStation' } }],
             'release_dates' => [{ 'platform' => 48, 'region' => 1, 'date' => 1_371_168_000 }]
           }
         ]
