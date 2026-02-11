@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe PSN::Services::ImportAccountDefinedTrophies do
   describe '.import' do
     let(:account) { build(:psn_account, :account_id) }
+    let(:game) { instance_double(Game) }
     let(:psn_response) do
       [
         {
@@ -42,6 +43,10 @@ RSpec.describe PSN::Services::ImportAccountDefinedTrophies do
 
     before do
       allow(PSN::Client::Trophy).to receive(:all_account_titles).and_return(psn_response)
+      allow(IGDB::Services::ImportGame).to receive(:import).and_return(game)
+      allow(PSN::Services::ImportPSNRelease).to receive(:import)
+      allow(TrophyList).to receive(:find_by!).and_return(instance_double(TrophyList))
+      allow(Platform).to receive(:where).and_return([])
     end
 
     context 'when no titles are already imported' do
