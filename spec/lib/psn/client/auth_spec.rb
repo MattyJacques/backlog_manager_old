@@ -3,12 +3,16 @@
 require 'rails_helper'
 
 RSpec.describe PSN::Client::Auth do
-  describe '.authenticate', :vcr do
+  describe '.authenticate' do
     before do
       allow(Rails.logger).to receive(:error)
     end
 
     context 'when the access token does not exist' do
+      before do
+        stub_psn_auth_success
+      end
+
       it 'retrieves a new psn access token' do
         result = described_class.authenticate
 
@@ -18,8 +22,7 @@ RSpec.describe PSN::Client::Auth do
 
     context 'when the NPSSO code has expired' do
       before do
-        allow(ENV).to receive(:fetch).and_call_original
-        allow(ENV).to receive(:fetch).with('PSN_NPSSO', nil).and_return('EXPIRED')
+        stub_psn_auth_npsso_expired
       end
 
       it 'returns a NPSSO code expired error' do

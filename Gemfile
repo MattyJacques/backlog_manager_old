@@ -131,9 +131,6 @@ group :test do
   # Mock HTTP request responses
   gem 'webmock'
 
-  # Record responses to HTTP requests to avoid requests in tests
-  gem 'vcr'
-
   # Convient database cleaning strategy to help testing
   gem 'database_cleaner-active_record'
 end

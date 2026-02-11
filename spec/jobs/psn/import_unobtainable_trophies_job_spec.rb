@@ -18,14 +18,23 @@ RSpec.describe PSN::ImportUnobtainableTrophiesJob do
       allow(trophy_list_relation).to receive(:pluck).with(:psntl_id).and_return(psntl_ids)
     end
 
-    context 'when the PSNP+ list request is successful', :vcr do
+    context 'when the PSNP+ list request is successful' do
       let(:trophy_list1) { build(:trophy_list, trophy_count: 1, psnp_id: '13') }
       let(:trophy_list2) { build(:trophy_list, trophy_count: 1, psnp_id: '20') }
       let(:trophy_relation) { instance_double(ActiveRecord::Relation) }
       let(:trophy1) { trophy_list1.trophies.first }
       let(:trophy2) { trophy_list2.trophies.first }
+      let(:psnp_response) do
+        {
+          'list' => {
+            '13' => [1],
+            '20' => [2]
+          }
+        }
+      end
 
       before do
+        stub_psnp_unobtainable_list(psnp_response)
         allow(TrophyList).to receive(:where).with(psnp_id: anything)
                                             .and_return([trophy_list1, trophy_list2])
         allow(trophy_list1).to receive(:trophies).and_return(trophy_relation)

@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe PSN::Services::UpdateAccountTitle do
-  describe '.update', :vcr do
+  describe '.update' do
     let(:account) { build(:psn_account, :account_id) }
     let(:title) do
       {
@@ -27,6 +27,26 @@ RSpec.describe PSN::Services::UpdateAccountTitle do
     let(:trophy_list) { build(:trophy_list, trophy_count: 1) }
     let(:account_trophy_list) { build(:account_trophy_list, psn_updated_at: 1.minute.ago) }
     let(:trophy) { trophy_list.trophies.first }
+    let(:earned_data_response) do
+      {
+        'trophySetVersion' => '01.12',
+        'hasTrophyGroups' => false,
+        'lastUpdatedDateTime' => '2008-07-16T10:59:08Z',
+        'trophies' => Array.new(17) do |i|
+          {
+            'trophyId' => i,
+            'trophyHidden' => false,
+            'earned' => true,
+            'earnedDateTime' => "2008-07-#{format('%02d', i + 1)}T13:16:12Z",
+            'trophyType' => 'bronze',
+            'trophyRare' => 2,
+            'trophyEarnedRate' => '38.6'
+          }
+        end,
+        'rarestTrophies' => [],
+        'totalItemCount' => 17
+      }
+    end
 
     before do
       allow(TrophyList).to receive(:find_by!).with(comm_id: np_comm_id).and_return(trophy_list)
@@ -34,6 +54,7 @@ RSpec.describe PSN::Services::UpdateAccountTitle do
                                                                  .and_return(account_trophy_list)
       allow(account_trophy_list).to receive(:update!)
       allow(trophy_list.trophies).to receive(:find_by!).and_return(trophy)
+      allow(PSN::Client::Trophy).to receive(:title_trophy_list).and_return(earned_data_response)
     end
 
     context 'when all trophies are new' do
@@ -134,7 +155,6 @@ RSpec.describe PSN::Services::UpdateAccountTitle do
       end
 
       before do
-        allow(PSN::Client::Trophy).to receive(:title_trophy_list).and_return(earned_data_response)
         allow(account_trophy_list.earned_trophies).to receive(:find_by!).and_return(earned_trophy)
         allow(account_trophy_list.earned_trophies).to receive(:exists?).with(trophy:, timestamp: anything)
                                                                        .and_return(false)

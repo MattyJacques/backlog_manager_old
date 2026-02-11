@@ -3,9 +3,22 @@
 require 'rails_helper'
 
 RSpec.describe IGDB::Client::Games do
-  describe '.search', :vcr do
+  let(:ps4) { build(:ps4) }
+  let(:search_results) do
+    [
+      { 'name' => 'The Last of Us', 'platforms' => [{ 'id' => 48 }] },
+      { 'name' => 'The Last of Us Part II', 'platforms' => [{ 'id' => 48 }] }
+    ]
+  end
+  let(:game_result) do
+    { 'name' => 'The Last of Us', 'id' => 1009 }
+  end
+
+  describe '.search' do
     context 'when arguments are valid' do
-      let(:ps4) { build(:ps4) }
+      before do
+        stub_igdb_post('games', search_results)
+      end
 
       it 'returns the search results of the name' do
         results = described_class.search('The Last of Us')
@@ -46,8 +59,12 @@ RSpec.describe IGDB::Client::Games do
     end
   end
 
-  describe '.get_by_name', :vcr do
+  describe '.get_by_name' do
     context 'when arguments are valid' do
+      before do
+        stub_igdb_post('games', [game_result])
+      end
+
       it 'gets the correct game' do
         response = described_class.get_by_name('The Last of Us')
 
@@ -64,8 +81,12 @@ RSpec.describe IGDB::Client::Games do
     end
   end
 
-  describe '.get_by_id', :vcr do
+  describe '.get_by_id' do
     context 'when arguments are valid' do
+      before do
+        stub_igdb_post('games', [game_result])
+      end
+
       it 'gets the correct game' do
         response = described_class.get_by_id('1009')
 

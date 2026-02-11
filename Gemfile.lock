@@ -448,7 +448,6 @@ GEM
     unf_ext (0.0.8.2)
     unicode-display_width (2.4.2)
     uri (1.1.1)
-    vcr (6.1.0)
     version_gem (1.1.2)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -517,7 +516,6 @@ DEPENDENCIES
   tanakai
   turbo-rails
   tzinfo-data
-  vcr
   web-console
   webdrivers
   webmock
