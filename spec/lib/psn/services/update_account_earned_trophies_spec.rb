@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe PSN::Services::UpdateAccountEarnedTrophies do
-  describe '.update', :vcr do
+  describe '.update' do
     let(:account) { build(:psn_account, :account_id) }
     let(:all_titles_response) do
       [

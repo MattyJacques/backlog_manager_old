@@ -45,59 +45,6 @@ SimpleCov.start do
   track_files '{app,lib}/**/*.rb'
 end
 
-require 'vcr'
-VCR.configure do |c|
-  # Directory to store vcr cassettes
-  c.cassette_library_dir = 'spec/vcr'
-
-  # Which HTTP library to hook into
-  c.hook_into :webmock
-
-  # Allow automatic cassette recording if cassette does not already exist
-  c.configure_rspec_metadata!
-
-  # Filter out secrets from cassette data
-  c.filter_sensitive_data('<IGDB_CLIENT_ID>') { ENV.fetch('IGDB_CLIENT_ID', nil) }
-  c.filter_sensitive_data('<IGDB_CLIENT_SECRET>') { ENV.fetch('IGDB_CLIENT_SECRET', nil) }
-  c.filter_sensitive_data('<IGDB_TOKEN>') { Rails.cache.read('igdb_token') }
-
-  c.filter_sensitive_data('<PSN_CLIENT_ID>') { ENV.fetch('PSN_CLIENT_ID', nil) }
-  c.filter_sensitive_data('<PSN_BASIC>') { ENV.fetch('PSN_BASIC_TOKEN', nil) }
-  c.filter_sensitive_data('<PSN_NPSSO>') { ENV.fetch('PSN_NPSSO', nil) }
-  c.filter_sensitive_data('<PSN_TOKEN>') { Rails.cache.read('psn_token') }
-
-  c.filter_sensitive_data('accesstoken') do |interaction|
-    if interaction.response.body&.include?('access_token')
-      token = JSON.parse(interaction.response.body)
-      token['access_token'] if token.is_a?(Hash)
-    end
-  end
-
-  c.filter_sensitive_data('idtoken') do |interaction|
-    if interaction.response.body&.include?('id_token')
-      token = JSON.parse(interaction.response.body)
-      token['id_token'] if token.is_a?(Hash)
-    end
-  end
-  c.filter_sensitive_data('refreshtoken') do |interaction|
-    if interaction.response.body&.include?('refresh_token')
-      token = JSON.parse(interaction.response.body)
-      token['refresh_token'] if token.is_a?(Hash)
-    end
-  end
-
-  # PSN auth code, regex stops this being <AUTH_CODE>
-  c.filter_sensitive_data('v1.Ab23CD') do |interaction|
-    if (location = interaction.response.headers['Location']&.first)
-      code = location.match(%r{\?code=([A-Za-z0-9:?_\-./=]+)})
-      code[1] if code.present?
-    elsif (body = interaction.response.headers['body']&.first)
-      code = body.match(%r{\?code=([A-Za-z0-9:?_\-./=]+)})
-      code[1] if code.present?
-    end
-  end
-end
-
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -139,21 +86,9 @@ RSpec.configure do |config|
     config.default_formatter = 'doc'
   end
 
-  # Disable vcr and WebMock if the test does not have VCR metadata
-  # Can also filter by spec metadata type
-  # example.metadata[:type] == :feature
+  # Disable WebMock by default, enable in specs that need HTTP mocking
   config.around do |example|
-    vcr = example.metadata[:vcr]
-
-    if vcr.nil?
-      WebMock.disable!
-      VCR.turned_off { example.run }
-      WebMock.enable!
-      next
-    else
-      example.run
-    end
-
+    example.run
     Rails.cache.clear
   end
 

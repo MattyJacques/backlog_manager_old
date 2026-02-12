@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe PSN::Services::ImportPSNRelease do
-  describe '.import', :vcr do
+  describe '.import' do
     let(:game_name) { 'LittleBigPlanet™' }
     let(:game) { build(:game) }
     let(:release) { build(:release) }
