@@ -70,7 +70,7 @@ gem 'httparty'
 gem 'tanakai'
 
 # User authentication
-gem 'devise'
+gem 'devise', '>= 4.9.3'
 
 # Background job worker
 gem 'delayed_job_active_record'
