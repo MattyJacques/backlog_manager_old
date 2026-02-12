@@ -34,6 +34,7 @@ jobs:
       - name: Run FactoryBot linting
         env:
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+          RAILS_ENV: test
         run: |
           bundle exec rake factory_bot:lint
 
