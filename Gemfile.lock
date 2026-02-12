@@ -491,7 +491,7 @@ DEPENDENCIES
   database_cleaner-active_record
   debug
   delayed_job_active_record
-  devise
+  devise (>= 4.9.3)
   devise-specs
   factory_bot_rails
   font-awesome-sass
