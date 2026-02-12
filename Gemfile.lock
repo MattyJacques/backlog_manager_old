@@ -144,7 +144,7 @@ GEM
     delayed_job_active_record (4.1.8)
       activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
-    devise (4.9.2)
+    devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -491,7 +491,7 @@ DEPENDENCIES
   database_cleaner-active_record
   debug
   delayed_job_active_record
-  devise
+  devise (>= 4.9.3)
   devise-specs
   factory_bot_rails
   font-awesome-sass
