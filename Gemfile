@@ -70,7 +70,7 @@ gem 'httparty'
 gem 'tanakai'
 
 # User authentication
-gem 'devise', '>= 4.9.3'
+gem 'devise', '>= 5.0.3'
 
 # Background job worker
 gem 'delayed_job_active_record'
@@ -99,9 +99,6 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
-
-  # Generate specs for devise flows
-  gem 'devise-specs'
 
   # Quickly login as any registered user
   gem 'any_login'

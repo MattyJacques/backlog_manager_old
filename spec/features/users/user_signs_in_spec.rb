@@ -26,7 +26,7 @@ RSpec.describe 'User signs in' do
     fill_in 'user_password', with: user.password
     click_button 'Log in'
 
-    expect(page).to have_text 'Invalid Username or password.'
+    expect(page).to have_text 'Invalid username or password.'
     expect(page).not_to have_selector '.profile-dropdown'
   end
 end
