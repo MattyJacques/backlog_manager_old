@@ -36,6 +36,9 @@ gem 'font-awesome-sass'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Required for Ruby 4.0+ (removed from default gems)
+gem 'ostruct'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
