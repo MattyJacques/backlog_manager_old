@@ -37,6 +37,7 @@ gem 'font-awesome-sass'
 gem 'jbuilder'
 
 # Required for Ruby 4.0+ (removed from default gems)
+gem 'abbrev'
 gem 'observer'
 gem 'ostruct'
 
