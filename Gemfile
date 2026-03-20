@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.3'
+ruby '4.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 7.1.3', '>= 7.0.4.3'
@@ -10,7 +10,7 @@ gem 'rails', '~> 7.1.3', '>= 7.0.4.3'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'sqlite3', '~> 2.9'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 6.0'
@@ -35,6 +35,14 @@ gem 'font-awesome-sass'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
+
+# Required for Ruby 4.0+ (removed from default gems)
+gem 'abbrev'
+gem 'observer'
+gem 'ostruct'
+
+# net-imap >= 0.6.1 required for Ruby 4.0 Ractor compatibility
+gem 'net-imap', '>= 0.6.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
