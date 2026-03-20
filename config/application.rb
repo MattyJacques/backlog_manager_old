@@ -8,7 +8,7 @@ require 'rails/all'
 # all engines have added their paths via set_autoload_paths, resulting in a
 # FrozenError. This workaround can be removed when upgrading to a Rails
 # version with native Ruby 4.0 support (likely Rails 8.1+).
-if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("4.0")
+if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('4.0')
   ActiveSupport::Dependencies.autoload_paths.define_singleton_method(:freeze) { self }
   ActiveSupport::Dependencies.autoload_once_paths.define_singleton_method(:freeze) { self }
 end
