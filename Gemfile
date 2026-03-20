@@ -41,6 +41,9 @@ gem 'abbrev'
 gem 'observer'
 gem 'ostruct'
 
+# net-imap >= 0.6.1 required for Ruby 4.0 Ractor compatibility
+gem 'net-imap', '>= 0.6.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 

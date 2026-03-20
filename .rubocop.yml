@@ -6,6 +6,7 @@ require:
 
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 3.3
 
 Layout/LineLength:
   Exclude:

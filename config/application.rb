@@ -3,11 +3,11 @@ require_relative 'boot'
 require 'rails/all'
 
 # Workaround for Ruby 4.0 compatibility with Rails 7.1.
-# The initialization order changed so that setup_main_autoloader (which
-# freezes ActiveSupport::Dependencies.autoload_paths) can run before all
-# engines have added their paths via set_autoload_paths, causing a
-# FrozenError. Making freeze a no-op on these arrays is safe because the
-# freeze was only a guard against accidental late modification.
+# Ruby 4.0 changed initialization behavior causing setup_main_autoloader
+# (which freezes ActiveSupport::Dependencies.autoload_paths) to run before
+# all engines have added their paths via set_autoload_paths, resulting in a
+# FrozenError. This workaround can be removed when upgrading to a Rails
+# version with native Ruby 4.0 support (likely Rails 8.1+).
 if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("4.0")
   ActiveSupport::Dependencies.autoload_paths.define_singleton_method(:freeze) { self }
   ActiveSupport::Dependencies.autoload_once_paths.define_singleton_method(:freeze) { self }
