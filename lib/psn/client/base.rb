@@ -16,7 +16,9 @@ module PSN
 
         def do_get_request(path, options = {})
           with_retry_on_auth_error do
-            HTTParty.get(path, headers: { 'Authorization' => "Bearer #{token}" }, **options, verify: false)
+            headers = { 'Authorization' => "Bearer #{token}", 'Apollo-Require-Preflight' => 'true' }
+
+            HTTParty.get(path, headers:, **options, verify: false)
           end
         end
 

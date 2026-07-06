@@ -30,6 +30,21 @@ RSpec.describe PSN::Client::Base do
       end
     end
 
+    context 'when sending the request' do
+      before do
+        stub_psn_auth_success
+        stub_request(:get, url)
+          .with(headers: { 'Apollo-Require-Preflight' => 'true' })
+          .to_return(status: 200, body: response_body.to_json, headers: { 'Content-Type' => 'application/json' })
+      end
+
+      it 'sends the apollo-require-preflight header so PSN does not block it as a CSRF risk' do
+        result = described_class.get(url)
+
+        expect(result['accountId']).not_to be_nil
+      end
+    end
+
     context 'when access token has expired' do
       before do
         stub_psn_auth_success
